@@ -11,14 +11,16 @@ namespace Assignment
         private double price;
         private string name;
         private int IDno;
+        private string desc;
 
         //Default Constructor
         public Product() { }
         //Constructor
-        public Product(double price, string name, int IDno) {
+        public Product(double price, string name, int IDno, string desc) {
             this.price = price;
             this.name = name;
             this.IDno = IDno;
+            this.desc = desc;
         }
 
         //Price property
@@ -37,6 +39,13 @@ namespace Assignment
         public int ID {
             get { return this.IDno; }
             set { this.IDno = value; }
+        }
+
+        //Description Property
+        public string Desc
+        {
+            get { return this.Desc; }
+            set { this.Desc = value; }
         }
     }
 }
