@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Assignment
 {
-    class backend : Product
+    class backend
     {
 
         //Product Information Loader from Text
@@ -27,24 +27,21 @@ namespace Assignment
                 */
 
                 //Product array initalization
-                Product[] ProductArr = new Product[3] { new Product(13.79, "Cosmopolitan", 0),
-                new Product(50.60, "Archi Daily", 1),new Product(14.60, "Travelz", 2)};
+                Product[] ProductArr = new Product[3] { new Product(13.79, "Cosmopolitan", 0, null),
+                new Product(50.60, "Archi Daily", 1, null),new Product(14.60, "Travelz", 2, null)};
             }
         }
 
         public void LoadDesc()
         {
-            int counter = 0;
-            string liner;
+            //string liner;
 
             System.IO.StreamReader file = new System.IO.StreamReader("c:\\loadprod.txt");
-            while ((liner = file.ReadLine()) != null)
+            //while ((liner = file.ReadLine()) != null)
+            for (int i = 0; i < file.ReadLine().Length; i++)
             {
-                //Console.WriteLine(line);
-                //Object Properties Creator and Inserter
-                counter++;
+                Product[i].Desc = file.ReadLine();
             }
-
             file.Close();
 
         }
