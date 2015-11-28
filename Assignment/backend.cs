@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Assignment
 {
-    class backend
+    class backend : Product
     {
 
         //Product Information Loader from Text
