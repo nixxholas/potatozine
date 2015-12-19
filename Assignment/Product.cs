@@ -11,7 +11,14 @@ namespace Assignment
         private double price;
         private string name;
         private int IDno;
+
+        /**
+            type 1 = Fashion
+            type 2 = ???
+        **/
         private int type;
+
+
         private string desc;
         private string imglink;
 
