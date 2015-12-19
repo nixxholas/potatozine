@@ -34,21 +34,6 @@ namespace Assignment
 
         public void LoadDesc()
         {
-            //string liner;
-
-            System.IO.StreamReader file = new System.IO.StreamReader("c:\\loadprod.txt");
-            //while ((liner = file.ReadLine()) != null)
-            for (int i = 0; i < file.ReadLine().Length; i++)
-            {
-                //Needs revamp
-                //Product[i].Desc = file.ReadLine();
-            }
-            file.Close();
-
-        }
-
-        public void testProdDesc()
-        {
 
             /**
             Custom File Loader
