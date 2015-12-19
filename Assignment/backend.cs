@@ -34,12 +34,12 @@ namespace Assignment
             private string desc;
             **/
 
-            System.IO.StreamReader theFile = new System.IO.StreamReader("C:\\loadprod.txt");
+            System.IO.StreamReader theFile = new System.IO.StreamReader("loadprod.txt");
             String line;
             while ((line = theFile.ReadLine()) != null)
             {
                 string[] content = line.Split(',');
-                new Product(double.Parse(content[0]), content[1], int.Parse(content[2]), content[3]);
+                new Product(double.Parse(content[0]), content[1], int.Parse(content[2]), int.Parse(content[3]), content[4], content[5]);
             }
 
             theFile.Close();

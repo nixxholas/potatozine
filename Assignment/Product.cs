@@ -11,16 +11,20 @@ namespace Assignment
         private double price;
         private string name;
         private int IDno;
+        private int type;
         private string desc;
+        private string imglink;
 
         //Default Constructor
         public Product() { }
         //Constructor
-        public Product(double price, string name, int IDno, string desc) {
+        public Product(double price, string name, int IDno, int type, string desc, string imglink) {
             this.price = price;
             this.name = name;
             this.IDno = IDno;
+            this.type = type;
             this.desc = desc;
+            this.imglink = imglink;
         }
 
         //Price property
@@ -41,11 +45,23 @@ namespace Assignment
             set { this.IDno = value; }
         }
 
+        public int Type
+        {
+            get { return this.type; }
+            set { this.type = value; }
+        }
+
         //Description Property
         public string Desc
         {
             get { return this.Desc; }
             set { this.Desc = value; }
+        }
+
+        public string Imglink
+        {
+            get { return this.imglink; }
+            set { this.imglink = value; }
         }
     }
 }
