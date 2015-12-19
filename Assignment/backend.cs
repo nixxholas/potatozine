@@ -10,26 +10,15 @@ namespace Assignment
     class backend
     {
 
-        //Product Information Loader from Text
-        public void prodinfoText(String location)
+        public double priceLooper()
         {
-            string[] lineparsed = System.IO.File.ReadAllLines(@location);
+            double finaltotal = 0;
 
-            foreach (string line in lineparsed)
-            {
-                
+            /**
+            Wait for Qi to have a box for showing the subtotal
+            **/
 
-                //Object Creation initializes here
-                /*
-                Product cosmopolitan = new Product(13.79, "Cosmopolitan", 1);
-                Product archidaily = new Product(50.60, "Archi Daily", 2);
-                Product Travelz = new Product(14.60, "Travelz",3);
-                */
-
-                //Product array initalization
-                Product[] ProductArr = new Product[3] { new Product(13.79, "Cosmopolitan", 0, null),
-                new Product(50.60, "Archi Daily", 1, null),new Product(14.60, "Travelz", 2, null)};
-            }
+            return finaltotal;
         }
 
         public void LoadDesc()
