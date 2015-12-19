@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    class Cart : Product
+    class Cart : CartGUI
     {
         List<int> cart = new List<int>();
 
@@ -17,10 +17,15 @@ namespace Assignment
             cart.Remove(itemcode);
         }
 
+        /**
+        Supposed to add items to the listBox
+            That's it
+        **/
         public void listCart() {
             foreach (int a in cart) {
-                //lstCart.Items.Add(a);
+                lstCart.Items.Add(a);
             }
         }
-    }
+        
+}
 }
