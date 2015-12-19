@@ -16,5 +16,12 @@ namespace Assignment
         {
             InitializeComponent();
         }
+
+        private void splashTimer_Tick(object sender, EventArgs e)
+        {
+            splashBar.Increment(1);
+            if (splashBar.Value == 100)
+                splashTimer.Stop();
+        }
     }
 }

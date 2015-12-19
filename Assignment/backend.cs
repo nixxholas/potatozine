@@ -40,7 +40,8 @@ namespace Assignment
             //while ((liner = file.ReadLine()) != null)
             for (int i = 0; i < file.ReadLine().Length; i++)
             {
-                Product[i].Desc = file.ReadLine();
+                //Needs revamp
+                //Product[i].Desc = file.ReadLine();
             }
             file.Close();
 
@@ -48,16 +49,26 @@ namespace Assignment
 
         public void testProdDesc()
         {
-            System.IO.StreamReader theFile = new System.IO.StreamReader("C:\\loadprod.txt");
-            String DescString = theFile.ReadToEnd();
-
-            theFile.Close();
 
             /**
             Custom File Loader
             Displays all contents
+
+            private double price;
+            private string name;
+            private int IDno;
+            private string desc;
             **/
-            Console.WriteLine(DescString);
+
+            System.IO.StreamReader theFile = new System.IO.StreamReader("C:\\loadprod.txt");
+            String line;
+            while ((line = theFile.ReadLine()) != null)
+            {
+                string[] content = line.Split(',');
+                new Product(double.Parse(content[0]), content[1], int.Parse(content[2]), content[3]);
+            }
+
+            theFile.Close();
         }
     }
 }

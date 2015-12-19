@@ -52,9 +52,10 @@
             // 
             // picBanner
             // 
-            this.picBanner.Location = new System.Drawing.Point(12, 59);
+            this.picBanner.Location = new System.Drawing.Point(9, 48);
+            this.picBanner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(956, 258);
+            this.picBanner.Size = new System.Drawing.Size(717, 210);
             this.picBanner.TabIndex = 0;
             this.picBanner.TabStop = false;
             // 
@@ -62,44 +63,49 @@
             // 
             this.lstCatergory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCatergory.FormattingEnabled = true;
-            this.lstCatergory.ItemHeight = 22;
+            this.lstCatergory.ItemHeight = 17;
             this.lstCatergory.Items.AddRange(new object[] {
             "Fashion",
             "Technology",
             "Travel",
             "Architecture"});
-            this.lstCatergory.Location = new System.Drawing.Point(12, 364);
+            this.lstCatergory.Location = new System.Drawing.Point(9, 296);
+            this.lstCatergory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstCatergory.Name = "lstCatergory";
-            this.lstCatergory.Size = new System.Drawing.Size(229, 312);
+            this.lstCatergory.Size = new System.Drawing.Size(173, 242);
             this.lstCatergory.TabIndex = 1;
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(11, 332);
+            this.lblCategory.Location = new System.Drawing.Point(8, 270);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(139, 29);
+            this.lblCategory.Size = new System.Drawing.Size(106, 24);
             this.lblCategory.TabIndex = 2;
             this.lblCategory.Text = "Catergories";
             // 
             // btnLstItms
             // 
             this.btnLstItms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLstItms.Location = new System.Drawing.Point(12, 700);
+            this.btnLstItms.Location = new System.Drawing.Point(9, 569);
+            this.btnLstItms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLstItms.Name = "btnLstItms";
-            this.btnLstItms.Size = new System.Drawing.Size(230, 37);
+            this.btnLstItms.Size = new System.Drawing.Size(172, 30);
             this.btnLstItms.TabIndex = 3;
             this.btnLstItms.Text = "List Items";
             this.btnLstItms.UseVisualStyleBackColor = true;
+            this.btnLstItms.Click += new System.EventHandler(this.btnLstItms_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.lblPotatoZine);
-            this.panel1.Location = new System.Drawing.Point(-7, -1);
+            this.panel1.Location = new System.Drawing.Point(-5, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 51);
+            this.panel1.Size = new System.Drawing.Size(746, 41);
             this.panel1.TabIndex = 4;
             // 
             // lblPotatoZine
@@ -107,66 +113,73 @@
             this.lblPotatoZine.AutoSize = true;
             this.lblPotatoZine.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPotatoZine.ForeColor = System.Drawing.Color.White;
-            this.lblPotatoZine.Location = new System.Drawing.Point(16, 8);
+            this.lblPotatoZine.Location = new System.Drawing.Point(12, 6);
+            this.lblPotatoZine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPotatoZine.Name = "lblPotatoZine";
-            this.lblPotatoZine.Size = new System.Drawing.Size(137, 38);
+            this.lblPotatoZine.Size = new System.Drawing.Size(109, 30);
             this.lblPotatoZine.TabIndex = 0;
             this.lblPotatoZine.Text = "PotatoZine";
             // 
             // picItem1
             // 
-            this.picItem1.Location = new System.Drawing.Point(256, 364);
+            this.picItem1.Location = new System.Drawing.Point(192, 296);
+            this.picItem1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picItem1.Name = "picItem1";
-            this.picItem1.Size = new System.Drawing.Size(221, 291);
+            this.picItem1.Size = new System.Drawing.Size(166, 236);
             this.picItem1.TabIndex = 5;
             this.picItem1.TabStop = false;
             this.picItem1.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // picItem2
             // 
-            this.picItem2.Location = new System.Drawing.Point(493, 364);
+            this.picItem2.Location = new System.Drawing.Point(370, 296);
+            this.picItem2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picItem2.Name = "picItem2";
-            this.picItem2.Size = new System.Drawing.Size(221, 291);
+            this.picItem2.Size = new System.Drawing.Size(166, 236);
             this.picItem2.TabIndex = 6;
             this.picItem2.TabStop = false;
             // 
             // picItem3
             // 
-            this.picItem3.Location = new System.Drawing.Point(735, 364);
+            this.picItem3.Location = new System.Drawing.Point(551, 296);
+            this.picItem3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picItem3.Name = "picItem3";
-            this.picItem3.Size = new System.Drawing.Size(221, 291);
+            this.picItem3.Size = new System.Drawing.Size(166, 236);
             this.picItem3.TabIndex = 7;
             this.picItem3.TabStop = false;
             // 
             // picItem6
             // 
-            this.picItem6.Location = new System.Drawing.Point(735, 672);
+            this.picItem6.Location = new System.Drawing.Point(551, 546);
+            this.picItem6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picItem6.Name = "picItem6";
-            this.picItem6.Size = new System.Drawing.Size(221, 291);
+            this.picItem6.Size = new System.Drawing.Size(166, 236);
             this.picItem6.TabIndex = 10;
             this.picItem6.TabStop = false;
             // 
             // picItem5
             // 
-            this.picItem5.Location = new System.Drawing.Point(493, 672);
+            this.picItem5.Location = new System.Drawing.Point(370, 546);
+            this.picItem5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picItem5.Name = "picItem5";
-            this.picItem5.Size = new System.Drawing.Size(221, 291);
+            this.picItem5.Size = new System.Drawing.Size(166, 236);
             this.picItem5.TabIndex = 9;
             this.picItem5.TabStop = false;
             // 
             // picItem4
             // 
-            this.picItem4.Location = new System.Drawing.Point(256, 672);
+            this.picItem4.Location = new System.Drawing.Point(192, 546);
+            this.picItem4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picItem4.Name = "picItem4";
-            this.picItem4.Size = new System.Drawing.Size(221, 291);
+            this.picItem4.Size = new System.Drawing.Size(166, 236);
             this.picItem4.TabIndex = 8;
             this.picItem4.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 1045);
+            this.ClientSize = new System.Drawing.Size(735, 849);
             this.Controls.Add(this.picItem6);
             this.Controls.Add(this.picItem5);
             this.Controls.Add(this.picItem4);
@@ -178,6 +191,7 @@
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lstCatergory);
             this.Controls.Add(this.picBanner);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Catalogue";
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();

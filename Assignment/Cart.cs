@@ -19,7 +19,7 @@ namespace Assignment
 
         public void listCart() {
             foreach (int a in cart) {
-                lstCart.Items.Add(a);
+                //lstCart.Items.Add(a);
             }
         }
     }
