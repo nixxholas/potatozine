@@ -78,15 +78,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    //code to load images
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    //code to load images
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    //code to load images
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    //code to load images
                     break;
             }
         }
