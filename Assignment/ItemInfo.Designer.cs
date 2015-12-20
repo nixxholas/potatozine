@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PicItemInfo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblPotatoZine = new System.Windows.Forms.Label();
             this.lblPdctInfo = new System.Windows.Forms.Label();
             this.lblProdNam = new System.Windows.Forms.Label();
@@ -37,21 +38,20 @@
             this.lblQuantity = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnAddCart = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicItemInfo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // PicItemInfo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 117);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 353);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PicItemInfo.Location = new System.Drawing.Point(12, 117);
+            this.PicItemInfo.Name = "PicItemInfo";
+            this.PicItemInfo.Size = new System.Drawing.Size(288, 353);
+            this.PicItemInfo.TabIndex = 0;
+            this.PicItemInfo.TabStop = false;
             // 
             // panel1
             // 
@@ -62,6 +62,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(994, 51);
             this.panel1.TabIndex = 5;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(715, 8);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(260, 33);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Back to Catalogue";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblPotatoZine
             // 
@@ -131,14 +142,14 @@
             this.lblPrice.TabIndex = 12;
             this.lblPrice.Text = "Price";
             // 
-            // textBox1
+            // txtPrice
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(382, 435);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 34);
-            this.textBox1.TabIndex = 13;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(382, 435);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(100, 34);
+            this.txtPrice.TabIndex = 13;
             // 
             // btnAddCart
             // 
@@ -150,23 +161,13 @@
             this.btnAddCart.Text = "Add to cart";
             this.btnAddCart.UseVisualStyleBackColor = true;
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(803, 8);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(172, 33);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Back to Catalogue";
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
             // ItemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 491);
             this.Controls.Add(this.btnAddCart);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lblQuantity);
@@ -174,10 +175,10 @@
             this.Controls.Add(this.lblProdNam);
             this.Controls.Add(this.lblPdctInfo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PicItemInfo);
             this.Name = "ItemInfo";
             this.Text = "Item Info";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicItemInfo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -188,7 +189,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PicItemInfo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblPotatoZine;
@@ -198,7 +199,7 @@
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnAddCart;
     }
 }

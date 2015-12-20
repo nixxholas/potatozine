@@ -17,10 +17,7 @@ namespace Assignment
             cart.Remove(itemcode);
         }
 
-        /**
-        Supposed to add items to the listBox
-            That's it
-        **/
+        //Add items to the listbox
         public void listCart() {
             foreach (int a in cart) {
                 lstCart.Items.Add(a);

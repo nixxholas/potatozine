@@ -16,5 +16,22 @@ namespace Assignment
         {
             InitializeComponent();
         }
+
+        //cart object
+        Cart myCart = new Cart();
+
+        //Method to load/insert picture, name, description, price etc. into the page
+        public void LoadInfo(string imgURL, string name, string desc, double price) {
+            PicItemInfo.Load(imgURL); //Sets the picture in the iteminfo
+            lblProdNam.Text = name; //Changes the text for product name
+            txtProdDesc.Text = desc; //Changes the text in the textbox for product description
+            txtPrice.Text = System.Convert.ToString(price);//Changes the text for pricing
+        }
+
+        //Back to catalogue button click
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();//Closes the iteminfo form
+        }
     }
 }

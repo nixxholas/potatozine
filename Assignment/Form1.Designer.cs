@@ -127,7 +127,7 @@
             this.picItem1.Size = new System.Drawing.Size(221, 290);
             this.picItem1.TabIndex = 5;
             this.picItem1.TabStop = false;
-            this.picItem1.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.picItem1.Click += new System.EventHandler(this.picItem1_Click);
             // 
             // picItem2
             // 
@@ -138,6 +138,7 @@
             this.picItem2.Size = new System.Drawing.Size(221, 290);
             this.picItem2.TabIndex = 6;
             this.picItem2.TabStop = false;
+            this.picItem2.Click += new System.EventHandler(this.picItem2_Click);
             // 
             // picItem3
             // 
@@ -148,6 +149,7 @@
             this.picItem3.Size = new System.Drawing.Size(221, 290);
             this.picItem3.TabIndex = 7;
             this.picItem3.TabStop = false;
+            this.picItem3.Click += new System.EventHandler(this.picItem3_Click);
             // 
             // picItem6
             // 
@@ -158,6 +160,7 @@
             this.picItem6.Size = new System.Drawing.Size(221, 290);
             this.picItem6.TabIndex = 10;
             this.picItem6.TabStop = false;
+            this.picItem6.Click += new System.EventHandler(this.picItem6_Click);
             // 
             // picItem5
             // 
@@ -168,6 +171,7 @@
             this.picItem5.Size = new System.Drawing.Size(221, 290);
             this.picItem5.TabIndex = 9;
             this.picItem5.TabStop = false;
+            this.picItem5.Click += new System.EventHandler(this.picItem5_Click);
             // 
             // picItem4
             // 
@@ -178,6 +182,7 @@
             this.picItem4.Size = new System.Drawing.Size(221, 290);
             this.picItem4.TabIndex = 8;
             this.picItem4.TabStop = false;
+            this.picItem4.Click += new System.EventHandler(this.picItem4_Click);
             // 
             // Form1
             // 
