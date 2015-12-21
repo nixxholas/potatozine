@@ -21,7 +21,7 @@ namespace Assignment
             return finaltotal;
         }
 
-        public void LoadDesc()
+        public static void LoadDesc()
         {
 
             /**
@@ -34,7 +34,7 @@ namespace Assignment
             private string desc;
             **/
 
-            System.IO.StreamReader theFile = new System.IO.StreamReader("loadprod.txt");
+            System.IO.StreamReader theFile = new System.IO.StreamReader(@"loadprod.txt");
             String line;
             while ((line = theFile.ReadLine()) != null)
             {

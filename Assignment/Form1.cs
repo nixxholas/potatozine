@@ -30,6 +30,8 @@ namespace Assignment
             InitializeComponent();
 
             t.Abort();
+
+            backend.LoadDesc();
         }
 
         //Method to run the splash screen
