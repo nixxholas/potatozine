@@ -1,4 +1,4 @@
-StyleXStyle,2.00,0001,1,This is a fashion magazine,http://www.stylexstyle.com/sites/default/files/Photo%206-6-15%201%2057%2013%20pm.jpg
+StyleXStyle,2.00,0001,1,This is a fashion magazine,Images/cosmopolitan.jpg
 ELLE,3.00,0002,1,This is another fashion magazine,blank
 Vogue,4.00,0003,1,This is a high class fashion magazine,blank
 Teen Vogue,2.50,1,0004,This is Vogue for kids,blank
