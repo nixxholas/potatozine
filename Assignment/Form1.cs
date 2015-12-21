@@ -48,16 +48,16 @@ namespace Assignment
             //Takes catergory selected and parses in URLs to load pictures
             switch (this.selCat) {
                 case "Fashion":
-                    //Code to make fashion items visible
+                    //setPic("1", "2", "3", "4", "5", "6");
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    //setPic("1", "2", "3", "4", "5", "6");
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    //setPic("1", "2", "3", "4", "5", "6");
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    //setPic("1", "2", "3", "4", "5", "6");
                     break;
             }
         }
@@ -78,16 +78,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    //code to load images
+                    itemPage.Show();
                     break;
                 case "Technology":
-                    //code to load images
+                    itemPage.Show();
                     break;
                 case "Travel":
-                    //code to load images
+                    itemPage.Show();
                     break;
                 case "Architecture":
-                    //code to load images
+                    itemPage.Show();
                     break;
             }
         }
@@ -97,16 +97,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    //Code to make fashion items visible
+                    itemPage.Show();
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    itemPage.Show();
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    itemPage.Show();
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    itemPage.Show();
                     break;
             }
         }
@@ -116,16 +116,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    //Code to make fashion items visible
+                    itemPage.Show();
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    itemPage.Show();
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    itemPage.Show();
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    itemPage.Show();
                     break;
             }
         }
@@ -135,16 +135,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    //Code to make fashion items visible
+                    itemPage.Show();
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    itemPage.Show();
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    itemPage.Show();
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    itemPage.Show();
                     break;
             }
         }
@@ -154,16 +154,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    //Code to make fashion items visible
+                    itemPage.Show();
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    itemPage.Show();
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    itemPage.Show();
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    itemPage.Show();
                     break;
             }
         }
@@ -173,16 +173,16 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    //Code to make fashion items visible
+                    itemPage.Show();
                     break;
                 case "Technology":
-                    //code to make technology stuff visible
+                    itemPage.Show();
                     break;
                 case "Travel":
-                    //code to make teavel stuff visible
+                    itemPage.Show();
                     break;
                 case "Architecture":
-                    //code to make archi stuff visible
+                    itemPage.Show();
                     break;
             }
         }
