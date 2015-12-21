@@ -10,6 +10,7 @@ namespace Assignment
     class backend
     {
 
+
         public double priceLooper()
         {
             double finaltotal = 0;
@@ -21,7 +22,7 @@ namespace Assignment
             return finaltotal;
         }
 
-        public void LoadDesc()
+        public static void LoadDesc()
         {
 
             /**
@@ -33,16 +34,20 @@ namespace Assignment
             private int IDno;
             private string desc;
             **/
+            var listOfProducts = new List<Product>();
 
-            System.IO.StreamReader theFile = new System.IO.StreamReader("loadprod.txt");
+            System.IO.StreamReader theFile = new System.IO.StreamReader(@"loadprod.txt");
             String line;
             while ((line = theFile.ReadLine()) != null)
             {
                 string[] content = line.Split(',');
-                new Product(double.Parse(content[0]), content[1], int.Parse(content[2]), int.Parse(content[3]), content[4], content[5]);
+                listOfProducts.Add(new Product(content[0], double.Parse(content[1]), int.Parse(content[2]), int.Parse(content[3]), content[4], content[5]));
+               // counter++;
             }
 
             theFile.Close();
         }
+
+        
     }
 }

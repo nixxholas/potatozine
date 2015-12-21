@@ -1,6 +1,6 @@
-﻿2.00,StyleXStyle,0001,1,This is a fashion magazine,blank
-3.00,ELLE,0002,1,This is another fashion magazine,blank
-4.00,Vogue,0003,1,This is a high class fashion magazine,blank
-2.50,Teen Vogue,1,0004,This is Vogue for kids,blank
-3.50,Asian Women,1,0005,Title says it all,blank
-2.50,Allure,0006,1,Learn to be an expert in booty,blank
+﻿StyleXStyle,2.00,0001,1,This is a fashion magazine,http://www.stylexstyle.com/sites/default/files/Photo%206-6-15%201%2057%2013%20pm.jpg
+ELLE,3.00,0002,1,This is another fashion magazine,blank
+Vogue,4.00,0003,1,This is a high class fashion magazine,blank
+Teen Vogue,2.50,1,0004,This is Vogue for kids,blank
+Asian Women,3.50,1,0005,Title says it all,blank
+Allure,2.50,0006,1,Learn to be an expert in booty,blank

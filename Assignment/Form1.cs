@@ -13,11 +13,28 @@ namespace Assignment
     public partial class Form1 : Form
     {
         string selCat;
+        int counter = 0;
+        public static int noofprods = 24; //Can be modified to add more
 
         //creation of object
         ItemInfo itemPage = new ItemInfo(); //ItemInfo page object
         CartGUI cartPage = new CartGUI();//Cart page object
+        Product[] arrProducts = new Product[noofprods]; //Array of Product Objects
+        public void LoadDescBeta()
+        {
+            System.IO.StreamReader theFile = new System.IO.StreamReader(@"loadprod.txt");
+            String line;
 
+
+            while ((line = theFile.ReadLine()) != null)
+            {
+                string[] content = line.Split(',');
+                arrProducts[counter] = new Product(content[0], double.Parse(content[1]), int.Parse(content[2]), int.Parse(content[3]), content[4], content[5]);
+                counter++;
+            }
+
+            theFile.Close();
+        }
 
         //Start of program
         public Form1()
@@ -25,11 +42,13 @@ namespace Assignment
             //Loads the splash screen
             Thread t = new Thread(new ThreadStart(splashStart));
             t.Start();
+            LoadDescBeta();
             Thread.Sleep(5000);
 
             InitializeComponent();
 
             t.Abort();
+
         }
 
         //Method to run the splash screen
@@ -79,6 +98,7 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    itemPage.LoadInfo(arrProducts[0].Imglink,arrProducts[0].Name,arrProducts[0].Desc,arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Technology":
