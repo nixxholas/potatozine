@@ -15,7 +15,12 @@ namespace Assignment
         public CartGUI()
         {
             InitializeComponent();
+            //need to reference to listitems method for object mycart
         }
-        
+
+        private void btnBackShop_Click(object sender, EventArgs e)
+        {
+            this.Hide();//Closes the cart page
+        }
     }
 }

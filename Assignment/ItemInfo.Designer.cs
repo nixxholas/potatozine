@@ -36,13 +36,13 @@
             this.lblProdNam = new System.Windows.Forms.Label();
             this.txtProdDesc = new System.Windows.Forms.TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numQuantity = new System.Windows.Forms.NumericUpDown();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnAddCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicItemInfo)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // PicItemInfo
@@ -110,6 +110,7 @@
             this.txtProdDesc.Location = new System.Drawing.Point(325, 149);
             this.txtProdDesc.Multiline = true;
             this.txtProdDesc.Name = "txtProdDesc";
+            this.txtProdDesc.ReadOnly = true;
             this.txtProdDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtProdDesc.Size = new System.Drawing.Size(643, 279);
             this.txtProdDesc.TabIndex = 8;
@@ -124,13 +125,23 @@
             this.lblQuantity.TabIndex = 9;
             this.lblQuantity.Text = "Quantity";
             // 
-            // numericUpDown1
+            // numQuantity
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(583, 435);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown1.TabIndex = 11;
+            this.numQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numQuantity.Location = new System.Drawing.Point(583, 435);
+            this.numQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numQuantity.Name = "numQuantity";
+            this.numQuantity.Size = new System.Drawing.Size(120, 34);
+            this.numQuantity.TabIndex = 11;
+            this.numQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblPrice
             // 
@@ -160,6 +171,7 @@
             this.btnAddCart.TabIndex = 14;
             this.btnAddCart.Text = "Add to cart";
             this.btnAddCart.UseVisualStyleBackColor = true;
+            this.btnAddCart.Click += new System.EventHandler(this.btnAddCart_Click);
             // 
             // ItemInfo
             // 
@@ -169,7 +181,7 @@
             this.Controls.Add(this.btnAddCart);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numQuantity);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.txtProdDesc);
             this.Controls.Add(this.lblProdNam);
@@ -181,7 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicItemInfo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +209,7 @@
         private System.Windows.Forms.Label lblProdNam;
         private System.Windows.Forms.TextBox txtProdDesc;
         private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numQuantity;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnAddCart;

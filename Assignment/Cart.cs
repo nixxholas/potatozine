@@ -8,20 +8,32 @@ namespace Assignment
 {
     class Cart : CartGUI
     {
-        List<int> cart = new List<int>();
 
-        public void addItem(int itemcode) {
-            cart.Add(itemcode);
+        double total = 0.0;
+        List<string> cart = new List<string>();
+
+        
+
+        //Method to add item
+        public void addItem(string name) {
+            cart.Add(name);
         }
-        public void removeItem(int itemcode) {
-            cart.Remove(itemcode);
+
+        //Method to remove item
+        public void removeItem(string name) {
+            cart.Remove(name);
         }
 
         //Add items to the listbox
         public void listCart() {
-            foreach (int a in cart) {
-                lstCart.Items.Add(a);
+            foreach (string item in cart) {
+                lstCart.Items.Add(item);
             }
+        }
+
+        //Method to get total
+        public void updatetotal(double price) {
+            total = total + price;
         }
         
 }

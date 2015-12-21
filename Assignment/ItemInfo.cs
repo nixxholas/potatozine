@@ -31,7 +31,18 @@ namespace Assignment
         //Back to catalogue button click
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();//Closes the iteminfo form
+            this.Hide();//Closes the iteminfo form
+        }
+
+        private void btnAddCart_Click(object sender, EventArgs e)
+        {
+            int quantity = (int)numQuantity.Value;
+            if (quantity != 0) {
+                for (int count = 0; count < quantity; count++) {
+                    myCart.addItem(lblProdNam.Text);
+                    //myCart.updatetotal(Convert.ToDouble(txtPrice.Text));
+                }
+            }
         }
     }
 }

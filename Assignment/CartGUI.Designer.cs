@@ -61,6 +61,7 @@
             this.btnBackShop.TabIndex = 1;
             this.btnBackShop.Text = "Back to Catalogue";
             this.btnBackShop.UseVisualStyleBackColor = true;
+            this.btnBackShop.Click += new System.EventHandler(this.btnBackShop_Click);
             // 
             // lblPotatoZine
             // 

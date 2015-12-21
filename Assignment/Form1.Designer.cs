@@ -40,6 +40,7 @@
             this.picItem6 = new System.Windows.Forms.PictureBox();
             this.picItem5 = new System.Windows.Forms.PictureBox();
             this.picItem4 = new System.Windows.Forms.PictureBox();
+            this.btnCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picItem1)).BeginInit();
@@ -100,6 +101,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.btnCart);
             this.panel1.Controls.Add(this.lblPotatoZine);
             this.panel1.Location = new System.Drawing.Point(-7, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,6 +186,17 @@
             this.picItem4.TabStop = false;
             this.picItem4.Click += new System.EventHandler(this.picItem4_Click);
             // 
+            // btnCart
+            // 
+            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.Location = new System.Drawing.Point(877, 7);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(98, 36);
+            this.btnCart.TabIndex = 1;
+            this.btnCart.Text = "My Cart";
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +244,7 @@
         private System.Windows.Forms.PictureBox picItem6;
         private System.Windows.Forms.PictureBox picItem5;
         private System.Windows.Forms.PictureBox picItem4;
+        private System.Windows.Forms.Button btnCart;
     }
 }
 

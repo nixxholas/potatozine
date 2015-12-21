@@ -16,6 +16,7 @@ namespace Assignment
 
         //creation of object
         ItemInfo itemPage = new ItemInfo(); //ItemInfo page object
+        CartGUI cartPage = new CartGUI();//Cart page object
 
 
         //Start of program
@@ -185,6 +186,11 @@ namespace Assignment
                     itemPage.Show();
                     break;
             }
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            cartPage.Show();
         }
     }
 }
