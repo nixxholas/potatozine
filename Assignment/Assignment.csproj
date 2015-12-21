@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="backend.cs" />
     <Compile Include="Cart.cs">
       <SubType>Form</SubType>
     </Compile>

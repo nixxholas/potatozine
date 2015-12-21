@@ -34,6 +34,7 @@ namespace Assignment
             this.desc = desc;
             this.imglink = imglink;
         }
+   
 
 
         //Price property

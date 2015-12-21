@@ -48,7 +48,6 @@ namespace Assignment
             InitializeComponent();
 
             t.Abort();
-
         }
 
         //Method to run the splash screen

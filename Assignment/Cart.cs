@@ -35,6 +35,17 @@ namespace Assignment
         public void updatetotal(double price) {
             total = total + price;
         }
-        
-}
+
+        public double priceLooper()
+        {
+            double finaltotal = 0;
+
+            /**
+            Wait for Qi to have a box for showing the subtotal
+            **/
+
+            return finaltotal;
+        }
+
+    }
 }
