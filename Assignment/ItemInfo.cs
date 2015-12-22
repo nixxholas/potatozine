@@ -15,7 +15,10 @@ namespace Assignment
         public ItemInfo()
         {
             InitializeComponent();
+
         }
+
+        public string curname;
 
         //cart object
         CartGUI myCart = new CartGUI();
@@ -27,6 +30,7 @@ namespace Assignment
             txtProdDesc.Text = desc; //Changes the text in the textbox for product description
             txtPrice.Text = System.Convert.ToString(price);//Changes the text for pricing
         }
+
 
         //Back to catalogue button click
         private void btnBack_Click(object sender, EventArgs e)

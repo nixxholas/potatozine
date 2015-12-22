@@ -34,6 +34,9 @@ namespace Assignment
         public void addItem(string name)
         {
             cart.Add(name);
+            foreach (string item in cart) {
+                MessageBox.Show(item);
+            }
         }
 
         //Method to remove item
@@ -45,12 +48,7 @@ namespace Assignment
         //Add items to the listbox
         public void listCart()
         {
-            lstCart.BeginUpdate();
-            foreach (string item in cart)
-            {
-                lstCart.Items.Add(item);
-            }
-            lstCart.EndUpdate();
+            lstCart.DataSource = cart;
         }
 
         private void BindData()
