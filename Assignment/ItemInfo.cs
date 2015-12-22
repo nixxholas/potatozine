@@ -18,7 +18,7 @@ namespace Assignment
         }
 
         //cart object
-        Cart myCart = new Cart();
+        CartGUI myCart = new CartGUI();
 
         //Method to load/insert picture, name, description, price etc. into the page
         public void LoadInfo(string imgURL, string name, string desc, double price) {
@@ -42,7 +42,11 @@ namespace Assignment
                 for (int count = 0; count < quantity; count++) {
                     myCart.addItem(lblProdNam.Text);
                     myCart.updatetotal(Convert.ToDouble(txtPrice.Text));
+                    MessageBox.Show("Added to cart");
                 }
+            } else
+            {
+                MessageBox.Show("ERROR FUCK OFF");
             }
         }
 

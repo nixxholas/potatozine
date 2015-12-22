@@ -18,7 +18,7 @@ namespace Assignment
 
         //creation of object
         ItemInfo itemPage = new ItemInfo(); //ItemInfo page object
-        Cart cartPage = new Cart();//Cart page object
+        CartGUI cartPage = new CartGUI();//Cart page object
         Product[] arrProducts = new Product[noofprods]; //Array of Product Objects
 
         //Start of program
