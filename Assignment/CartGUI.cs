@@ -24,39 +24,17 @@ namespace Assignment
 
         private double total = 0.0;
 
-        List<string> cart = new List<string>();
-        List<double> price = new List<double>();
+        public static List<string> myItems = new List<string>();
 
-        //Method to add item
-        public void addItem(string name)
+        public void addItem(string item)
         {
-            cart.Add(name);
-        }
-
-        //Method to remove item
-        public void removeItem(string name)
-        {
-            cart.Remove(name);
-        }
-
-        /**
-        //Add items to the listbox
-        public void listCart()
-        {
-            lstCart.DataSource = cart;
-        }
-    **/
-
-        //Method to get total
-        public void updatetotal(double price)
-        {
-            total += price;
+            myItems.Add(item);
         }
 
         private void refBtn_Click(object sender, EventArgs e)
         {
             lstCart.Items.Clear();
-            lstCart.DataSource = cart;
+            lstCart.DataSource = myItems;
         }
     }
 }
