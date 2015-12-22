@@ -15,9 +15,6 @@ namespace Assignment
         public CartGUI()
         {
             InitializeComponent();
-            //Problem is that the cartGUI does not inherit from the cart class. So i cannot run it here. mmh. I need it to run when I open the cart.
-            listCart();
-
         }
 
         private void btnBackShop_Click(object sender, EventArgs e)
@@ -34,9 +31,6 @@ namespace Assignment
         public void addItem(string name)
         {
             cart.Add(name);
-            foreach (string item in cart) {
-                MessageBox.Show(item);
-            }
         }
 
         //Method to remove item
@@ -45,18 +39,13 @@ namespace Assignment
             cart.Remove(name);
         }
 
+        /**
         //Add items to the listbox
         public void listCart()
         {
             lstCart.DataSource = cart;
         }
-
-        private void BindData()
-        {
-            lstCart.DataSource = null;
-            lstCart.DataSource = cart;
-            lstCart.DisplayMember = "Name";
-        }
+    **/
 
         //Method to get total
         public void updatetotal(double price)
@@ -64,19 +53,9 @@ namespace Assignment
             total += price;
         }
 
-        public double priceLooper()
-        {
-            double finaltotal = 0;
-
-            /**
-            Wait for Qi to have a box for showing the subtotal
-            **/
-
-            return finaltotal;
-        }
-
         private void refBtn_Click(object sender, EventArgs e)
         {
+            lstCart.Items.Clear();
             lstCart.DataSource = cart;
         }
     }
