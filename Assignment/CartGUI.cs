@@ -33,8 +33,12 @@ namespace Assignment
 
         private void refBtn_Click(object sender, EventArgs e)
         {
-            lstCart.Items.Clear();
             lstCart.DataSource = myItems;
+        }
+
+        private void btnCartRem_Click(object sender, EventArgs e)
+        {
+            myItems = null;
         }
     }
 }

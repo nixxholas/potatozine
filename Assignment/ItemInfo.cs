@@ -44,7 +44,7 @@ namespace Assignment
             int quantity = (int)numQuantity.Value;
             if (quantity != 0) {
                 for (int count = 0; count < quantity; count++) {
-                    CartGUI.myItems.Add(myCart.Name);
+                    CartGUI.myItems.Add(lblProdNam.Text);
                     //myCart.updatetotal(Convert.ToDouble(txtPrice.Text));
                     MessageBox.Show("Added to cart");
                 }
