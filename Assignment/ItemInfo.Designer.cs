@@ -212,6 +212,6 @@
         private System.Windows.Forms.NumericUpDown numQuantity;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Button btnAddCart;
+        public System.Windows.Forms.Button btnAddCart;
     }
 }

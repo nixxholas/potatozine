@@ -15,7 +15,7 @@ namespace Assignment
         public CartGUI()
         {
             InitializeComponent();
-            //need to reference to listitems method for object mycart
+            //Problem is that the cartGUI does not inherit from the cart class. So i cannot run it here. mmh. I need it to run when I open the cart.
         }
 
         private void btnBackShop_Click(object sender, EventArgs e)

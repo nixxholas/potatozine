@@ -9,10 +9,9 @@ namespace Assignment
     class Cart : CartGUI
     {
 
-        double total = 0.0;
+        private double total = 0.0;
         List<string> cart = new List<string>();
-
-        
+        List<double> price = new List<double>();
 
         //Method to add item
         public void addItem(string name) {

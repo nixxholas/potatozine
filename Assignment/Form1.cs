@@ -18,8 +18,24 @@ namespace Assignment
 
         //creation of object
         ItemInfo itemPage = new ItemInfo(); //ItemInfo page object
-        CartGUI cartPage = new CartGUI();//Cart page object
+        Cart cartPage = new Cart();//Cart page object
         Product[] arrProducts = new Product[noofprods]; //Array of Product Objects
+
+        //Start of program
+        public Form1()
+        {
+            //Loads the splash screen
+            Thread t = new Thread(new ThreadStart(splashStart));
+            t.Start();
+            LoadDescBeta();
+            Thread.Sleep(5000);
+
+            InitializeComponent();
+
+            t.Abort();
+        }
+
+        //Method to read the textfile
         public void LoadDescBeta()
         {
             System.IO.StreamReader theFile = new System.IO.StreamReader(@"loadprod.txt");
@@ -34,20 +50,6 @@ namespace Assignment
             }
 
             theFile.Close();
-        }
-
-        //Start of program
-        public Form1()
-        {
-            //Loads the splash screen
-            Thread t = new Thread(new ThreadStart(splashStart));
-            t.Start();
-            LoadDescBeta();
-            Thread.Sleep(5000);
-
-            InitializeComponent();
-
-            t.Abort();
         }
 
         //Method to run the splash screen
@@ -81,7 +83,7 @@ namespace Assignment
             }
         }
 
-        //Method that takes in the string URL and
+        //Method that takes in the string URL and sets in picitems 1-6
         public void setPic(string item1, string item2, string item3, string item4, string item5, string item6) {
             picItem1.Load(item1);
             picItem2.Load(item2);
@@ -211,5 +213,7 @@ namespace Assignment
         {
             cartPage.Show();
         }
+
+
     }
 }

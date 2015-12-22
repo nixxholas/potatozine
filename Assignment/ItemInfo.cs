@@ -34,15 +34,18 @@ namespace Assignment
             this.Hide();//Closes the iteminfo form
         }
 
+        //Code to run when add to cart is clicked
         private void btnAddCart_Click(object sender, EventArgs e)
         {
             int quantity = (int)numQuantity.Value;
             if (quantity != 0) {
                 for (int count = 0; count < quantity; count++) {
                     myCart.addItem(lblProdNam.Text);
-                    //myCart.updatetotal(Convert.ToDouble(txtPrice.Text));
+                    myCart.updatetotal(Convert.ToDouble(txtPrice.Text));
                 }
             }
         }
+
+
     }
 }

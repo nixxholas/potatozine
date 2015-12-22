@@ -36,7 +36,7 @@
             this.btnCartRem = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblSubTotal = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,21 +128,21 @@
             this.lblSubTotal.TabIndex = 21;
             this.lblSubTotal.Text = "Total";
             // 
-            // textBox1
+            // txtTotal
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(736, 401);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(229, 38);
-            this.textBox1.TabIndex = 22;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(736, 401);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(229, 38);
+            this.txtTotal.TabIndex = 22;
             // 
             // CartGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 548);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblSubTotal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCartRem);
@@ -169,6 +169,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListBox lstCart;
         private System.Windows.Forms.Label lblSubTotal;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotal;
     }
 }
