@@ -65,7 +65,7 @@ namespace Assignment
         private void btnLstItms_Click(object sender, EventArgs e)
         {
             //Takes category selected and puts into a string
-            this.selCat = lstCatergory.SelectedItem.ToString();
+            this.selCat = lstCatergory.SelectedItem.ToString(); //Qi xiang.. Category not Catergory.. REMOVE IT
            
 
             //Takes catergory selected and parses in URLs to load pictures

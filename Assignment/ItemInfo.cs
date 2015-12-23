@@ -44,6 +44,7 @@ namespace Assignment
                     CartGUI.itemPrice.Add(double.Parse(txtPrice.Text));
                 }
                 MessageBox.Show("Added to cart");
+            this.Hide();
         }
 
 

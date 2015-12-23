@@ -29,6 +29,19 @@ namespace Assignment
 
         public static List<string> myItems = new List<string>();
         public static List<double> itemPrice = new List<double>();
+        
+
+        public void refresherorb()
+        {
+            lstCart.DataSource = myItems;
+        }
+
+        public void remfList(int index)
+        {
+            //code to remove from listbox as well
+            myItems.RemoveAt(index);
+            lstCart.DataSource = myItems;
+        }
 
         public void addItem(string item, double price)
         {
@@ -66,15 +79,24 @@ namespace Assignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (lstCart == null)
+            if (txtTotal.Text == "0")
             {
                 MessageBox.Show("There is nothing to checkout with.");
             } else
             {
                 chkout.Show();
                 chkout.Total = this.total;
+                this.Hide();
             }
          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.lstCart.SelectedIndex >= 0)
+                myItems.Remove(lstCart.SelectedItem.ToString());
+            lstCart.DataSource = myItems;
+
         }
     }
 }
