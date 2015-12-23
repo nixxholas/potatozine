@@ -411,6 +411,7 @@
             this.btnCheckout.TabIndex = 42;
             this.btnCheckout.Text = "Checkout";
             this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // Payment
             // 

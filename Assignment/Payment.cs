@@ -68,5 +68,10 @@ namespace Assignment
                 MessageBox.Show("You have entered invalid information. Please try again.");
 
         }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            checkInput();
+        }
     }
 }

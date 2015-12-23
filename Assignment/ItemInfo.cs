@@ -20,9 +20,6 @@ namespace Assignment
 
         public string curname;
 
-        //cart object
-        CartGUI myCart = new CartGUI();
-
         //Method to load/insert picture, name, description, price etc. into the page
         public void LoadInfo(string imgURL, string name, string desc, double price) {
             PicItemInfo.Load(imgURL); //Sets the picture in the iteminfo
@@ -42,16 +39,11 @@ namespace Assignment
         private void btnAddCart_Click(object sender, EventArgs e)
         {
             int quantity = (int)numQuantity.Value;
-            if (quantity != 0) {
                 for (int count = 0; count < quantity; count++) {
                     CartGUI.myItems.Add(lblProdNam.Text);
-                    //myCart.updatetotal(Convert.ToDouble(txtPrice.Text));
-                    MessageBox.Show("Added to cart");
+                    CartGUI.itemPrice.Add(double.Parse(txtPrice.Text));
                 }
-            } else
-            {
-                MessageBox.Show("ERROR FUCK OFF");
-            }
+                MessageBox.Show("Added to cart");
         }
 
 
