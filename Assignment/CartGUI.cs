@@ -17,6 +17,9 @@ namespace Assignment
             InitializeComponent();
         }
 
+        //Object for payment
+        Payment chkout = new Payment();
+
         private void btnBackShop_Click(object sender, EventArgs e)
         {
             this.Hide();//Closes the cart page
@@ -39,6 +42,12 @@ namespace Assignment
         private void btnCartRem_Click(object sender, EventArgs e)
         {
             myItems = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            chkout.Show();
+            chkout.Total = this.total;
         }
     }
 }

@@ -32,7 +32,8 @@
             this.lstCatergory = new System.Windows.Forms.ListBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.btnLstItms = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.btnCart = new System.Windows.Forms.Button();
             this.lblPotatoZine = new System.Windows.Forms.Label();
             this.picItem1 = new System.Windows.Forms.PictureBox();
             this.picItem2 = new System.Windows.Forms.PictureBox();
@@ -40,9 +41,8 @@
             this.picItem6 = new System.Windows.Forms.PictureBox();
             this.picItem5 = new System.Windows.Forms.PictureBox();
             this.picItem4 = new System.Windows.Forms.PictureBox();
-            this.btnCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItem3)).BeginInit();
@@ -98,16 +98,27 @@
             this.btnLstItms.UseVisualStyleBackColor = true;
             this.btnLstItms.Click += new System.EventHandler(this.btnLstItms_Click);
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.btnCart);
-            this.panel1.Controls.Add(this.lblPotatoZine);
-            this.panel1.Location = new System.Drawing.Point(-7, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 50);
-            this.panel1.TabIndex = 4;
+            this.panelTop.BackColor = System.Drawing.Color.Teal;
+            this.panelTop.Controls.Add(this.btnCart);
+            this.panelTop.Controls.Add(this.lblPotatoZine);
+            this.panelTop.Location = new System.Drawing.Point(-7, -1);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(995, 50);
+            this.panelTop.TabIndex = 4;
+            // 
+            // btnCart
+            // 
+            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.Location = new System.Drawing.Point(877, 7);
+            this.btnCart.Name = "btnCart";
+            this.btnCart.Size = new System.Drawing.Size(98, 36);
+            this.btnCart.TabIndex = 1;
+            this.btnCart.Text = "My Cart";
+            this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // lblPotatoZine
             // 
@@ -186,21 +197,11 @@
             this.picItem4.TabStop = false;
             this.picItem4.Click += new System.EventHandler(this.picItem4_Click);
             // 
-            // btnCart
-            // 
-            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCart.Location = new System.Drawing.Point(877, 7);
-            this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(98, 36);
-            this.btnCart.TabIndex = 1;
-            this.btnCart.Text = "My Cart";
-            this.btnCart.UseVisualStyleBackColor = true;
-            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(980, 1045);
             this.Controls.Add(this.picItem6);
             this.Controls.Add(this.picItem5);
@@ -208,17 +209,17 @@
             this.Controls.Add(this.picItem3);
             this.Controls.Add(this.picItem2);
             this.Controls.Add(this.picItem1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnLstItms);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lstCatergory);
             this.Controls.Add(this.picBanner);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Catalogue";
+            this.Text = "Potatozine Catalogue";
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItem3)).EndInit();
@@ -236,7 +237,7 @@
         private System.Windows.Forms.ListBox lstCatergory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Button btnLstItms;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label lblPotatoZine;
         private System.Windows.Forms.PictureBox picItem1;
         private System.Windows.Forms.PictureBox picItem2;

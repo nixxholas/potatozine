@@ -63,8 +63,7 @@ namespace Assignment
         {
             //Takes category selected and puts into a string
             this.selCat = lstCatergory.SelectedItem.ToString();
-
-            //Insert code here to make all boxes transparent
+           
 
             //Takes catergory selected and parses in URLs to load pictures
             switch (this.selCat) {
