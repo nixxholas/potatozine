@@ -46,12 +46,20 @@ namespace Assignment
         private void btnCartRem_Click(object sender, EventArgs e)
         {
             myItems = null;
+            txtTotal.Text = "0";
+            lstCart.DataSource = myItems;
+            itemPrice = null;
         }
         
         private double calTotal() {
             double price = 0.0;
-            foreach (double i in itemPrice) {
-                this.total += i;
+            this.total = 0;
+            if (itemPrice != null)
+            {
+                foreach (double i in itemPrice)
+                {
+                    this.total += i;
+                }
             }
             return price;
         }
