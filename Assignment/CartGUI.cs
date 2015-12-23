@@ -94,7 +94,7 @@ namespace Assignment
         private void button2_Click(object sender, EventArgs e)
         {
             if (this.lstCart.SelectedIndex >= 0)
-                myItems.Remove(lstCart.SelectedItem.ToString());
+            myItems.Remove(lstCart.SelectedItem.ToString());
             lstCart.DataSource = myItems;
 
         }
