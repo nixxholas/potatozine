@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -28,7 +29,9 @@ namespace Assignment
             Thread t = new Thread(new ThreadStart(splashStart));
             t.Start();
             LoadDescBeta();
-            Thread.Sleep(5000);
+            SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
+            simpleSound.Play();//If you don't want the annoyance, remove Looping
+            Thread.Sleep(3000);
 
             InitializeComponent();
 

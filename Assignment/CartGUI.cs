@@ -58,8 +58,15 @@ namespace Assignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            chkout.Show();
-            chkout.Total = this.total;
+            if (lstCart == null)
+            {
+                MessageBox.Show("There is nothing to checkout with.");
+            } else
+            {
+                chkout.Show();
+                chkout.Total = this.total;
+            }
+         
         }
     }
 }
