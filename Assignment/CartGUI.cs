@@ -27,6 +27,7 @@ namespace Assignment
 
         private double total = 0.0;
 
+        public static String[] itemArr = new String[50];
         public static List<string> myItems = new List<string>();
         public static List<double> itemPrice = new List<double>();
         
@@ -34,13 +35,15 @@ namespace Assignment
         public void refresherorb()
         {
             lstCart.DataSource = myItems;
+            
         }
 
         public void remfList(int index)
         {
             //code to remove from listbox as well
             myItems.RemoveAt(index);
-            lstCart.DataSource = myItems;
+            lstCart.DataSource = itemArr;
+            
         }
 
         public void addItem(string item, double price)
@@ -51,16 +54,17 @@ namespace Assignment
 
         private void refBtn_Click(object sender, EventArgs e)
         {
-            lstCart.DataSource = myItems;
+            lstCart.DataSource = itemArr;
             calTotal();
             txtTotal.Text = System.Convert.ToString(this.total);
         }
 
         private void btnCartRem_Click(object sender, EventArgs e)
         {
+            Array.Clear(itemArr, 0, itemArr.Length);
             myItems = null;
             txtTotal.Text = "0";
-            lstCart.DataSource = myItems;
+            lstCart.DataSource = itemArr;
             itemPrice = null;
         }
         
@@ -93,9 +97,23 @@ namespace Assignment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.lstCart.SelectedIndex >= 0)
-            myItems.Remove(lstCart.SelectedItem.ToString());
-            lstCart.DataSource = myItems;
+            //foreach (ListViewItem i in lstViewCart.SelectedItems)
+            //  lstViewCart.Items.Remove(i);
+            
+            /**
+
+            **/
+            if (this.lstCart.SelectedIndex > -1)
+            {
+                int index = this.lstCart.SelectedIndex;
+                MessageBox.Show(index.ToString());
+                myItems.RemoveAt(index);
+                //String selected = lstCart.SelectedValue.ToString();
+                //MessageBox.Show(myItems.ToString());
+                //myItems.Remove(selected);
+                lstCart.DataSource = myItems;
+                //MessageBox.Show(myItems.ToString());
+            }
 
         }
     }
