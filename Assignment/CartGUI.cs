@@ -30,24 +30,20 @@ namespace Assignment
         public static String[] itemArr = new String[50];
         public static List<string> myItems = new List<string>();
         public static List<double> itemPrice = new List<double>();
-        
+
 
         public void refresherorb()
         {
             lstCart.DataSource = myItems;
-            
+
         }
 
         public void remfList(int index)
         {
             //code to remove from listbox as well
             myItems.RemoveAt(index);
-<<<<<<< HEAD
             lstCart.DataSource = itemArr;
-=======
             lstCart.DataSource = myItems;
->>>>>>> origin/appd
-            
         }
 
         public void addItem(string item, double price)
@@ -71,8 +67,9 @@ namespace Assignment
             lstCart.DataSource = itemArr;
             itemPrice = null;
         }
-        
-        private double calTotal() {
+
+        private double calTotal()
+        {
             double price = 0.0;
             this.total = 0;
             if (itemPrice != null)
@@ -90,21 +87,21 @@ namespace Assignment
             if (txtTotal.Text == "0")
             {
                 MessageBox.Show("There is nothing to checkout with.");
-            } else
+            }
+            else
             {
                 chkout.Show();
                 chkout.Total = this.total;
                 this.Hide();
             }
-         
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             //foreach (ListViewItem i in lstViewCart.SelectedItems)
             //  lstViewCart.Items.Remove(i);
-<<<<<<< HEAD
-            
+
             /**
 
             **/
@@ -118,17 +115,16 @@ namespace Assignment
                 //myItems.Remove(selected);
                 lstCart.DataSource = myItems;
                 //MessageBox.Show(myItems.ToString());
-=======
-            if (this.lstCart.SelectedIndex > -1)
-            {
-                String selected = lstCart.SelectedValue.ToString();
-                MessageBox.Show(myItems.ToString());
-                myItems.Remove(selected);
-                lstCart.DataSource = myItems;
-                MessageBox.Show(myItems.ToString());
->>>>>>> origin/appd
-            }
+                if (this.lstCart.SelectedIndex > -1)
+                {
+                    String selected = lstCart.SelectedValue.ToString();
+                    MessageBox.Show(myItems.ToString());
+                    myItems.Remove(selected);
+                    lstCart.DataSource = myItems;
+                    MessageBox.Show(myItems.ToString());
+                }
 
+            }
         }
     }
 }
