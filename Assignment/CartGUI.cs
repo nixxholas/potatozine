@@ -34,6 +34,7 @@ namespace Assignment
         public void refresherorb()
         {
             lstCart.DataSource = myItems;
+            
         }
 
         public void remfList(int index)
@@ -41,6 +42,7 @@ namespace Assignment
             //code to remove from listbox as well
             myItems.RemoveAt(index);
             lstCart.DataSource = myItems;
+            
         }
 
         public void addItem(string item, double price)
@@ -93,9 +95,16 @@ namespace Assignment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.lstCart.SelectedIndex >= 0)
-            myItems.Remove(lstCart.SelectedItem.ToString());
-            lstCart.DataSource = myItems;
+            //foreach (ListViewItem i in lstViewCart.SelectedItems)
+            //  lstViewCart.Items.Remove(i);
+            if (this.lstCart.SelectedIndex > -1)
+            {
+                String selected = lstCart.SelectedValue.ToString();
+                MessageBox.Show(myItems.ToString());
+                myItems.Remove(selected);
+                lstCart.DataSource = myItems;
+                MessageBox.Show(myItems.ToString());
+            }
 
         }
     }
