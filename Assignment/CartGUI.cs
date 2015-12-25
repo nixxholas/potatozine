@@ -42,7 +42,11 @@ namespace Assignment
         {
             //code to remove from listbox as well
             myItems.RemoveAt(index);
+<<<<<<< HEAD
             lstCart.DataSource = itemArr;
+=======
+            lstCart.DataSource = myItems;
+>>>>>>> origin/appd
             
         }
 
@@ -99,6 +103,7 @@ namespace Assignment
         {
             //foreach (ListViewItem i in lstViewCart.SelectedItems)
             //  lstViewCart.Items.Remove(i);
+<<<<<<< HEAD
             
             /**
 
@@ -113,6 +118,15 @@ namespace Assignment
                 //myItems.Remove(selected);
                 lstCart.DataSource = myItems;
                 //MessageBox.Show(myItems.ToString());
+=======
+            if (this.lstCart.SelectedIndex > -1)
+            {
+                String selected = lstCart.SelectedValue.ToString();
+                MessageBox.Show(myItems.ToString());
+                myItems.Remove(selected);
+                lstCart.DataSource = myItems;
+                MessageBox.Show(myItems.ToString());
+>>>>>>> origin/appd
             }
 
         }
