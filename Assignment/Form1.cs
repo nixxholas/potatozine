@@ -105,12 +105,15 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Technology":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Travel":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Architecture":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
             }
@@ -121,15 +124,19 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    itemPage.LoadInfo(arrProducts[1].Imglink, arrProducts[1].Name, arrProducts[1].Desc, arrProducts[1].Price);
                     itemPage.Show();
                     break;
                 case "Technology":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Travel":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Architecture":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
             }
@@ -140,15 +147,19 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    itemPage.LoadInfo(arrProducts[2].Imglink, arrProducts[2].Name, arrProducts[2].Desc, arrProducts[2].Price);
                     itemPage.Show();
                     break;
                 case "Technology":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Travel":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Architecture":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
             }
@@ -159,15 +170,19 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    itemPage.LoadInfo(arrProducts[3].Imglink, arrProducts[3].Name, arrProducts[3].Desc, arrProducts[3].Price);
                     itemPage.Show();
                     break;
                 case "Technology":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Travel":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Architecture":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
             }
@@ -178,15 +193,19 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    itemPage.LoadInfo(arrProducts[4].Imglink, arrProducts[4].Name, arrProducts[4].Desc, arrProducts[4].Price);
                     itemPage.Show();
                     break;
                 case "Technology":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Travel":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Architecture":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
             }
@@ -197,15 +216,19 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
+                    itemPage.LoadInfo(arrProducts[5].Imglink, arrProducts[5].Name, arrProducts[5].Desc, arrProducts[5].Price);
                     itemPage.Show();
                     break;
                 case "Technology":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Travel":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
                 case "Architecture":
+                    itemPage.LoadInfo(arrProducts[0].Imglink, arrProducts[0].Name, arrProducts[0].Desc, arrProducts[0].Price);
                     itemPage.Show();
                     break;
             }
