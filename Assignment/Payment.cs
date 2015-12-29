@@ -40,8 +40,12 @@ namespace Assignment
         }
 
         //Check if empty
+        /**
+         * This is broken
+         * 
+         **/
         public void checkInput() {
-            bool noerror = true;
+            bool noerror = false; //Set to false for debugging
             int temp = 0;
             noerror = int.TryParse(txtCardNo.Text, out temp);
             if (noerror == true)
@@ -71,7 +75,9 @@ namespace Assignment
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            checkInput();
+            //checkInput();
+            Receipt receiptPage = new Receipt();
+            receiptPage.Show();
         }
     }
 }

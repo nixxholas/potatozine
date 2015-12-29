@@ -81,6 +81,7 @@ namespace Assignment
                 chkout.Show();
                 chkout.Total = this.total;
                 this.Hide();
+                Receipt.loadData();
             }
 
         }

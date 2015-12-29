@@ -15,6 +15,21 @@ namespace Assignment
         public Receipt()
         {
             InitializeComponent();
+            ReceiptBox.Text = listReceipt;
+        }
+
+        public static String listReceipt;
+        public static int count4me;
+
+        public static void loadData()
+        {
+           //Perform a += for loop for each item
+            foreach (string product in CartGUI.myItems)
+            {
+                listReceipt += product + "\t\t $" + CartGUI.itemPrice[count4me] + "\n";
+                count4me++;
+            }
+            count4me = 0;
         }
     }
 }

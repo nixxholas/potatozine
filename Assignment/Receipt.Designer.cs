@@ -32,7 +32,7 @@
             this.lblPotatoZine = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ReceiptBox = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             this.panelTop.BackColor = System.Drawing.Color.Teal;
             this.panelTop.Controls.Add(this.lblPotatoZine);
             this.panelTop.Location = new System.Drawing.Point(1, 1);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(746, 41);
             this.panelTop.TabIndex = 5;
@@ -62,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 56);
+            this.label1.Location = new System.Drawing.Point(149, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(431, 91);
@@ -73,34 +73,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(186, 157);
+            this.label2.Location = new System.Drawing.Point(147, 162);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(446, 29);
             this.label2.TabIndex = 7;
             this.label2.Text = "for shopping with us. Here\'s your receipt.";
             // 
-            // textBox1
+            // ReceiptBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 203);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(609, 324);
-            this.textBox1.TabIndex = 8;
+            this.ReceiptBox.Location = new System.Drawing.Point(64, 209);
+            this.ReceiptBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ReceiptBox.Multiline = true;
+            this.ReceiptBox.Name = "ReceiptBox";
+            this.ReceiptBox.ReadOnly = true;
+            this.ReceiptBox.Size = new System.Drawing.Size(609, 324);
+            this.ReceiptBox.TabIndex = 8;
             // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 536);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(748, 584);
+            this.Controls.Add(this.ReceiptBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Receipt";
             this.Text = "Receipt";
             this.panelTop.ResumeLayout(false);
@@ -116,6 +117,6 @@
         private System.Windows.Forms.Label lblPotatoZine;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox ReceiptBox;
     }
 }

@@ -39,7 +39,6 @@ namespace Assignment
         private void btnAddCart_Click(object sender, EventArgs e)
         {
             int quantity = (int)numQuantity.Value;
-            int bumpcheck = 0;
                 for (int count = 0; count < quantity; count++) {
                     CartGUI.myItems.Add(lblProdNam.Text);
                     CartGUI.itemPrice.Add(double.Parse(txtPrice.Text));
