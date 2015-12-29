@@ -65,6 +65,8 @@
             this.lblSubtot = new System.Windows.Forms.Label();
             this.txtSubTot = new System.Windows.Forms.TextBox();
             this.btnCheckout = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.discount = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -454,12 +456,35 @@
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(452, 195);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 17);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Discount Code:";
+            // 
+            // discount
+            // 
+            this.discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discount.Location = new System.Drawing.Point(551, 192);
+            this.discount.Margin = new System.Windows.Forms.Padding(2);
+            this.discount.Name = "discount";
+            this.discount.Size = new System.Drawing.Size(113, 23);
+            this.discount.TabIndex = 45;
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(763, 579);
+            this.Controls.Add(this.discount);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.txtSubTot);
             this.Controls.Add(this.lblSubtot);
@@ -545,5 +570,7 @@
         private System.Windows.Forms.Label lblSubtot;
         private System.Windows.Forms.TextBox txtSubTot;
         private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox discount;
     }
 }

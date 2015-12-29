@@ -44,7 +44,7 @@ namespace Assignment
          * This is broken
          * 
          **/
-        public void checkInput() {
+        public Boolean checkInput() {
             bool noerror = false; //Set to false for debugging
             int temp = 0;
             noerror = int.TryParse(txtCardNo.Text, out temp);
@@ -69,15 +69,29 @@ namespace Assignment
             if (noerror == true)
                 noerror = (txtPostal.Text != null);
             if (noerror == false)
+            {
                 MessageBox.Show("You have entered invalid information. Please try again.");
-
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            //checkInput();
-            Receipt receiptPage = new Receipt();
-            receiptPage.Show();
+            Boolean go = checkInput();
+            if (go == true)
+            {
+                if (discount.Text == "lolurekt")
+                {
+                    double payable = CartGUI.viewtotal;
+                    payable *= 1/2;
+                }
+                Receipt receiptPage = new Receipt();
+                receiptPage.Show();
+            }
         }
     }
 }

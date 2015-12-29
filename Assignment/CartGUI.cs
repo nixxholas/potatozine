@@ -26,6 +26,7 @@ namespace Assignment
         }
 
         private double total = 0.0;
+        public static double viewtotal = 0.0;
         public static List<string> myItems = new List<string>();
         public static List<double> itemPrice = new List<double>();
 
@@ -66,6 +67,7 @@ namespace Assignment
                     this.total += i;
                 }
             }
+            viewtotal = price;
             return price;
         }
 
