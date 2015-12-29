@@ -42,17 +42,6 @@ namespace Assignment
             int bumpcheck = 0;
                 for (int count = 0; count < quantity; count++) {
                     CartGUI.myItems.Add(lblProdNam.Text);
-                for (int checker = 0; checker < CartGUI.itemArr.Length; checker++)
-                {
-                    if (CartGUI.itemArr[checker] == null || CartGUI.itemArr[checker] == "0")
-                    {
-                        if (bumpcheck < quantity)
-                        {
-                            CartGUI.itemArr[checker] = lblProdNam.Text;
-                        }
-                            bumpcheck++;
-                    }
-                }
                     CartGUI.itemPrice.Add(double.Parse(txtPrice.Text));
                 }
                 MessageBox.Show("Added to cart");

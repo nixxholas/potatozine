@@ -26,48 +26,35 @@ namespace Assignment
         }
 
         private double total = 0.0;
-
-        public static String[] itemArr = new String[50];
         public static List<string> myItems = new List<string>();
         public static List<double> itemPrice = new List<double>();
 
-
-        public void refresherorb()
-        {
-            lstCart.DataSource = myItems;
-
-        }
-
-        public void remfList(int index)
-        {
-            //code to remove from listbox as well
-            myItems.RemoveAt(index);
-            lstCart.DataSource = itemArr;
-            lstCart.DataSource = myItems;
-        }
-
+        //Code to additem
         public void addItem(string item, double price)
         {
             myItems.Add(item);
             itemPrice.Add(price);
         }
 
+        //Code to referesh
         private void refBtn_Click(object sender, EventArgs e)
         {
-            lstCart.DataSource = itemArr;
+            lstCart.DataSource = null;
+            lstCart.DataSource = myItems;
             calTotal();
             txtTotal.Text = System.Convert.ToString(this.total);
         }
 
+        //Code to empty cart
         private void btnCartRem_Click(object sender, EventArgs e)
         {
-            Array.Clear(itemArr, 0, itemArr.Length);
             myItems = null;
             txtTotal.Text = "0";
-            lstCart.DataSource = itemArr;
+            lstCart.DataSource = myItems;
             itemPrice = null;
         }
 
+        //Code to calculate total
         private double calTotal()
         {
             double price = 0.0;
@@ -82,6 +69,7 @@ namespace Assignment
             return price;
         }
 
+        //Code check if there is things to checkout
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtTotal.Text == "0")
@@ -97,34 +85,14 @@ namespace Assignment
 
         }
 
+        //Code for removing item.
         private void button2_Click(object sender, EventArgs e)
         {
-            //foreach (ListViewItem i in lstViewCart.SelectedItems)
-            //  lstViewCart.Items.Remove(i);
-
-            /**
-
-            **/
-            if (this.lstCart.SelectedIndex > -1)
-            {
-                int index = this.lstCart.SelectedIndex;
-                MessageBox.Show(index.ToString());
-                myItems.RemoveAt(index);
-                //String selected = lstCart.SelectedValue.ToString();
-                //MessageBox.Show(myItems.ToString());
-                //myItems.Remove(selected);
-                lstCart.DataSource = myItems;
-                //MessageBox.Show(myItems.ToString());
-                if (this.lstCart.SelectedIndex > -1)
-                {
-                    String selected = lstCart.SelectedValue.ToString();
-                    MessageBox.Show(myItems.ToString());
-                    myItems.Remove(selected);
-                    lstCart.DataSource = myItems;
-                    MessageBox.Show(myItems.ToString());
-                }
-
-            }
+            int index = this.lstCart.SelectedIndex;
+            string selected = lstCart.SelectedValue.ToString();
+            myItems.Remove(selected);
+            itemPrice.RemoveAt(index);
+            calTotal();
         }
     }
 }

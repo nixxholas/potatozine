@@ -29,8 +29,8 @@ namespace Assignment
             Thread t = new Thread(new ThreadStart(splashStart));
             t.Start();
             LoadDescBeta();
-            SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
-            simpleSound.Play();//If you don't want the annoyance, remove Looping
+            //SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
+            //simpleSound.Play();//If you don't want the annoyance, remove Looping
             Thread.Sleep(3000);
 
             InitializeComponent();
