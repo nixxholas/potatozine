@@ -1,6 +1,24 @@
 Cosmopolitan,2.00,0001,1,This is a fashion magazine,Images/cosmopolitan.jpg
-ELLE,3.00,0002,1,This is another fashion magazine,blank
-Vogue,4.00,0003,1,This is a high class fashion magazine,blank
-Teen Vogue,2.50,1,0004,This is Vogue for kids,blank
-Asian Women,3.50,1,0005,Title says it all,blank
-Allure,2.50,0006,1,Learn to be an expert in booty,blank
+ELLE,3.00,0002,1,This is another fashion magazine,Images/cosmopolitan.jpg
+Vogue,4.00,0003,1,This is a high class fashion magazine,Images/cosmopolitan.jpg
+Teen Vogue,2.50,1,0004,This is Vogue for kids,Images/cosmopolitan.jpg
+Asian Women,3.50,1,0005,Title says it all,Images/cosmopolitan.jpg
+Allure,2.50,0006,1,Learn to be an expert in booty,Images/cosmopolitan.jpg
+Tech,2.00,0001,1,This is a fashion magazine,Images/cosmopolitan.jpg
+Tech,3.00,0002,1,This is another fashion magazine,Images/cosmopolitan.jpg
+Tech,4.00,0003,1,This is a high class fashion magazine,Images/cosmopolitan.jpg
+Tech Vogue,2.50,1,0004,This is Vogue for kids,Images/cosmopolitan.jpg
+Tech,3.50,1,0005,Title says it all,Images/cosmopolitan.jpg
+Tech,2.50,0006,1,Learn to be an expert in booty,Images/cosmopolitan.jpg
+Travel,2.00,0001,1,This is a fashion magazine,Images/cosmopolitan.jpg
+Travel,3.00,0002,1,This is another fashion magazine,Images/cosmopolitan.jpg
+Travel,4.00,0003,1,This is a high class fashion magazine,Images/cosmopolitan.jpg
+Travel Vogue,2.50,1,0004,This is Vogue for kids,Images/cosmopolitan.jpg
+Travel Women,3.50,1,0005,Title says it all,Images/cosmopolitan.jpg
+Travel,2.50,0006,1,Learn to be an expert in booty,Images/cosmopolitan.jpg
+Archi,2.00,0001,1,This is a fashion magazine,Images/cosmopolitan.jpg
+Archi,3.00,0002,1,This is another fashion magazine,Images/cosmopolitan.jpg
+Archi,4.00,0003,1,This is a high class fashion magazine,Images/cosmopolitan.jpg
+Archi Vogue,2.50,1,0004,This is Vogue for kids,Images/cosmopolitan.jpg
+Archi Women,3.50,1,0005,Title says it all,Images/cosmopolitan.jpg
+Archi,2.50,0006,1,Learn to be an expert in booty,Images/cosmopolitan.jpg
