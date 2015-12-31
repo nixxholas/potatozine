@@ -37,22 +37,28 @@ namespace Assignment
             itemPrice.Add(price);
         }
 
-        //Code to referesh
-        private void refBtn_Click(object sender, EventArgs e)
-        {
+        //Code to refresh
+        public void reloadcart() {
             lstCart.DataSource = null;
             lstCart.DataSource = myItems;
             calTotal();
             txtTotal.Text = System.Convert.ToString(this.total);
         }
 
+        //Code to run when refresh button is clicked
+        private void refBtn_Click(object sender, EventArgs e)
+        {
+            reloadcart();
+        }
+
+
         //Code to empty cart
         private void btnCartRem_Click(object sender, EventArgs e)
         {
-            myItems = null;
+            myItems.Clear();
+            itemPrice.Clear();
             txtTotal.Text = "0";
-            lstCart.DataSource = myItems;
-            itemPrice = null;
+            reloadcart();
         }
 
         //Code to calculate total
@@ -95,7 +101,7 @@ namespace Assignment
             string selected = lstCart.SelectedValue.ToString();
             myItems.Remove(selected);
             itemPrice.RemoveAt(index);
-            calTotal();
+            reloadcart();
         }
     }
 }
