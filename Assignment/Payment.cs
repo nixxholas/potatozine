@@ -44,7 +44,7 @@ namespace Assignment
          * This is broken
          * 
          **/
-        public Boolean checkInput() {
+        public bool checkInput() {
             bool noerror = false; //Set to false for debugging
             int temp = 0;
             noerror = int.TryParse(txtCardNo.Text, out temp);
