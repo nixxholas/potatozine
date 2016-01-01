@@ -44,44 +44,10 @@ namespace Assignment
          * This is broken
          * 
          **/
-        public bool checkInput() {
-            bool noerror = false; //Set to false for debugging
-            int temp = 0;
-            noerror = int.TryParse(txtCardNo.Text, out temp);
-            if (noerror == true)
-                noerror = int.TryParse(txtExpMnth.Text, out temp);
-            if (noerror == true)
-                noerror = int.TryParse(txtExpYr.Text, out temp);
-            if (noerror == true)
-                noerror = int.TryParse(txtCVV.Text, out temp);
-            if (noerror == true)
-                noerror = (txtCardHolderNam.Text != null);
-            if (noerror == true)
-                noerror = (txtAdd1.Text != null);
-            if (noerror == true)
-                noerror = (txtCity.Text != null);
-            if (noerror == true)
-                noerror = (txtCountry.Text != null);
-            if (noerror == true)
-                noerror = (txtState.Text != null);
-            if (noerror == true)
-                noerror = (txtPostal.Text != null);
-            if (noerror == true)
-                noerror = (txtPostal.Text != null);
-            if (noerror == false)
-            {
-                MessageBox.Show("You have entered invalid information. Please try again.");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            Boolean go = checkInput();
+            bool go = checkInput(true);
             if (go == true)
             {
                 if (discount.Text == "lolurekt")
@@ -91,6 +57,51 @@ namespace Assignment
                 }
                 Receipt receiptPage = new Receipt();
                 receiptPage.Show();
+            }
+        }
+
+        public bool checkInput(bool noerror)
+        {
+            int temp = 0;
+            noerror = int.TryParse(txtCardNo.Text, out temp);
+            if (noerror == true)
+                noerror = int.TryParse(txtExpMnth.Text, out temp);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = int.TryParse(txtExpYr.Text, out temp);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = int.TryParse(txtCVV.Text, out temp);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtCardHolderNam.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtAdd1.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtCity.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtCountry.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtState.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtPostal.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == true)
+                noerror = (txtPostal.Text != null);
+            MessageBox.Show(noerror.ToString());
+            if (noerror == false)
+            {
+                MessageBox.Show("You have entered invalid information. Please try again.");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }
