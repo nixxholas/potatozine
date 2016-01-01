@@ -36,11 +36,11 @@ namespace Assignment
 
         public void Export(int number, string data, double total)
         {
-            string[] lines = { "PotatoZine", "", "", "", "Total: "};
+            string[] lines = { "PotatoZine", "", "", "", "Total: " };
             lines[2] = number.ToString();
             lines[3] = data;
             lines[4] += total.ToString();
             System.IO.File.WriteAllLines(@"C:\receipt.txt", lines);
         }
     }
-} 
+}
