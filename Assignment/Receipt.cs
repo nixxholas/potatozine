@@ -18,6 +18,7 @@ namespace Assignment
             ReceiptBox.Text = listReceipt;
         }
 
+        public static int receiptcount;
         public static String listReceipt;
         public static int count4me;
 
@@ -30,6 +31,8 @@ namespace Assignment
                 count4me++;
             }
             count4me = 0;
+            printer Printer = new printer(receiptcount, listReceipt);
+            Printer.Export(receiptcount, listReceipt, CartGUI.viewtotal);
         }
     }
 }
