@@ -82,8 +82,6 @@ namespace Assignment
                 noerror = (txtState.Text != null);
             if (noerror == true)
                 noerror = (txtPostal.Text != null);
-            if (noerror == true)
-                noerror = (txtPostal.Text != null);
             if (noerror == false)
             {
                 MessageBox.Show("You have entered invalid information. Please try again.");
