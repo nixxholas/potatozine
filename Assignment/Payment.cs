@@ -66,34 +66,24 @@ namespace Assignment
             noerror = int.TryParse(txtCardNo.Text, out temp);
             if (noerror == true)
                 noerror = int.TryParse(txtExpMnth.Text, out temp);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = int.TryParse(txtExpYr.Text, out temp);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = int.TryParse(txtCVV.Text, out temp);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtCardHolderNam.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtAdd1.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtCity.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtCountry.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtState.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtPostal.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == true)
                 noerror = (txtPostal.Text != null);
-            MessageBox.Show(noerror.ToString());
             if (noerror == false)
             {
                 MessageBox.Show("You have entered invalid information. Please try again.");
