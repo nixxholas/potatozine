@@ -36,7 +36,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblSubTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.refBtn = new System.Windows.Forms.Button();
             this.lstCart = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
@@ -134,18 +133,6 @@
             this.txtTotal.TabIndex = 22;
             this.txtTotal.Text = "0";
             // 
-            // refBtn
-            // 
-            this.refBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refBtn.Location = new System.Drawing.Point(553, 200);
-            this.refBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.refBtn.Name = "refBtn";
-            this.refBtn.Size = new System.Drawing.Size(172, 38);
-            this.refBtn.TabIndex = 24;
-            this.refBtn.Text = "Refresh";
-            this.refBtn.UseVisualStyleBackColor = true;
-            this.refBtn.Click += new System.EventHandler(this.refBtn_Click);
-            // 
             // lstCart
             // 
             this.lstCart.FormattingEnabled = true;
@@ -174,7 +161,6 @@
             this.ClientSize = new System.Drawing.Size(748, 445);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lstCart);
-            this.Controls.Add(this.refBtn);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblSubTotal);
             this.Controls.Add(this.button1);
@@ -202,7 +188,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Button refBtn;
         public System.Windows.Forms.ListBox lstCart;
         private System.Windows.Forms.Button button2;
     }

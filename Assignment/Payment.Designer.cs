@@ -568,9 +568,9 @@
         private System.Windows.Forms.Label lblPayDet;
         private System.Windows.Forms.Label lblCardNo;
         private System.Windows.Forms.Label lblSubtot;
-        private System.Windows.Forms.TextBox txtSubTot;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox discount;
+        public System.Windows.Forms.TextBox txtSubTot;
     }
 }

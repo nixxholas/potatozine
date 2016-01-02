@@ -38,13 +38,6 @@ namespace Assignment
             txtTotal.Text = System.Convert.ToString(this.total);
         }
 
-        //Code to run when refresh button is clicked
-        private void refBtn_Click(object sender, EventArgs e)
-        {
-            reloadcart();
-        }
-
-
         //Code to empty cart
         private void btnCartRem_Click(object sender, EventArgs e)
         {
@@ -80,7 +73,7 @@ namespace Assignment
             else
             {
                 chkout.Show();
-                chkout.Total = this.total;
+                chkout.setupPay(total);
                 this.Hide();
                 Receipt.loadData();
             }

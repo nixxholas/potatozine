@@ -244,6 +244,7 @@ namespace Assignment
         private void btnCart_Click(object sender, EventArgs e)
         {
             cartPage.Show();
+            cartPage.reloadcart();
         }
 
 

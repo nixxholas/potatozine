@@ -15,16 +15,11 @@ namespace Assignment
         public Payment()
         {
             InitializeComponent();
-            displayTotal(this.total);
         }
 
-        private double total;
-
-        //Subtotal Property
-        public double Total
+        public void setupPay(double total)
         {
-            get { return this.total; }
-            set { this.total = value; }
+            txtSubTot.Text = total.ToString();
         }
 
         //Back button to hide the checkout form
@@ -33,18 +28,7 @@ namespace Assignment
             this.Hide();
         }
 
-        //Method to set the subtotal textbox
-        public void displayTotal(double total)
-        {
-            txtSubTot.Text = System.Convert.ToString(total);
-        }
-
         //Check if empty
-        /**
-         * This is broken
-         * 
-         **/
-
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             bool go = checkInput(true);
