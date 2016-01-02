@@ -30,13 +30,6 @@ namespace Assignment
         public static List<string> myItems = new List<string>();
         public static List<double> itemPrice = new List<double>();
 
-        //Code to additem
-        public void addItem(string item, double price)
-        {
-            myItems.Add(item);
-            itemPrice.Add(price);
-        }
-
         //Code to refresh
         public void reloadcart() {
             lstCart.DataSource = null;
@@ -97,11 +90,16 @@ namespace Assignment
         //Code for removing item.
         private void button2_Click(object sender, EventArgs e)
         {
-            int index = this.lstCart.SelectedIndex;
-            string selected = lstCart.SelectedValue.ToString();
-            myItems.Remove(selected);
-            itemPrice.RemoveAt(index);
-            reloadcart();
+           try
+            {
+                int index = this.lstCart.SelectedIndex;
+                string selected = lstCart.SelectedValue.ToString();
+                myItems.Remove(selected);
+                itemPrice.RemoveAt(index);
+                reloadcart();
+            } catch (NullReferenceException) {
+                MessageBox.Show("There is nothing to remove.");
+            }
         }
     }
 }
