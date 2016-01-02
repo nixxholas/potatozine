@@ -27,7 +27,7 @@ namespace Assignment
            //Perform a += for loop for each item
             foreach (string product in CartGUI.myItems)
             {
-                listReceipt += product + "\t\t $" + CartGUI.itemPrice[count4me] + "\n";
+                listReceipt += product + "\t\t $" + CartGUI.itemPrice[count4me] + Environment.NewLine;
                 count4me++;
             }
             count4me = 0;
