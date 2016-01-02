@@ -64,24 +64,31 @@ namespace Assignment
         //Code when the list items button is clicked
         private void btnLstItms_Click(object sender, EventArgs e)
         {
-            //Takes category selected and puts into a string
-            this.selCat = lstCatergory.SelectedItem.ToString(); //Qi xiang.. Category not Catergory.. REMOVE IT
-           
+            try
+            {
+                //Takes category selected and puts into a string
+                this.selCat = lstCatergory.SelectedItem.ToString(); //Qi xiang.. Category not Catergory.. REMOVE IT
 
-            //Takes catergory selected and parses in URLs to load pictures
-            switch (this.selCat) {
-                case "Fashion":
-                    setPic(arrProducts[0].Imglink, arrProducts[1].Imglink, arrProducts[2].Imglink, arrProducts[3].Imglink, arrProducts[4].Imglink, arrProducts[5].Imglink);
-                    break;
-                case "Technology":
-                    setPic(arrProducts[6].Imglink, arrProducts[7].Imglink, arrProducts[8].Imglink, arrProducts[9].Imglink, arrProducts[10].Imglink, arrProducts[11].Imglink);
-                    break;
-                case "Travel":
-                    setPic(arrProducts[12].Imglink, arrProducts[13].Imglink, arrProducts[14].Imglink, arrProducts[15].Imglink, arrProducts[16].Imglink, arrProducts[17].Imglink);
-                    break;
-                case "Architecture":
-                    setPic(arrProducts[18].Imglink, arrProducts[19].Imglink, arrProducts[20].Imglink, arrProducts[21].Imglink, arrProducts[22].Imglink, arrProducts[23].Imglink);
-                    break;
+
+                //Takes catergory selected and parses in URLs to load pictures
+                switch (this.selCat)
+                {
+                    case "Fashion":
+                        setPic(arrProducts[0].Imglink, arrProducts[1].Imglink, arrProducts[2].Imglink, arrProducts[3].Imglink, arrProducts[4].Imglink, arrProducts[5].Imglink);
+                        break;
+                    case "Technology":
+                        setPic(arrProducts[6].Imglink, arrProducts[7].Imglink, arrProducts[8].Imglink, arrProducts[9].Imglink, arrProducts[10].Imglink, arrProducts[11].Imglink);
+                        break;
+                    case "Travel":
+                        setPic(arrProducts[12].Imglink, arrProducts[13].Imglink, arrProducts[14].Imglink, arrProducts[15].Imglink, arrProducts[16].Imglink, arrProducts[17].Imglink);
+                        break;
+                    case "Architecture":
+                        setPic(arrProducts[18].Imglink, arrProducts[19].Imglink, arrProducts[20].Imglink, arrProducts[21].Imglink, arrProducts[22].Imglink, arrProducts[23].Imglink);
+                        break;
+                }
+            } catch (NullReferenceException)
+            {
+
             }
         }
 
