@@ -12,6 +12,8 @@ namespace Assignment
 {
     public partial class Payment : Form
     {
+        public static double total4Receipt;
+
         public Payment()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace Assignment
         public void setupPay(double total)
         {
             txtSubTot.Text = total.ToString();
+            total4Receipt = Convert.ToDouble(txtSubTot.Text);
         }
 
         //Back button to hide the checkout form
@@ -40,6 +43,7 @@ namespace Assignment
                     payable *= 1/2;
                 }
                 Receipt receiptPage = new Receipt();
+                this.Hide();
                 receiptPage.Show();
             }
         }

@@ -27,12 +27,12 @@ namespace Assignment
            //Perform a += for loop for each item
             foreach (string product in CartGUI.myItems)
             {
-                listReceipt += product + "\t\t $" + CartGUI.itemPrice[count4me] + Environment.NewLine;
+                listReceipt += product + "\t $" + CartGUI.itemPrice[count4me] + Environment.NewLine;
                 count4me++;
             }
             count4me = 0;
             printer Printer = new printer(receiptcount, listReceipt);
-            Printer.Export(receiptcount, listReceipt, CartGUI.viewtotal);
+            Printer.Export(receiptcount, listReceipt, Payment.total4Receipt);
         }
     }
 }
