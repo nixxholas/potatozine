@@ -70,8 +70,7 @@
             this.lstCatergory.Items.AddRange(new object[] {
             "Fashion",
             "Technology",
-            "Travel",
-            "Architecture"});
+            "Travel"});
             this.lstCatergory.Location = new System.Drawing.Point(12, 364);
             this.lstCatergory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstCatergory.Name = "lstCatergory";

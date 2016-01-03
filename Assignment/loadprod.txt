@@ -1,14 +1,10 @@
-CLEO,2.00,0001,1,CLEO is a magazine for young fun women who are always on the lookout for brand new ideas and are ready to explore their horizons and learn new things. CLEO also gives women fashion tips and ideas and prepares them to make the most important decisions they will make in their lives.,Images/cleo.jpg
-Bazaar Art,2.50,0002,Bazaar Art focuses on art and fashion giving readers the latest trends and ideas to look out for.,Images/bazarart.jpg
-Her World,5.40,0003,Her World is the magazine most women choose for the latest tips and tricks to stay in top shape and issues that concern the modern woman. This magazine includes interviews and articles which set you thinking about current issues and is recommended for any woman looking for a fashion magazine.,Images/herworld.jpg
-Simply Her,3.30,0004,This magazine provides her with shopping ideas and is a lifestyle guide that is trusted by many in Singapore. This magazine focuses on working women who are often busy and provides them with the best ideas possible to look in trend and be in top fashion.,Images/simplyher.jpg
-MensHealth,5.00,0005,Trusted by many men around the world. Mens health provides tips on health and beauty for the male. The magazine also includes some fashion tips for men who wish to look in tip top condition with the best looking outfits possible at any moment of time.,Images/MensHealth.jpg
-Allyou,1.20,0006,Unisex magazine made for him and her. Focuses all about you and gives you health and fashion tips and tricks to stand out among all.,Images/allyou.jpg
-How It Works,3.00,1001,The magazine that shows you how things around the world work. Touches on some technology issues as well to tell you how it all works in this world.,Images/howitworks.jpg
-SMART,3.00,1002,SMART magazine focuses on the innovations and creativity made by some of the most brilliant innovaters in the world. This magazine keeps you in trend with the latest technological discoveries by people.,Images/SMART.jpg
-//4moretech
-TRAVELE,3.00,2001,TRAVELE is a new magazine which aims to give readers an insight into the world and give them ideas for their next vaycay plans.,Images/TRAVELE.png
-Local Adventures,4.20,2002,Local Adventures is a magazine targeted at locals who are on a tight budget and wish to uncover new things locally.,Images/LocalAdventures.png
-
-//5moreArchi
-
+CLEO,2.00,0001,1,CLEO is a magazine for young fun women who are always on the lookout for brand new ideas and are ready to explore their horizons and learn new things. CLEO also gives women fashion tips and ideas and prepares them to make the most important decisions they will make in their lives.,Images/cleo.jpg,Fashion
+Bazaar Art,2.50,0002,Bazaar Art focuses on art and fashion giving readers the latest trends and ideas to look out for.,Images/bazarart.jpg,Fashion
+Her World,5.40,0003,Her World is the magazine most women choose for the latest tips and tricks to stay in top shape and issues that concern the modern woman. This magazine includes interviews and articles which set you thinking about current issues and is recommended for any woman looking for a fashion magazine.,Images/herworld.jpg,Fashion
+Simply Her,3.30,0004,This magazine provides her with shopping ideas and is a lifestyle guide that is trusted by many in Singapore. This magazine focuses on working women who are often busy and provides them with the best ideas possible to look in trend and be in top fashion.,Images/simplyher.jpg,Fashion
+MensHealth,5.00,0005,Trusted by many men around the world. Mens health provides tips on health and beauty for the male. The magazine also includes some fashion tips for men who wish to look in tip top condition with the best looking outfits possible at any moment of time.,Images/MensHealth.jpg,Fashion
+Allyou,1.20,0006,Unisex magazine made for him and her. Focuses all about you and gives you health and fashion tips and tricks to stand out among all.,Images/allyou.jpg,Fashion
+How It Works,3.00,1001,The magazine that shows you how things around the world work. Touches on some technology issues as well to tell you how it all works in this world.,Images/howitworks.jpg,Technology
+SMART,3.00,1002,SMART magazine focuses on the innovations and creativity made by some of the most brilliant innovaters in the world. This magazine keeps you in trend with the latest technological discoveries by people.,Images/SMART.jpg,Technology
+TRAVELE,3.00,2001,TRAVELE is a new magazine which aims to give readers an insight into the world and give them ideas for their next vaycay plans.,Images/TRAVELE.png,Travel
+Local Adventures,4.20,2002,Local Adventures is a magazine targeted at locals who are on a tight budget and wish to uncover new things locally.,Images/LocalAdventures.png,Travel
