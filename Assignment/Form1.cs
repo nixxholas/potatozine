@@ -48,7 +48,7 @@ namespace Assignment
             while ((line = theFile.ReadLine()) != null)
             {
                 string[] content = line.Split(',');
-                arrProducts[counter] = new Product(content[0], double.Parse(content[1]), int.Parse(content[2]), int.Parse(content[3]), content[4], content[5]);
+                arrProducts[counter] = new Product(content[0], double.Parse(content[1]), int.Parse(content[2]), content[3], content[4], content[5]);
                 counter++;
             }
 
@@ -109,15 +109,15 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[0].Imglink,arrProducts[0].Name,arrProducts[0].Desc,arrProducts[0].Price);
+                    itemPage.LoadInfo(arrProducts[0].Imglink,arrProducts[0].Name,arrProducts[0].Desc,arrProducts[0].Price, arrProducts[0].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":
-                    itemPage.LoadInfo(arrProducts[6].Imglink, arrProducts[6].Name, arrProducts[6].Desc, arrProducts[6].Price);
+                    itemPage.LoadInfo(arrProducts[6].Imglink, arrProducts[6].Name, arrProducts[6].Desc, arrProducts[6].Price, arrProducts[0].Catname);
                     itemPage.Show();
                     break;
                 case "Travel":
-                    itemPage.LoadInfo(arrProducts[12].Imglink, arrProducts[12].Name, arrProducts[12].Desc, arrProducts[12].Price);
+                    itemPage.LoadInfo(arrProducts[12].Imglink, arrProducts[12].Name, arrProducts[12].Desc, arrProducts[12].Price, arrProducts[0].Catname);
                     itemPage.Show();
                     break;
             }
@@ -128,15 +128,15 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[1].Imglink, arrProducts[1].Name, arrProducts[1].Desc, arrProducts[1].Price);
+                    itemPage.LoadInfo(arrProducts[1].Imglink, arrProducts[1].Name, arrProducts[1].Desc, arrProducts[1].Price, arrProducts[0].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":
-                    itemPage.LoadInfo(arrProducts[7].Imglink, arrProducts[7].Name, arrProducts[7].Desc, arrProducts[7].Price);
+                    itemPage.LoadInfo(arrProducts[7].Imglink, arrProducts[7].Name, arrProducts[7].Desc, arrProducts[7].Price, arrProducts[7].Catname);
                     itemPage.Show();
                     break;
                 case "Travel":
-                    itemPage.LoadInfo(arrProducts[13].Imglink, arrProducts[13].Name, arrProducts[13].Desc, arrProducts[13].Price);
+                    itemPage.LoadInfo(arrProducts[13].Imglink, arrProducts[13].Name, arrProducts[13].Desc, arrProducts[13].Price, arrProducts[13].Catname);
                     itemPage.Show();
                     break;
             }
@@ -147,7 +147,7 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[2].Imglink, arrProducts[2].Name, arrProducts[2].Desc, arrProducts[2].Price);
+                    itemPage.LoadInfo(arrProducts[2].Imglink, arrProducts[2].Name, arrProducts[2].Desc, arrProducts[2].Price, arrProducts[2].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":
@@ -164,7 +164,7 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[3].Imglink, arrProducts[3].Name, arrProducts[3].Desc, arrProducts[3].Price);
+                    itemPage.LoadInfo(arrProducts[3].Imglink, arrProducts[3].Name, arrProducts[3].Desc, arrProducts[3].Price, arrProducts[3].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":
@@ -181,7 +181,7 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[4].Imglink, arrProducts[4].Name, arrProducts[4].Desc, arrProducts[4].Price);
+                    itemPage.LoadInfo(arrProducts[4].Imglink, arrProducts[4].Name, arrProducts[4].Desc, arrProducts[4].Price, arrProducts[4].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":
@@ -198,7 +198,7 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[5].Imglink, arrProducts[5].Name, arrProducts[5].Desc, arrProducts[5].Price);
+                    itemPage.LoadInfo(arrProducts[5].Imglink, arrProducts[5].Name, arrProducts[5].Desc, arrProducts[5].Price, arrProducts[5].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":

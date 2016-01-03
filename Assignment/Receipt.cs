@@ -16,6 +16,7 @@ namespace Assignment
         {
             InitializeComponent();
             ReceiptBox.Text = listReceipt;
+
         }
 
         public static int receiptcount;

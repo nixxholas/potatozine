@@ -82,7 +82,7 @@
             // 
             // ReceiptBox
             // 
-            this.ReceiptBox.Location = new System.Drawing.Point(64, 209);
+            this.ReceiptBox.Location = new System.Drawing.Point(64, 222);
             this.ReceiptBox.Margin = new System.Windows.Forms.Padding(2);
             this.ReceiptBox.Multiline = true;
             this.ReceiptBox.Name = "ReceiptBox";

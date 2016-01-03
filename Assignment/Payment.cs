@@ -41,6 +41,9 @@ namespace Assignment
                 {
                     double payable = CartGUI.viewtotal;
                     payable *= 1/2;
+                    MessageBox.Show("Your discount code is usable and is now used.");
+                } else if (discount.Text != null) {
+                    MessageBox.Show("You have entered an invalid discount code. No discount will be given.");
                 }
                 Receipt receiptPage = new Receipt();
                 this.Hide();

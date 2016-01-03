@@ -18,14 +18,13 @@ namespace Assignment
 
         }
 
-        public string curname;
-
         //Method to load/insert picture, name, description, price etc. into the page
-        public void LoadInfo(string imgURL, string name, string desc, double price) {
+        public void LoadInfo(string imgURL, string name, string desc, double price, string catname) {
             PicItemInfo.Load(imgURL); //Sets the picture in the iteminfo
             lblProdNam.Text = name; //Changes the text for product name
             txtProdDesc.Text = desc; //Changes the text in the textbox for product description
             txtPrice.Text = System.Convert.ToString(price);//Changes the text for pricing
+            lblCat.Text = catname;
         }
 
 
@@ -39,11 +38,12 @@ namespace Assignment
         private void btnAddCart_Click(object sender, EventArgs e)
         {
             int quantity = (int)numQuantity.Value;
-                for (int count = 0; count < quantity; count++) {
-                    CartGUI.myItems.Add(lblProdNam.Text);
-                    CartGUI.itemPrice.Add(double.Parse(txtPrice.Text));
-                }
-                MessageBox.Show("Added to cart");
+                for (int count = 0; count < quantity; count++)
+            {
+                CartGUI.myItems.Add("Category : " + lblCat.Text + "\t  |  Magazine : " + lblProdNam.Text + "\t |  Price : $" + txtPrice.Text);
+                CartGUI.itemPrice.Add(double.Parse(txtPrice.Text));
+            }
+            MessageBox.Show("Added to cart");
             this.Hide();
         }
 

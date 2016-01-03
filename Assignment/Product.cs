@@ -12,30 +12,33 @@ namespace Assignment
         private string name;
         private int IDno;
 
-        /**
-            type 1 = Fashion
-            type 2 = ???
-        **/
-        private int type;
-
 
         private string desc;
         private string imglink;
+        private string catname;
 
         //Default Constructor
         public Product() { }
         
         //Constructor
-        public Product(string name, double price, int IDno, int type, string desc, string imglink) {
+        public Product(string name, double price, int IDno, string desc, string imglink, string catname) {
             this.name = name;
             this.price = price;
             this.IDno = IDno;
-            this.type = type;
             this.desc = desc;
             this.imglink = imglink;
+            this.catname = catname;
         }
-   
 
+        //public Product(string name, double price, int IDno, int type, string desc, string imglink)
+        //{
+        //    this.name = name;
+        //    this.price = price;
+        //    this.IDno = IDno;
+        //    this.type = type;
+        //    this.desc = desc;
+        //    this.imglink = imglink;
+        //}
 
         //Price property
         public double Price{
@@ -55,12 +58,6 @@ namespace Assignment
             set { this.IDno = value; }
         }
 
-        public int Type
-        {
-            get { return this.type; }
-            set { this.type = value; }
-        }
-
         //Description Property
         public string Desc
         {
@@ -72,6 +69,12 @@ namespace Assignment
         {
             get { return this.imglink; }
             set { this.imglink = value; }
+        }
+
+        public string Catname
+        {
+            get { return this.catname; }
+            set { this.catname = value; }
         }
     }
 }
