@@ -77,13 +77,18 @@ namespace Assignment
                         setPic(arrProducts[0].Imglink, arrProducts[1].Imglink, arrProducts[2].Imglink, arrProducts[3].Imglink, arrProducts[4].Imglink, arrProducts[5].Imglink);
                         break;
                     case "Technology":
-                        setPic(arrProducts[6].Imglink, arrProducts[7].Imglink, arrProducts[8].Imglink, arrProducts[9].Imglink, arrProducts[10].Imglink, arrProducts[11].Imglink);
+                        setPic(arrProducts[6].Imglink, arrProducts[7].Imglink, arrProducts[8].Imglink, arrProducts[9].Imglink, arrProducts[9].Imglink, arrProducts[9].Imglink);
+                        picItem3.Hide();
+                        picItem4.Hide();
+                        picItem5.Hide();
+                        picItem6.Hide();
                         break;
                     case "Travel":
-                        setPic(arrProducts[12].Imglink, arrProducts[13].Imglink, arrProducts[14].Imglink, arrProducts[15].Imglink, arrProducts[16].Imglink, arrProducts[17].Imglink);
-                        break;
-                    case "Architecture":
-                        setPic(arrProducts[18].Imglink, arrProducts[19].Imglink, arrProducts[20].Imglink, arrProducts[21].Imglink, arrProducts[22].Imglink, arrProducts[23].Imglink);
+                        setPic(arrProducts[8].Imglink, arrProducts[9].Imglink, arrProducts[9].Imglink, arrProducts[9].Imglink, arrProducts[9].Imglink, arrProducts[9].Imglink);
+                        picItem3.Hide();
+                        picItem4.Hide();
+                        picItem5.Hide();
+                        picItem6.Hide();
                         break;
                 }
             } catch (NullReferenceException)
@@ -113,11 +118,11 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Technology":
-                    itemPage.LoadInfo(arrProducts[6].Imglink, arrProducts[6].Name, arrProducts[6].Desc, arrProducts[6].Price, arrProducts[0].Catname);
+                    itemPage.LoadInfo(arrProducts[6].Imglink, arrProducts[6].Name, arrProducts[6].Desc, arrProducts[6].Price, arrProducts[6].Catname);
                     itemPage.Show();
                     break;
                 case "Travel":
-                    itemPage.LoadInfo(arrProducts[12].Imglink, arrProducts[12].Name, arrProducts[12].Desc, arrProducts[12].Price, arrProducts[0].Catname);
+                    itemPage.LoadInfo(arrProducts[8].Imglink, arrProducts[8].Name, arrProducts[8].Desc, arrProducts[8].Price, arrProducts[8].Catname);
                     itemPage.Show();
                     break;
             }
@@ -128,7 +133,7 @@ namespace Assignment
             switch (this.selCat)
             {
                 case "Fashion":
-                    itemPage.LoadInfo(arrProducts[1].Imglink, arrProducts[1].Name, arrProducts[1].Desc, arrProducts[1].Price, arrProducts[0].Catname);
+                    itemPage.LoadInfo(arrProducts[1].Imglink, arrProducts[1].Name, arrProducts[1].Desc, arrProducts[1].Price, arrProducts[1].Catname);
                     itemPage.Show();
                     break;
                 case "Technology":
@@ -136,7 +141,7 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Travel":
-                    itemPage.LoadInfo(arrProducts[13].Imglink, arrProducts[13].Name, arrProducts[13].Desc, arrProducts[13].Price, arrProducts[13].Catname);
+                    itemPage.LoadInfo(arrProducts[9].Imglink, arrProducts[9].Name, arrProducts[9].Desc, arrProducts[9].Price, arrProducts[9].Catname);
                     itemPage.Show();
                     break;
             }
@@ -151,10 +156,8 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Technology":
-                    picItem3.Hide();
                     break;
                 case "Travel":
-                    picItem3.Hide();
                     break;
             }
         }
@@ -168,10 +171,8 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Technology":
-                    picItem4.Hide();
                     break;
                 case "Travel":
-                    picItem4.Hide();
                     break;
             }
         }
@@ -185,10 +186,8 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Technology":
-                    picItem5.Hide();
                     break;
                 case "Travel":
-                    picItem5.Hide();
                     break;
             }
         }
@@ -202,10 +201,8 @@ namespace Assignment
                     itemPage.Show();
                     break;
                 case "Technology":
-                    picItem6.Hide();
                     break;
                 case "Travel":
-                    picItem6.Hide();
                     break;
             }
         }

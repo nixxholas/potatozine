@@ -149,6 +149,8 @@
     <Content Include="Images\herworld.jpg" />
     <Content Include="Images\SMART.jpg" />
     <Content Include="Images\TRAVELE.png" />
+    <Content Include="Images\zine.png" />
+    <None Include="Resources\zine.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
