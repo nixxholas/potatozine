@@ -53,6 +53,8 @@
             // 
             // picBanner
             // 
+            this.picBanner.BackgroundImage = global::Assignment.Properties.Resources.main;
+            this.picBanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBanner.Location = new System.Drawing.Point(12, 68);
             this.picBanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBanner.Name = "picBanner";

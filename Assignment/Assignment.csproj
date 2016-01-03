@@ -135,12 +135,20 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\cosmopolitan.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <None Include="Images\main.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\main.png" />
+    <Content Include="Images\allyou.jpg" />
+    <Content Include="Images\howitworks.jpg" />
+    <Content Include="Images\LocalAdventures.png" />
+    <Content Include="Images\Simplyher.jpg" />
+    <Content Include="Images\cleo.jpg" />
+    <Content Include="Images\bazarart.jpg" />
+    <Content Include="Images\MensHealth.jpg" />
+    <Content Include="Images\homendecor.jpg" />
+    <Content Include="Images\herworld.jpg" />
+    <Content Include="Images\SMART.jpg" />
+    <Content Include="Images\TRAVELE.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
