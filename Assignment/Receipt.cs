@@ -16,7 +16,7 @@ namespace Assignment
         {
             InitializeComponent();
             ReceiptBox.Text = listReceipt;
-
+            lblTotal.Text += Payment.total4Receipt;
         }
 
         public static int receiptcount;
@@ -28,10 +28,10 @@ namespace Assignment
            //Perform a += for loop for each item
             foreach (string product in CartGUI.myItems)
             {
-                listReceipt += product + "\t $" + CartGUI.itemPrice[count4me] + Environment.NewLine;
+                listReceipt += product + Environment.NewLine;
                 count4me++;
             }
-            count4me = 0;
+            count4me = 0; //Reset the counter
             printer Printer = new printer(receiptcount, listReceipt);
             Printer.Export(receiptcount, listReceipt, Payment.total4Receipt);
         }

@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ReceiptBox = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             // 
             // ReceiptBox
             // 
-            this.ReceiptBox.Location = new System.Drawing.Point(64, 222);
+            this.ReceiptBox.Location = new System.Drawing.Point(64, 208);
             this.ReceiptBox.Margin = new System.Windows.Forms.Padding(2);
             this.ReceiptBox.Multiline = true;
             this.ReceiptBox.Name = "ReceiptBox";
@@ -90,11 +91,22 @@
             this.ReceiptBox.Size = new System.Drawing.Size(609, 324);
             this.ReceiptBox.TabIndex = 8;
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(518, 547);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(85, 24);
+            this.lblTotal.TabIndex = 9;
+            this.lblTotal.Text = "Total : $";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 584);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.ReceiptBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox ReceiptBox;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

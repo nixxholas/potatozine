@@ -74,6 +74,7 @@ namespace Assignment
             {
                 chkout.Show();
                 chkout.setupPay(total);
+                viewtotal = total;
                 this.Hide();
                 Receipt.loadData();
             }
