@@ -34,12 +34,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ReceiptBox = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.Teal;
+            this.panelTop.Controls.Add(this.button1);
             this.panelTop.Controls.Add(this.lblPotatoZine);
             this.panelTop.Location = new System.Drawing.Point(1, 1);
             this.panelTop.Margin = new System.Windows.Forms.Padding(2);
@@ -101,6 +103,17 @@
             this.lblTotal.TabIndex = 9;
             this.lblTotal.Text = "Total : $";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(621, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,5 +144,6 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox ReceiptBox;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button button1;
     }
 }

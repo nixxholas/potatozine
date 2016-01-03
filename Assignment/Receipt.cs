@@ -35,5 +35,11 @@ namespace Assignment
             printer Printer = new printer(receiptcount, listReceipt);
             Printer.Export(receiptcount, listReceipt, Payment.total4Receipt);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Goodbye!");
+            Application.Exit();
+        }
     }
 }

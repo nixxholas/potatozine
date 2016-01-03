@@ -39,9 +39,7 @@ namespace Assignment
             {
                 if (discount.Text == "lolurekt")
                 {
-                    double payable = CartGUI.viewtotal;
-                    payable *= 1/2;
-                    total4Receipt = payable;
+                    CartGUI.viewtotal = CartGUI.viewtotal / 2;
                     MessageBox.Show("Your discount code will now deduct 50% of the total.");
                 } else if (discount.Text != "") {
                     MessageBox.Show("You have entered an invalid discount code. No discount will be given.");
@@ -49,6 +47,7 @@ namespace Assignment
                 {
                     //Do nothing if nothing is keyed in for discount
                 }
+                total4Receipt = CartGUI.viewtotal;
                 Receipt receiptPage = new Receipt();
                 this.Hide();
                 receiptPage.Show();
