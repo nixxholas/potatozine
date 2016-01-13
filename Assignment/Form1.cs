@@ -65,8 +65,9 @@ namespace Assignment
         {
           for (int i = 0; i < noofprods; i++)
             {
+                String checkname = arrProducts[i].Catname;// THIS CAUSES IT
                 //wtf nullexception
-               if (arrProducts[i].Catname == category)
+               if (checkname == category)
                 {
                     //Untested
                     setSinglePic(arrProducts[i].Imglink);
