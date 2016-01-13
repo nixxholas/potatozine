@@ -11,8 +11,6 @@ namespace Assignment
         private double price;
         private string name;
         private int IDno;
-
-
         private string desc;
         private string imglink;
         private string catname;
@@ -29,16 +27,6 @@ namespace Assignment
             this.imglink = imglink;
             this.catname = catname;
         }
-
-        //public Product(string name, double price, int IDno, int type, string desc, string imglink)
-        //{
-        //    this.name = name;
-        //    this.price = price;
-        //    this.IDno = IDno;
-        //    this.type = type;
-        //    this.desc = desc;
-        //    this.imglink = imglink;
-        //}
 
         //Price property
         public double Price{

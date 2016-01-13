@@ -28,7 +28,7 @@ namespace Assignment
             //Loads the splash screen
             Thread t = new Thread(new ThreadStart(splashStart));
             t.Start();
-            LoadDescBeta();
+            LoadDesc();
             //SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
             //simpleSound.Play();//If you don't want the annoyance, remove Looping
             Thread.Sleep(3000);
@@ -39,7 +39,7 @@ namespace Assignment
         }
 
         //Method to read the textfile
-        public void LoadDescBeta()
+        public void LoadDesc()
         {
             System.IO.StreamReader theFile = new System.IO.StreamReader(@"loadprod.txt");
             String line;
@@ -59,6 +59,27 @@ namespace Assignment
         public void splashStart()
         {
             Application.Run(new Splash());
+        }
+
+        //Automated Method for Product Category Detection
+        //switch (category)
+        //{
+        //    case "Fashion":
+        //        break;
+        //    case "Technology":
+        //        break;
+        //    case "Travel":
+        //        break;
+        //} Omitted for now
+        private void ListItemBeta(String category)
+        {
+          for (int i = 0; i < noofprods; i++)
+            {
+               if (category == arrProducts[i].Catname)
+                {
+                    setSinglePic(arrProducts[i].Imglink);
+                }
+            }
         }
 
         //Code when the list items button is clicked
@@ -106,6 +127,36 @@ namespace Assignment
             picItem4.Load(item4);
             picItem5.Load(item5);
             picItem6.Load(item6);
+        }
+
+        //New Refined Method to initialize shit globally
+        public void setSinglePic(string item1)
+        {
+            showAll();
+            if (picItem1.Image != null)
+            {
+                picItem1.Load(item1);
+            }
+            else if (picItem2.Image != null)
+            {
+                picItem2.Load(item1);
+            }
+            else if (picItem3.Image != null)
+            {
+                picItem3.Load(item1);
+            }
+            else if (picItem4.Image != null)
+            {
+                picItem4.Load(item1);
+            }
+            else if (picItem5.Image != null)
+            {
+                picItem5.Load(item1);
+            }
+            else if (picItem6.Image != null)
+            {
+                picItem6.Load(item1);
+            }
         }
 
         //On click events for picitems 1-6
@@ -222,6 +273,12 @@ namespace Assignment
             picItem6.Show();
         }
 
-
+        private void lstCatergory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(lstCatergory.SelectedItem.ToString());
+            String selected = lstCatergory.SelectedItem.ToString();
+            ListItemBeta(selected);
+        }
+        
     }
 }
