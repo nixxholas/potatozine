@@ -14,7 +14,6 @@ namespace Assignment
     public partial class Form1 : Form
     {
         string selCat;
-        int counter = 0;
         public static int noofprods = 24; //Can be modified to add more
 
         //creation of object
@@ -43,7 +42,7 @@ namespace Assignment
         {
             System.IO.StreamReader theFile = new System.IO.StreamReader(@"loadprod.txt");
             String line;
-
+            int counter = 0;
 
             while ((line = theFile.ReadLine()) != null)
             {
@@ -62,23 +61,16 @@ namespace Assignment
         }
 
         //Automated Method for Product Category Detection
-        //switch (category)
-        //{
-        //    case "Fashion":
-        //        break;
-        //    case "Technology":
-        //        break;
-        //    case "Travel":
-        //        break;
-        //} Omitted for now
         private void ListItemBeta(String category)
         {
           for (int i = 0; i < noofprods; i++)
             {
-               if (category == arrProducts[i].Catname)
+                //wtf nullexception
+               if (arrProducts[i].Catname == category)
                 {
+                    //Untested
                     setSinglePic(arrProducts[i].Imglink);
-                }
+                } 
             }
         }
 
@@ -275,7 +267,8 @@ namespace Assignment
 
         private void lstCatergory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(lstCatergory.SelectedItem.ToString());
+            //This is working 100%
+            //MessageBox.Show(lstCatergory.SelectedItem.ToString());
             String selected = lstCatergory.SelectedItem.ToString();
             ListItemBeta(selected);
         }
