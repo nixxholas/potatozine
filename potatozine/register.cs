@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace potatozine
 {
-    public partial class main : Form
+    public partial class register : Form
     {
-        public main()
+        public register()
         {
             InitializeComponent();
         }
 
-        private void maintab_Click(object sender, EventArgs e)
+        private void regBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnCheckout_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

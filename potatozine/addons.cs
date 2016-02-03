@@ -8,13 +8,13 @@ namespace potatozine
 {
     class addons : product
     {
-        private string weight;
+        private double weight;
 
         public addons () { }
 
-        public addons (int a, string b, double c, string d) : base(a, b, c)
+        public addons (int a, string b, string c, double d, double e) : base(a, b, c, d)
         {
-            weight = d;
+            weight = e;
         }
 
         public override void getDetails()

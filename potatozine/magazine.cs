@@ -12,9 +12,9 @@ namespace potatozine
 
         public magazine () { }
 
-        public magazine (int a, string b, double c, int d) : base(a, b, c)
+        public magazine (int a, string b, string c, double d, int e) : base(a, b, c, d)
         {
-            pages = d;
+            pages = e;
         }
 
         public override void getDetails()
