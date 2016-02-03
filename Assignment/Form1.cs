@@ -65,9 +65,8 @@ namespace Assignment
         {
           for (int i = 0; i < noofprods; i++)
             {
-                String checkname = arrProducts[i].Catname;// THIS CAUSES IT
                 //wtf nullexception
-               if (checkname == category)
+               if (arrProducts[i].Catname == category)
                 {
                     //Untested
                     setSinglePic(arrProducts[i].Imglink);
@@ -268,11 +267,11 @@ namespace Assignment
 
         private void lstCatergory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //This is working 100%
-            //MessageBox.Show(lstCatergory.SelectedItem.ToString());
             String selected = lstCatergory.SelectedItem.ToString();
             ListItemBeta(selected);
         }
         
+
+
     }
 }
