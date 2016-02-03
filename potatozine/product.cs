@@ -10,13 +10,15 @@ namespace potatozine
     {
         private int pid; //Product ID
         private string name; //Product Name
+        private double price; //Product Price
 
         public product () { }
 
-        public product (int a, string b)
+        public product (int a, string b, double c)
         {
             pid = a;
             name = b;
+            price = c;
         }
 
         public virtual void getDetails()

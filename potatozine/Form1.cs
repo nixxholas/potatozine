@@ -16,5 +16,10 @@ namespace potatozine
         {
             InitializeComponent();
         }
+
+        private void maintab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

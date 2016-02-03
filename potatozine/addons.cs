@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace potatozine
 {
-    class magazine : product
+    class addons : product
     {
-        private int pages; //Magazine pages
+        private string weight;
 
-        public magazine () { }
+        public addons () { }
 
-        public magazine (int a, string b, double c, int d) : base(a, b, c)
+        public addons (int a, string b, double c, string d) : base(a, b, c)
         {
-            pages = d;
+            weight = d;
         }
 
         public override void getDetails()
