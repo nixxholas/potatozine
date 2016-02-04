@@ -1,0 +1,11 @@
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\bin\Debug\LoginWindowForm.exe.config
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\bin\Debug\LoginWindowForm.exe
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\bin\Debug\LoginWindowForm.pdb
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.csprojResolveAssemblyReference.cache
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.Form1.resources
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.Form2.resources
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.Properties.Resources.resources
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.csproj.GenerateResource.Cache
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.exe
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.pdb
+D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.Register.resources

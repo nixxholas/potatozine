@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace potatozine
 {
@@ -45,6 +46,7 @@ namespace potatozine
             theFile.Close();
         }
         
+        
         public void splashStart()
         {
             Application.Run(new splash());
@@ -63,11 +65,43 @@ namespace potatozine
         private void loginBtn_Click(object sender, EventArgs e)
         {
 
+            using (SqlConnection cn = new SqlConnection("Data Source=NIXH\\SQLEXPRESS;" +
+                    "database=login;" +
+                    "integrated security=true"))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM users WHERE username = '" + usernameBox.Text + "' AND password = '" + passwordBox.Text + "'"))
+                {
+                    SqlDataReader dr;
+                        cn.Open();
+                        dr = cmd.ExecuteReader();
+                        
+                        int count = 0;
+                        while (dr.Read())
+                        {
+                            count += 1;
+                        }
+
+                        if (count == 1)
+                        {
+                            MessageBox.Show("You are now logged in.");
+
+                        }
+                        else if (count > 1)
+                        {
+                            MessageBox.Show("Error. Duplicate Username and Password.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Your credentials are incorrect.");
+                        }
+                        passwordBox.Clear();
+                    }
+                }
+            }
         }
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Hide(); //Hides the main form
             register regForm = new register(); // New instance for the Register Form
             regForm.Show(); //Show the Form
         }
