@@ -72,6 +72,7 @@
             this.tabs.Size = new System.Drawing.Size(898, 607);
             this.tabs.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabs.TabIndex = 0;
+            this.tabs.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabs_Selected);
             // 
             // maintab
             // 

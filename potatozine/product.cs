@@ -25,7 +25,7 @@ namespace potatozine
 
         public virtual void getDetails()
         {
-
+            
         }
     }
 }

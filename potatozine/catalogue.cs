@@ -82,6 +82,17 @@ namespace potatozine
             register regForm = new register(); // New instance for the Register Form
             regForm.Show(); //Show the Form
         }
+
+        //Anti-Ms Choo System for Procastinating about Hard Coding.
+        public void UpdateTabs()
+        {
+
+        }
+
+        private void tabs_Selected(object sender, TabControlEventArgs e)
+        {
+
+        }
     }
 }
 
