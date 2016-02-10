@@ -45,12 +45,12 @@
             this.btnCheckout = new System.Windows.Forms.Button();
             this.accTab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.registerBtn = new System.Windows.Forms.Button();
             this.tabs.SuspendLayout();
             this.carttab.SuspendLayout();
             this.accTab.SuspendLayout();
@@ -252,6 +252,20 @@
             this.panel1.Size = new System.Drawing.Size(804, 491);
             this.panel1.TabIndex = 0;
             // 
+            // registerBtn
+            // 
+            this.registerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.registerBtn.BackColor = System.Drawing.Color.White;
+            this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.ForeColor = System.Drawing.Color.Black;
+            this.registerBtn.Location = new System.Drawing.Point(269, 227);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(120, 56);
+            this.registerBtn.TabIndex = 5;
+            this.registerBtn.Text = "Register";
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            // 
             // loginBtn
             // 
             this.loginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -272,6 +286,7 @@
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(340, 174);
             this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(207, 29);
             this.passwordBox.TabIndex = 3;
             // 
@@ -309,20 +324,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Username:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // registerBtn
-            // 
-            this.registerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.registerBtn.BackColor = System.Drawing.Color.White;
-            this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerBtn.ForeColor = System.Drawing.Color.Black;
-            this.registerBtn.Location = new System.Drawing.Point(269, 227);
-            this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(120, 56);
-            this.registerBtn.TabIndex = 5;
-            this.registerBtn.Text = "Register";
-            this.registerBtn.UseVisualStyleBackColor = false;
-            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // catalogue
             // 
