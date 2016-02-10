@@ -36,7 +36,7 @@
             this.numQty = new System.Windows.Forms.NumericUpDown();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblSelProdNam = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.itemView = new System.Windows.Forms.ListView();
             this.lblProdInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSelCat = new System.Windows.Forms.Label();
@@ -98,7 +98,7 @@
             this.maintab.Controls.Add(this.numQty);
             this.maintab.Controls.Add(this.textBox3);
             this.maintab.Controls.Add(this.lblSelProdNam);
-            this.maintab.Controls.Add(this.listView1);
+            this.maintab.Controls.Add(this.itemView);
             this.maintab.Controls.Add(this.lblProdInfo);
             this.maintab.Controls.Add(this.pictureBox1);
             this.maintab.Controls.Add(this.lblSelCat);
@@ -174,13 +174,13 @@
             this.lblSelProdNam.TabIndex = 5;
             this.lblSelProdNam.Text = "Test";
             // 
-            // listView1
+            // itemView
             // 
-            this.listView1.Location = new System.Drawing.Point(244, 61);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(608, 608);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.itemView.Location = new System.Drawing.Point(244, 61);
+            this.itemView.Name = "itemView";
+            this.itemView.Size = new System.Drawing.Size(608, 608);
+            this.itemView.TabIndex = 4;
+            this.itemView.UseCompatibleStateImageBehavior = false;
             // 
             // lblProdInfo
             // 
@@ -533,7 +533,7 @@
         private System.Windows.Forms.NumericUpDown numQty;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblSelProdNam;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView itemView;
         private System.Windows.Forms.Label lblProdInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblSelCat;
