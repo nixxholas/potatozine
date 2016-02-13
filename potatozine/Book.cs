@@ -21,5 +21,20 @@ namespace potatozine
             type = typ;
         }
 
+        public string Publisher {
+            get { return this.publisher; }
+            set { this.publisher = value; }
+        }
+
+        public string Authors {
+            get { return this.authors; }
+            set { this.publisher = value; }
+        }
+
+        public string Type {
+            get { return this.type; }
+            set { this.type = value; }
+        }
+
     }
 }
