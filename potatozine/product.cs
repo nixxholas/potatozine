@@ -8,19 +8,23 @@ namespace potatozine
 {
     class product
     {
-        private int pid; //Product ID
+        private string pid; //Product ID
         private string name; //Product 
         private string desc; //Product description
         private double price; //Product Price
+        private int catcd; //Category ID
+        private string imgLink; //Image Link
 
         public product () { }
 
-        public product (int a, string b, string c, double d)
+        public product (string id, string nam, string des, double pr, int cd, string img)
         {
-            pid = a;
-            name = b;
-            desc = c;
-            price = d;
+            pid = id;
+            name = nam;
+            desc = des;
+            price = pr;
+            catcd = cd;
+            imgLink = img;
         }
 
         public virtual void getDetails()

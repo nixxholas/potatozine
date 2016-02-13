@@ -64,7 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addons.cs" />
+    <Compile Include="Book.cs" />
     <Compile Include="catalogue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +87,7 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQL.cs" />
     <EmbeddedResource Include="catalogue.resx">
       <DependentUpon>catalogue.cs</DependentUpon>
     </EmbeddedResource>
