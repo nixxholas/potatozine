@@ -49,9 +49,9 @@
             this.memStatusBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.couponBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalBox = new System.Windows.Forms.TextBox();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.accTab = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -226,9 +226,9 @@
             this.carttab.Controls.Add(this.memStatusBox);
             this.carttab.Controls.Add(this.label3);
             this.carttab.Controls.Add(this.label2);
-            this.carttab.Controls.Add(this.textBox2);
+            this.carttab.Controls.Add(this.couponBox);
             this.carttab.Controls.Add(this.label1);
-            this.carttab.Controls.Add(this.textBox1);
+            this.carttab.Controls.Add(this.totalBox);
             this.carttab.Controls.Add(this.btnCheckout);
             this.carttab.Location = new System.Drawing.Point(4, 32);
             this.carttab.Name = "carttab";
@@ -313,15 +313,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Coupon Code:";
             // 
-            // textBox2
+            // couponBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Maroon;
-            this.textBox2.Location = new System.Drawing.Point(772, 459);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 29);
-            this.textBox2.TabIndex = 4;
+            this.couponBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.couponBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.couponBox.ForeColor = System.Drawing.Color.Maroon;
+            this.couponBox.Location = new System.Drawing.Point(772, 459);
+            this.couponBox.Name = "couponBox";
+            this.couponBox.Size = new System.Drawing.Size(140, 29);
+            this.couponBox.TabIndex = 4;
             // 
             // label1
             // 
@@ -334,18 +334,18 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Total:";
             // 
-            // textBox1
+            // totalBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.textBox1.Location = new System.Drawing.Point(772, 408);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(141, 29);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.totalBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBox.ForeColor = System.Drawing.Color.Maroon;
+            this.totalBox.Location = new System.Drawing.Point(772, 408);
+            this.totalBox.Name = "totalBox";
+            this.totalBox.ReadOnly = true;
+            this.totalBox.Size = new System.Drawing.Size(141, 29);
+            this.totalBox.TabIndex = 2;
+            this.totalBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCheckout
             // 
@@ -490,13 +490,17 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogout.Location = new System.Drawing.Point(853, 7);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(90, 31);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -538,9 +542,9 @@
         private System.Windows.Forms.TabPage maintab;
         private System.Windows.Forms.TabPage carttab;
         private System.Windows.Forms.TabPage accTab;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox totalBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox couponBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox memStatusBox;
         private System.Windows.Forms.Label label3;
