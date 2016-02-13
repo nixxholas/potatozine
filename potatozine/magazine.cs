@@ -17,9 +17,9 @@ namespace potatozine
             pages = pg;
         }
 
-        public override void getDetails()
-        {
-            base.getDetails();
+        public int Pages {
+            get { return this.pages; }
+            set { this.pages = value; }
         }
     }
 }

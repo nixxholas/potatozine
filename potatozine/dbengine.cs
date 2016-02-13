@@ -10,65 +10,49 @@ namespace potatozine
 {
     class dbengine
     {
-        public static String uniConnectionStr = "Data Source=NIXH\\SQLEXPRESS;" +
-                    "database=login;" +
-                    "integrated security=true";
+        public static String uniConnectionStr = "Data Source = DIT-NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
+        //"Data Source=NIXH\\SQLEXPRESS;" +
+        //        "database=login;" +
+        //        "integrated security=true";
         private DataTable Magazines = new DataTable();
         private DataTable Book = new DataTable();
-        private DataTable Products = new DataTable();
 
-        public void loadSQL() {
-            using (SqlConnection conn = new SqlConnection())
+
+        List<magazine> magazineobj = new List<magazine>();
+        List<Book> bookobj = new List<Book>();
+        public void createobjects()
+        {
+            foreach (DataRow Row in Magazines.Rows)
             {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    using (SqlDataAdapter da = new SqlDataAdapter())
-                    {
-                        //Connection String
-                        conn.ConnectionString = "Data Source = DIT - NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
-
-                        cmd.Connection = conn;
-
-                        cmd.CommandText = "Select * from Magazine";
-
-                        try
-                        {
-                            conn.Open();
-                            da.SelectCommand = cmd;
-                            Magazines.Rows.Clear();
-                            da.Fill(Magazines);
-                        }
-                        catch (Exception ex)
-                        {
-                        }
-                        finally
-                        {
-                            conn.Close();
-                        }
-
-                        cmd.CommandText = "Select * from Book";
-
-                        try
-                        {
-                            conn.Open();
-                            da.SelectCommand = cmd;
-                            Book.Rows.Clear();
-                            da.Fill(Book);
-                        }
-                        catch (Exception ex)
-                        {
-                        }
-                        finally
-                        {
-                            conn.Close();
-                        }
-
-                    }
-                }
+                magazine m = new magazine();
+                m.Pid = Row["prodID"].ToString();
+                m.Name = Row["name"].ToString();
+                m.Desc = Row["descpt"].ToString();
+                m.Price = double.Parse(Row["price"].ToString());
+                m.Catcd = int.Parse(Row["catcd"].ToString());
+                m.ImgLink = Row["img"].ToString();
+                m.Pages = int.Parse(Row["pages"].ToString());
+                magazineobj.Add(m);
+            }
+            foreach (DataRow Row in Book.Rows)
+            {
+                Book b = new Book();
+                b.Pid = Row["prodID"].ToString();
+                b.Name = Row["name"].ToString();
+                b.Desc = Row["descpt"].ToString();
+                b.Price = double.Parse(Row["price"].ToString());
+                b.Catcd = int.Parse(Row["catcd"].ToString());
+                b.ImgLink = Row["img"].ToString();
+                b.Publisher = Row["publisher"].ToString();
+                b.Authors = Row["author"].ToString();
+                b.Type = Row["type"].ToString();
+                bookobj.Add(b);
             }
         }
 
-        public void test2() {
+
+        public void loadProducts(string table)
+        {
             using (SqlConnection conn = new SqlConnection())
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -76,44 +60,49 @@ namespace potatozine
                     using (SqlDataAdapter da = new SqlDataAdapter())
                     {
                         //Connection String
-                        conn.ConnectionString = "Data Source = DIT - NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
+                        conn.ConnectionString = uniConnectionStr;
 
                         cmd.Connection = conn;
 
-                        cmd.CommandText = "Select * from Magazine";
+                        cmd.CommandText = "Select * from " + table;
 
-                        Products.Rows.Clear();
+                        if (table == "Magazine")
+                        {
 
-                        try
-                        {
-                            conn.Open();
-                            da.SelectCommand = cmd;
-                            da.Fill(Products);
+                            try
+                            {
+                                //Open Connection
+                                conn.Open();
+                                da.SelectCommand = cmd;
+                                da.Fill(Magazines);
+                            }
+                            catch (Exception ex)
+                            {
+                                throw ex;
+                            }
+                            finally
+                            {
+                                conn.Close();
+                            }
                         }
-                        catch (Exception ex)
+                        else
                         {
+                            try
+                            {
+                                //Open Connection
+                                conn.Open();
+                                da.SelectCommand = cmd;
+                                da.Fill(Book);
+                            }
+                            catch (Exception ex)
+                            {
+                                throw ex;
+                            }
+                            finally
+                            {
+                                conn.Close();
+                            }
                         }
-                        finally
-                        {
-                            conn.Close();
-                        }
-
-                        cmd.CommandText = "Select * from Book";
-
-                        try
-                        {
-                            conn.Open();
-                            da.SelectCommand = cmd;
-                            da.Fill(Products);
-                        }
-                        catch (Exception ex)
-                        {
-                        }
-                        finally
-                        {
-                            conn.Close();
-                        }
-
                     }
                 }
             }
