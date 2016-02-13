@@ -118,6 +118,8 @@
             // 
             // prodView
             // 
+            this.prodView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.prodView.Location = new System.Drawing.Point(179, 30);
             this.prodView.MultiSelect = false;
             this.prodView.Name = "prodView";
@@ -128,6 +130,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(758, 478);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -138,6 +141,7 @@
             // 
             // lblPrice
             // 
+            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrice.AutoSize = true;
             this.lblPrice.Location = new System.Drawing.Point(652, 450);
             this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -148,6 +152,7 @@
             // 
             // lblQty
             // 
+            this.lblQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblQty.AutoSize = true;
             this.lblQty.Location = new System.Drawing.Point(652, 478);
             this.lblQty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -158,6 +163,7 @@
             // 
             // numQty
             // 
+            this.numQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numQty.Location = new System.Drawing.Point(655, 500);
             this.numQty.Margin = new System.Windows.Forms.Padding(2);
             this.numQty.Minimum = new decimal(new int[] {
@@ -176,6 +182,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(655, 298);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
@@ -186,6 +193,7 @@
             // 
             // lblSelProdNam
             // 
+            this.lblSelProdNam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSelProdNam.AutoSize = true;
             this.lblSelProdNam.Location = new System.Drawing.Point(652, 276);
             this.lblSelProdNam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -196,6 +204,7 @@
             // 
             // lblProdInfo
             // 
+            this.lblProdInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProdInfo.AutoSize = true;
             this.lblProdInfo.Location = new System.Drawing.Point(652, 8);
             this.lblProdInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -206,6 +215,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(691, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -528,9 +538,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(361, -1);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(263, 29);
+            this.label7.Size = new System.Drawing.Size(276, 29);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Potatozine, Revision 99";
+            this.label7.Text = "Potatozine, Revision 102";
             // 
             // catalogue
             // 
