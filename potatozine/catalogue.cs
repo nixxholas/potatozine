@@ -56,20 +56,33 @@ namespace potatozine
                 using (SqlConnection conn = new SqlConnection())
                 {
                     //set up the connection string
+                    string command = "Select Count(*) from accountinfo where username = '" + usernameBox.Text
+                        + "' and password = '" + passwordBox.Text + "'";
+                    string usertype = "Select * from accountinfo where username = '" + usernameBox.Text
+                        + "' and password = '" + passwordBox.Text + "'";
                     conn.ConnectionString = dbengine.uniConnectionStr;
-                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from accountinfo where username = '" + usernameBox.Text
-                        + "' and password = '" + passwordBox.Text + "'", conn);
+                    conn.Open();
+                    SqlDataAdapter sda = new SqlDataAdapter(command, conn);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        MessageBox.Show("Username and Password is correct");
+                        SqlDataAdapter uta = new SqlDataAdapter(usertype, conn);
+                        DataTable account = new DataTable();
+                        uta.Fill(account);
+                        foreach (DataRow row in account.Rows)
+                        {
+                            btnLogout.Visible = true;
+                            memStatusBox.Text = (row["MemberType"].ToString());
+                            lblGreet.Text = (row["Username"].ToString());
+                            MessageBox.Show("Welcome to Potatozine, " + lblGreet.Text);
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Please check your username and password");
                     }
-
+                    conn.Close();
                 }
             }
             else
@@ -135,6 +148,14 @@ namespace potatozine
                 SizeMode = PictureBoxSizeMode.StretchImage
             };
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            lblGreet.Text = "";
+            memStatusBox.Text = "";
+            btnLogout.Visible = false;
+            MessageBox.Show("You have been logged out.");
         }
     }
 }
