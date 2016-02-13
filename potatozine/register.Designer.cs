@@ -32,12 +32,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.UsernameBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.repeatPassBox = new System.Windows.Forms.TextBox();
             this.regBtn = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.premiumCheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -46,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(184, 157);
+            this.label1.Location = new System.Drawing.Point(184, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 24);
             this.label1.TabIndex = 0;
@@ -58,7 +59,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(189, 191);
+            this.label2.Location = new System.Drawing.Point(189, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 1;
@@ -70,7 +71,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(224, 121);
+            this.label3.Location = new System.Drawing.Point(224, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 2;
@@ -82,48 +83,48 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(124, 225);
+            this.label4.Location = new System.Drawing.Point(124, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Repeat Password:";
             // 
-            // textBox1
+            // emailBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(292, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 29);
-            this.textBox1.TabIndex = 4;
+            this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.Location = new System.Drawing.Point(292, 101);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(285, 29);
+            this.emailBox.TabIndex = 4;
             // 
-            // textBox2
+            // UsernameBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(292, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 29);
-            this.textBox2.TabIndex = 5;
+            this.UsernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameBox.Location = new System.Drawing.Point(292, 137);
+            this.UsernameBox.Name = "UsernameBox";
+            this.UsernameBox.Size = new System.Drawing.Size(285, 29);
+            this.UsernameBox.TabIndex = 5;
             // 
-            // textBox3
+            // passwordBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(292, 188);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 29);
-            this.textBox3.TabIndex = 6;
+            this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.Location = new System.Drawing.Point(292, 171);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(285, 29);
+            this.passwordBox.TabIndex = 6;
             // 
-            // textBox4
+            // repeatPassBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(292, 222);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(285, 29);
-            this.textBox4.TabIndex = 7;
+            this.repeatPassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repeatPassBox.Location = new System.Drawing.Point(292, 205);
+            this.repeatPassBox.Name = "repeatPassBox";
+            this.repeatPassBox.Size = new System.Drawing.Size(285, 29);
+            this.repeatPassBox.TabIndex = 7;
             // 
             // regBtn
             // 
             this.regBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regBtn.Location = new System.Drawing.Point(317, 276);
+            this.regBtn.Location = new System.Drawing.Point(316, 281);
             this.regBtn.Name = "regBtn";
             this.regBtn.Size = new System.Drawing.Size(134, 53);
             this.regBtn.TabIndex = 8;
@@ -142,18 +143,31 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // premiumCheck
+            // 
+            this.premiumCheck.AutoSize = true;
+            this.premiumCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.premiumCheck.ForeColor = System.Drawing.SystemColors.Control;
+            this.premiumCheck.Location = new System.Drawing.Point(329, 247);
+            this.premiumCheck.Name = "premiumCheck";
+            this.premiumCheck.Size = new System.Drawing.Size(105, 28);
+            this.premiumCheck.TabIndex = 10;
+            this.premiumCheck.Text = "Premium";
+            this.premiumCheck.UseVisualStyleBackColor = true;
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(740, 412);
+            this.Controls.Add(this.premiumCheck);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.regBtn);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.repeatPassBox);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.UsernameBox);
+            this.Controls.Add(this.emailBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -174,11 +188,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.TextBox UsernameBox;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox repeatPassBox;
         private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.CheckBox premiumCheck;
     }
 }

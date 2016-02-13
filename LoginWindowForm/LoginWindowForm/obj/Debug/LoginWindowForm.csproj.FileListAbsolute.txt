@@ -9,3 +9,6 @@ D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginW
 D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.exe
 D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.pdb
 D:\Application Development\APPD\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.Register.resources
+C:\Users\Nicholas\Documents\GitHub\schproj\LoginWindowForm\LoginWindowForm\bin\Debug\LoginWindowForm.exe.config
+C:\Users\Nicholas\Documents\GitHub\schproj\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.exe
+C:\Users\Nicholas\Documents\GitHub\schproj\LoginWindowForm\LoginWindowForm\obj\Debug\LoginWindowForm.pdb

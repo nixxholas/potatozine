@@ -87,7 +87,7 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL.cs" />
+    <Compile Include="dbengine.cs" />
     <EmbeddedResource Include="catalogue.resx">
       <DependentUpon>catalogue.cs</DependentUpon>
     </EmbeddedResource>

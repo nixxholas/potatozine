@@ -8,8 +8,9 @@ using System.Data;
 
 namespace potatozine
 {
-    class SQL
+    class dbengine
     {
+        public static String uniConnectionStr;
         private DataTable Magazines = new DataTable();
         private DataTable Book = new DataTable();
         private DataTable Products = new DataTable();
