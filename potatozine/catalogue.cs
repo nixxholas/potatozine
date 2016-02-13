@@ -9,16 +9,17 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace potatozine
 {
     public partial class catalogue : Form
     {
-        String memType;
+        ImageList productImages = new ImageList();
         dbengine database = new dbengine();
         List<PictureBox> picBoxes = new List<PictureBox>();
         int listnum = 1;
-
+       
         public catalogue()
         {
             //Loads the splash screen
@@ -31,7 +32,37 @@ namespace potatozine
             //SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
             //simpleSound.Play();//If you don't want the annoyance, remove Looping
             Thread.Sleep(3000);
+            loadImgList();
             t.Abort();
+        }
+
+        private void loadImgList()
+        {
+            DirectoryInfo dir = new DirectoryInfo(@"images");
+            foreach (FileInfo file in dir.GetFiles())
+            {
+                try
+                {
+                    this.productImages.Images.Add(Image.FromFile(file.FullName));
+                }
+                catch
+                {
+                    Console.WriteLine("This is not an image file");
+                }
+            }
+            this.prodView.View = View.LargeIcon;
+            this.productImages.ImageSize = new Size(256, 256);
+            this.prodView.LargeImageList = this.productImages;
+            //or
+            //this.listView1.View = View.SmallIcon;
+            //this.listView1.SmallImageList = this.imageList1;
+
+            for (int j = 0; j < this.productImages.Images.Count; j++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.ImageIndex = j;
+                this.prodView.Items.Add(item);
+            }
         }
 
         public void splashStart()
@@ -152,11 +183,17 @@ namespace potatozine
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            lblGreet.Text = "";
+            lblGreet.Text = "Guest";
             memStatusBox.Text = "";
             btnLogout.Visible = false;
             MessageBox.Show("You have been logged out.");
         }
+
+        private void prodView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(prodView.SelectedItems.ToString());
+        }
     }
+    
 }
 

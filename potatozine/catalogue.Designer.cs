@@ -30,6 +30,7 @@
         {
             this.tabs = new System.Windows.Forms.TabControl();
             this.maintab = new System.Windows.Forms.TabPage();
+            this.prodView = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblQty = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblGreet = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.maintab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
@@ -95,6 +97,7 @@
             // maintab
             // 
             this.maintab.BackColor = System.Drawing.Color.Silver;
+            this.maintab.Controls.Add(this.prodView);
             this.maintab.Controls.Add(this.button1);
             this.maintab.Controls.Add(this.lblPrice);
             this.maintab.Controls.Add(this.lblQty);
@@ -112,6 +115,16 @@
             this.maintab.TabIndex = 0;
             this.maintab.Text = "Catalog";
             this.maintab.Click += new System.EventHandler(this.maintab_Click);
+            // 
+            // prodView
+            // 
+            this.prodView.Location = new System.Drawing.Point(179, 30);
+            this.prodView.MultiSelect = false;
+            this.prodView.Name = "prodView";
+            this.prodView.Size = new System.Drawing.Size(462, 494);
+            this.prodView.TabIndex = 11;
+            this.prodView.UseCompatibleStateImageBehavior = false;
+            this.prodView.SelectedIndexChanged += new System.EventHandler(this.prodView_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -212,6 +225,8 @@
             // 
             // lstCatergory
             // 
+            this.lstCatergory.BackColor = System.Drawing.Color.White;
+            this.lstCatergory.ForeColor = System.Drawing.Color.Black;
             this.lstCatergory.FormattingEnabled = true;
             this.lstCatergory.ItemHeight = 18;
             this.lstCatergory.Location = new System.Drawing.Point(6, 30);
@@ -274,7 +289,7 @@
             // descCol
             // 
             this.descCol.Text = "Description";
-            this.descCol.Width = 215;
+            this.descCol.Width = 193;
             // 
             // priceCol
             // 
@@ -386,7 +401,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(6, -21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 494);
+            this.panel1.Size = new System.Drawing.Size(907, 579);
             this.panel1.TabIndex = 0;
             // 
             // registerBtn
@@ -395,7 +410,7 @@
             this.registerBtn.BackColor = System.Drawing.Color.White;
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.ForeColor = System.Drawing.Color.Black;
-            this.registerBtn.Location = new System.Drawing.Point(323, 200);
+            this.registerBtn.Location = new System.Drawing.Point(325, 202);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(104, 56);
             this.registerBtn.TabIndex = 5;
@@ -409,7 +424,7 @@
             this.loginBtn.BackColor = System.Drawing.Color.White;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.Black;
-            this.loginBtn.Location = new System.Drawing.Point(459, 200);
+            this.loginBtn.Location = new System.Drawing.Point(461, 202);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(104, 56);
             this.loginBtn.TabIndex = 4;
@@ -504,6 +519,19 @@
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(361, -1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(263, 29);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Potatozine, Revision 99";
+            // 
             // catalogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,6 +540,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(955, 643);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblGreet);
             this.Controls.Add(this.label6);
@@ -574,6 +603,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblGreet;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListView prodView;
     }
 }
 
