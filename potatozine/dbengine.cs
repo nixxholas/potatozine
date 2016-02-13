@@ -18,8 +18,8 @@ namespace potatozine
         private DataTable Book = new DataTable();
 
 
-        List<magazine> magazineobj = new List<magazine>();
-        List<Book> bookobj = new List<Book>();
+        private List<magazine> magazineobj = new List<magazine>();
+        private List<Book> bookobj = new List<Book>();
         public void createobjects()
         {
             foreach (DataRow Row in Magazines.Rows)
@@ -106,6 +106,14 @@ namespace potatozine
                     }
                 }
             }
+        }
+
+        public List<magazine> Magazineobj {
+            get { return this.magazineobj; }
+        }
+
+        public List<Book> Bookobj {
+            get { return this.bookobj; }
         }
     }
 }

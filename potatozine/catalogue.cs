@@ -15,6 +15,10 @@ namespace potatozine
     public partial class catalogue : Form
     {
         String memType;
+        dbengine database = new dbengine();
+        List<PictureBox> picBoxes = new List<PictureBox>();
+        int listnum = 1;
+
         public catalogue()
         {
             //Loads the splash screen
@@ -29,7 +33,7 @@ namespace potatozine
             Thread.Sleep(3000);
             t.Abort();
         }
-        
+
         public void splashStart()
         {
             Application.Run(new splash());
@@ -90,11 +94,48 @@ namespace potatozine
         {
             if (tabs.SelectedTab == tabs.TabPages["Cart"])
             {
-                
+
             }
         }
 
+        private void catalogue_Load(object sender, EventArgs e)
+        {
+            database.loadProducts("magazine");
+            database.loadProducts("Book");
+            database.createobjects();
+        }
 
+        public void listobj(int catcd)
+        {
+            picBoxes.Clear();
+            foreach (magazine mag in database.Magazineobj)
+            {
+                if (mag.Catcd == catcd)
+                {
+                    createPicBox("none");
+                }
+            }
+            foreach (Book bk in database.Bookobj)
+            {
+                if (bk.Catcd == catcd)
+                {
+                    //code to create picbox
+                }
+            }
+        }
+
+        public void createPicBox(string imglink)
+        {
+            PictureBox pic = new PictureBox
+            {
+                Name = "PicBx" + listnum,
+                Size = new Size(221, 290),
+                Location = new Point(listnum * 316, 1),
+                BorderStyle = BorderStyle.FixedSingle,
+                SizeMode = PictureBoxSizeMode.StretchImage
+            };
+
+        }
     }
 }
 
