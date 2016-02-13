@@ -69,7 +69,35 @@ namespace potatozine
             //        "integrated security=true"))
                 if (usernameBox.Text != "" & passwordBox.Text != "")
             {
-                //Perform the login attempt
+                using (SqlConnection conn = new SqlConnection())
+                {
+                    if (chkRegular.Checked)
+                    {
+                        type = "Regular";
+                    }
+                    else if (chkPremium.Checked)
+                    {
+                        type = "Premium";
+                    }
+                    //set up the connection string
+                    conn.ConnectionString = connectionString;
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from UserDetails where username = '" + txtUser.Text
+                        + "' and password = '" + txtPass.Text + "'" + "and MemberType = '" + type + "'", conn);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    if (dt.Rows[0][0].ToString() == "1")
+                    {
+                        this.Hide();
+                        MessageBox.Show("Username and Password is correct");
+                        Form2 f2 = new Form2();
+                        f2.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please check your username and password");
+                    }
+
+                }
             }   else
             {
                 MessageBox.Show("Please enter your credentials.");

@@ -22,8 +22,6 @@ namespace potatozine
 
         private void regBtn_Click(object sender, EventArgs e)
         {
-            if (UsernameBox.Text != "" || passwordBox.Text != "" || repeatPassBox.Text == passwordBox.Text || emailBox.Text.IndexOfAny(letters) >= 0)
-            {
                 using (SqlConnection conn = new SqlConnection())
                 {
                     using (SqlCommand cmd = new SqlCommand())
@@ -65,10 +63,10 @@ namespace potatozine
                         }
                     }
                 }
-            } else
-            {
-                MessageBox.Show("Your input/s are invalid. Please try again.");
-            }
+            //} else
+            //{
+            //    MessageBox.Show("Your input/s are invalid. Please try again.");
+            //}
         }
 
         private void btnClose_Click(object sender, EventArgs e)
