@@ -54,7 +54,7 @@ namespace potatozine
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Invalid");
+                            MessageBox.Show(ex.ToString());
                         }
                         finally
                         {

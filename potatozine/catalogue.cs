@@ -71,26 +71,15 @@ namespace potatozine
             {
                 using (SqlConnection conn = new SqlConnection())
                 {
-                    if (chkRegular.Checked)
-                    {
-                        type = "Regular";
-                    }
-                    else if (chkPremium.Checked)
-                    {
-                        type = "Premium";
-                    }
                     //set up the connection string
-                    conn.ConnectionString = connectionString;
-                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from UserDetails where username = '" + txtUser.Text
-                        + "' and password = '" + txtPass.Text + "'" + "and MemberType = '" + type + "'", conn);
+                    conn.ConnectionString = dbengine.uniConnectionStr;
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from accountinfo where username = '" + usernameBox.Text
+                        + "' and password = '" + passwordBox.Text + "'", conn);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        this.Hide();
                         MessageBox.Show("Username and Password is correct");
-                        Form2 f2 = new Form2();
-                        f2.Show();
                     }
                     else
                     {
