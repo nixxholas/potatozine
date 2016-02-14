@@ -9,3 +9,6 @@ C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.splash.reso
 C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.csproj.GenerateResource.Cache
 C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.exe
 C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.pdb
+C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\bin\Debug\potatozine.exe.config
+C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.exe
+C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.pdb
