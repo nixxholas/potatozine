@@ -37,6 +37,15 @@ namespace potatozine
             cartView.DataSource = cart;
         }
 
+        private void resetCart()
+        {
+            cart.Columns.Remove("ID");
+            cart.Columns.Remove("Name");
+            cart.Columns.Remove("Qty");
+            cart.Columns.Remove("Price");
+            launchCart();
+        }
+
         private void loadreport() {
             DataTable tempstore = new DataTable();
             DGVrep.DataSource = database.getsales();
@@ -180,8 +189,8 @@ namespace potatozine
             btnCheckout.Enabled = false;
             printReceipt();
             cart.Rows.Clear();
+            resetCart();
             checkoutCart.Clear();
-            cartView.DataSource = cart;
             btnCheckout.Enabled = true;
         }
 
