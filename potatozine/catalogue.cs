@@ -75,10 +75,10 @@ namespace potatozine
                         uta.Fill(account);
                         foreach (DataRow row in account.Rows)
                         {
-                            btnLogout.Visible = true;
                             memStatusBox.Text = (row["MemberType"].ToString());
                             lblGreet.Text = (row["Username"].ToString());
                             MessageBox.Show("Welcome to Potatozine, " + lblGreet.Text);
+                            userControl(1);
                         }
                     }
                     else
@@ -91,6 +91,27 @@ namespace potatozine
             else
             {
                 MessageBox.Show("Please enter your credentials.");
+            }
+        }
+
+        private void userControl(int control)
+        {
+            if (control == 1) // When user logs in
+            {
+                loginBtn.Visible = false;
+                registerBtn.Visible = false;
+                usernameBox.Enabled = false;
+                passwordBox.Enabled = false;
+                btnLogout.Visible = true;
+            } else if (control == 2) // When user logs out
+            {
+                lblGreet.Text = "Guest";
+                memStatusBox.Text = "";
+                btnLogout.Visible = false;
+                usernameBox.Enabled = true;
+                passwordBox.Enabled = true;
+                loginBtn.Visible = true;
+                registerBtn.Visible = true;
             }
         }
 
@@ -198,13 +219,31 @@ namespace potatozine
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            lblGreet.Text = "";
-            memStatusBox.Text = "";
-            btnLogout.Visible = false;
+            userControl(2);
             MessageBox.Show("You have been logged out.");
         }
 
         private void lstCatergory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
