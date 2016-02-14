@@ -108,45 +108,46 @@ namespace potatozine
             }
         }
 
-        //public void AddSales(DataTable cart, string username) {
-        //    foreach (DataRow row in cart.Rows) { 
-        //    using (SqlConnection conn = new SqlConnection())
-        //    {
-        //            using (SqlCommand cmd = new SqlCommand())
-        //            {
-        //                //set up the connection string
-        //                conn.ConnectionString = dbengine.uniConnectionStr;
-        //                cmd.Connection = conn;
-        //                cmd.CommandText = "Insert into sales(prodid,username,name,qty,totamt)"
-        //                    + "Values(@Username,@Password,@MemberType)";
+        public void AddSales(DataTable cart, string username)
+        {
+            foreach (DataRow row in cart.Rows)
+            {
+                using (SqlConnection conn = new SqlConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        //set up the connection string
+                        conn.ConnectionString = dbengine.uniConnectionStr;
+                        cmd.Connection = conn;
+                        cmd.CommandText = "Insert into sales(prodid,username,name,qty,totamt)"
+                            + "Values(@prodid,@username,@name,@qty,@totamt)";
 
-        //                cmd.Parameters.AddWithValue("@prodid", Row[""])
-        //                cmd.Parameters.AddWithValue("@Username", username);
-        //                cmd.Parameters.AddWithValue("@Password", passwordBox.Text);
-        //                cmd.Parameters.AddWithValue("@MemberType", type);
+                        cmd.Parameters.AddWithValue("@prodid", row["ID"].ToString());
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@name", row["Name"].ToString());
+                        cmd.Parameters.AddWithValue("@qty", row["Qty"].ToString());
+                        cmd.Parameters.AddWithValue("@totamt", row["Price"]);
 
-        //                try
-        //                {
-        //                    //open connection
-        //                    conn.Open();
-        //                    //execute command
-        //                    cmd.ExecuteNonQuery();
-        //                    MessageBox.Show("User created");
-        //                    this.Hide();
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    MessageBox.Show(ex.ToString());
-        //                }
-        //                finally
-        //                {
-        //                    //close connection
-        //                    conn.Close();
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
+                        try
+                        {
+                            //open connection
+                            conn.Open();
+                            //execute command
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
+                        finally
+                        {
+                            //close connection
+                            conn.Close();
+                        }
+                    }
+                }
+            }
+        }
 
         public List<magazine> Magazineobj {
             get { return this.magazineobj; }

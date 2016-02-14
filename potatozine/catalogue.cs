@@ -63,7 +63,7 @@ namespace potatozine
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-
+            database.AddSales(cart,lblGreet.Text);
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -205,7 +205,6 @@ namespace potatozine
                 try
                 {
                     index = index - displayedMags.Count();
-                    MessageBox.Show(index.ToString());
                     setinfo(displayedBooks[index].Pid, displayedBooks[index].Name, displayedBooks[index].adddesc(), displayedBooks[index].Price.ToString(), displayedBooks[index].ImgLink);
                 }
                 catch (Exception ex)
