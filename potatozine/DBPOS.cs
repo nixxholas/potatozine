@@ -8,7 +8,7 @@ using System.Data;
 
 namespace potatozine
 {
-    class dbengine
+    class DBPOS
     {
         public static String uniConnectionStr = //"Data Source = DIT-NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
         "Data Source=NIXH\\SQLEXPRESS;" + "database=potatozine;" + "integrated security=true";
@@ -117,7 +117,7 @@ namespace potatozine
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         //set up the connection string
-                        conn.ConnectionString = dbengine.uniConnectionStr;
+                        conn.ConnectionString = DBPOS.uniConnectionStr;
                         cmd.Connection = conn;
                         cmd.CommandText = "Insert into sales(prodid,username,name,qty,totamt)"
                             + "Values(@prodid,@username,@name,@qty,@totamt)";

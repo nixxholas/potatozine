@@ -537,7 +537,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(209, 24);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Potatozine Revision 116";
+            this.label7.Text = "Potatozine Revision 120";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // catalogue

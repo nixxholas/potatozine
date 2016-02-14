@@ -18,7 +18,7 @@ namespace potatozine
         String memType;
         public double rprice; //Current Product Price
         public double cprice; //Current Calculated Price
-        dbengine database = new dbengine();
+        DBPOS database = new DBPOS();
         List<PictureBox> picBoxes = new List<PictureBox>();
         List<magazine> displayedMags = new List<magazine>();
         List<Book> displayedBooks = new List<Book>();
@@ -111,7 +111,7 @@ namespace potatozine
                         + "' and password = '" + passwordBox.Text + "'";
                     string usertype = "Select * from accountinfo where username = '" + usernameBox.Text
                         + "' and password = '" + passwordBox.Text + "'";
-                    conn.ConnectionString = dbengine.uniConnectionStr;
+                    conn.ConnectionString = DBPOS.uniConnectionStr;
                     conn.Open();
                     SqlDataAdapter sda = new SqlDataAdapter(command, conn);
                     DataTable dt = new DataTable(); //Data table verifying table

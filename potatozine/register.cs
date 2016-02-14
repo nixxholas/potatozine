@@ -35,7 +35,7 @@ namespace potatozine
                         type = "Regular";
                     }
                     //set up the connection string
-                    conn.ConnectionString = dbengine.uniConnectionStr;
+                    conn.ConnectionString = DBPOS.uniConnectionStr;
                     cmd.Connection = conn;
                     cmd.CommandText = "Insert into accountinfo(Name,Username,Password,Email,MemberType)"
                         + "Values(@Name,@Username,@Password,@Email,@MemberType)";
