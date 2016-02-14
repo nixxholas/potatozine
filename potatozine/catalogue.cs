@@ -306,7 +306,7 @@ namespace potatozine
                 }
                 totalcartBox.Text = sum.ToString("c");
                 totalcartBox.Refresh();
-                //RemoveDupes(cartView);
+                RemoveDupes(cartView);
             }
         }
 
