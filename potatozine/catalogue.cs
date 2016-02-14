@@ -90,8 +90,9 @@ namespace potatozine
                         uta.Fill(account);
                         foreach (DataRow row in account.Rows)
                         {
-                            memStatusBox.Text = (row["MemberType"].ToString());
-                            lblGreet.Text = (row["Username"].ToString());
+                            userloader user = new userloader((row["Username"].ToString()), (row["Name"].ToString()), (row["Email"].ToString()), (row["MemberType"].ToString()));
+                            memStatusBox.Text = user.Memtype;
+                            lblGreet.Text = user.Name;
                             MessageBox.Show("Welcome to Potatozine, " + lblGreet.Text);
                             userControl(1);
                         }
@@ -273,8 +274,22 @@ namespace potatozine
 
         private void refTotal()
         {
-            double sum = Convert.ToInt32(cart.Compute("SUM(Price)", string.Empty));
-            totalcartBox.Text = sum.ToString();
+            double sum;
+            if (cartView.Rows.Count == 0) //When no rows are present
+            {
+                sum = 0.00;
+                totalcartBox.Text = String.Format("{0:C}", sum);
+                totalcartBox.Refresh();
+            }
+            else {
+                sum = Convert.ToDouble(cart.Compute("SUM(Price)", string.Empty));
+                if (memStatusBox.Text == "Premium")
+                {
+                    sum *= 0.75;
+                }
+                totalcartBox.Text = sum.ToString("c");
+                totalcartBox.Refresh();
+            }
         }
 
         private void btnAddCart_Click(object sender, EventArgs e)
@@ -294,6 +309,15 @@ namespace potatozine
         private void cartView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             refTotal();
+        }
+
+        private void couponBox_TextChanged(object sender, EventArgs e)
+        {
+            if (couponBox.Text == "CNY50")
+            {
+                totalcartBox.Text = (Convert.ToDouble(totalcartBox.Text) * 0.5).ToString();
+                MessageBox.Show("You have just activated a 50% discount!");
+            }
         }
     }
 }
