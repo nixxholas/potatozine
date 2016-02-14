@@ -219,8 +219,7 @@ namespace potatozine
 
         private void catalogue_Load(object sender, EventArgs e)
         {
-            database.loadProducts("magazine");
-            database.loadProducts("Book");
+            database.loadProducts();
             database.createobjects();
         }
 

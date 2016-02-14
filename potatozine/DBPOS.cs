@@ -10,16 +10,18 @@ namespace potatozine
 {
     class DBPOS
     {
-        public static String uniConnectionStr = //"Data Source = DIT-NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
-        "Data Source=NIXH\\SQLEXPRESS;" + "database=potatozine;" + "integrated security=true";
+        public static String uniConnectionStr = "Data Source = DIT-NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
+        //"Data Source=NIXH\\SQLEXPRESS;" + "database=potatozine;" + "integrated security=true";
 
 
         private DataTable Magazines = new DataTable();
         private DataTable Book = new DataTable();
-
+        private DataTable SalesTbl = new DataTable();
 
         private List<magazine> magazineobj = new List<magazine>();
         private List<Book> bookobj = new List<Book>();
+
+
         public void createobjects()
         {
             foreach (DataRow Row in Magazines.Rows)
@@ -51,61 +53,16 @@ namespace potatozine
         }
 
 
-        public void loadProducts(string table)
+        public void loadProducts()
         {
-            using (SqlConnection conn = new SqlConnection())
-            {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    using (SqlDataAdapter da = new SqlDataAdapter())
-                    {
-                        //Connection String
-                        conn.ConnectionString = uniConnectionStr;
+            Magazines = SQLQuery("select * from magazine");
+            Book = SQLQuery("select * from Book");
+        }
 
-                        cmd.Connection = conn;
-
-                        cmd.CommandText = "Select * from " + table;
-
-                        if (table == "magazine")
-                        {
-
-                            try
-                            {
-                                //Open Connection
-                                conn.Open();
-                                da.SelectCommand = cmd;
-                                da.Fill(Magazines);
-                            }
-                            catch (Exception ex)
-                            {
-                                throw ex;
-                            }
-                            finally
-                            {
-                                conn.Close();
-                            }
-                        }
-                        else
-                        {
-                            try
-                            {
-                                //Open Connection
-                                conn.Open();
-                                da.SelectCommand = cmd;
-                                da.Fill(Book);
-                            }
-                            catch (Exception ex)
-                            {
-                                throw ex;
-                            }
-                            finally
-                            {
-                                conn.Close();
-                            }
-                        }
-                    }
-                }
-            }
+        public DataTable getsales()
+        {
+            SalesTbl = SQLQuery("select * from sales");
+            return SalesTbl;
         }
 
         public void AddSales(DataTable cart, string username)
@@ -149,7 +106,42 @@ namespace potatozine
             }
         }
 
-        public List<magazine> Magazineobj {
+        public DataTable SQLQuery(string command) {
+            DataTable temp = new DataTable();
+            using (SqlConnection conn = new SqlConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    {
+                        //Connection String
+                        conn.ConnectionString = uniConnectionStr;
+
+                        cmd.Connection = conn;
+
+                        cmd.CommandText = command;
+                        try
+                        {
+                            //Open Connection
+                            conn.Open();
+                            da.SelectCommand = cmd;
+                            da.Fill(temp);
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+                    }
+                }
+            }
+            return temp;
+        }
+
+    public List<magazine> Magazineobj {
             get { return this.magazineobj; }
         }
 
