@@ -15,11 +15,23 @@ namespace potatozine
     public partial class catalogue : Form
     {
         String memType;
+        public double rprice; //Current Product Price
+        public double cprice; //Current Calculated Price
         dbengine database = new dbengine();
         List<PictureBox> picBoxes = new List<PictureBox>();
         List<magazine> displayedMags = new List<magazine>();
         List<Book> displayedBooks = new List<Book>();
-        List<string> cart = new List<string>();
+        DataTable cart = new DataTable();
+
+        private void launchCart()
+        {
+            cart.Columns.Add("ID", typeof(string));
+            cart.Columns.Add("Name", typeof(string));
+            cart.Columns.Add("Description", typeof(string));
+            cart.Columns.Add("Qty", typeof(int));
+            cart.Columns.Add("Price", typeof(double));
+            cartView.DataSource = cart;
+        }
 
         int listnum = 0;
 
@@ -35,6 +47,7 @@ namespace potatozine
             //SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
             //simpleSound.Play();//If you don't want the annoyance, remove Looping
             Thread.Sleep(3000);
+            launchCart();            
             t.Abort();
         }
 
@@ -123,17 +136,10 @@ namespace potatozine
             regForm.Show(); //Show the Form
         }
 
-        //Anti-Ms Choo System for Procastinating about Hard Coding.
-        public void UpdateTabs()
-        {
-
-        }
-
         private void tabs_Selected(object sender, TabControlEventArgs e)
         {
             if (tabs.SelectedTab == tabs.TabPages["Cart"])
             {
-
             }
         }
 
@@ -193,11 +199,10 @@ namespace potatozine
         {
             int index = 0;
             string name = string.Empty;
-            //debugging
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
             try {
-                setinfo(displayedMags[index].Name, displayedMags[index].adddesc(), displayedMags[index].Price.ToString(), displayedMags[index].ImgLink);
+                setinfo(displayedMags[index].Pid, displayedMags[index].Name, displayedMags[index].adddesc(), displayedMags[index].Price.ToString(), displayedMags[index].ImgLink);
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -205,11 +210,13 @@ namespace potatozine
             }
 
 
-        private void setinfo(string name, string desc, string price, string img) {
+        private void setinfo(string pid, string name, string desc, string price, string img) {
             lblSelProdNam.Text = name;
             PicSelProd.Load(img);
             txtSelDesc.Text = desc;
             lblPrice.Text = "Price: " + price;
+            rprice = double.Parse(price);
+            lblPID.Text = pid;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -248,9 +255,29 @@ namespace potatozine
 
         }
 
+        private void refTotal()
+        {
+            double sum = Convert.ToInt32(cart.Compute("SUM(Price)", string.Empty));
+            totalcartBox.Text = sum.ToString();
+        }
+
         private void btnAddCart_Click(object sender, EventArgs e)
         {
+            if (lblSelProdNam.Text != "") {
+            cprice = rprice * double.Parse(numQty.Text);
+            cart.Rows.Add(lblPID.Text, lblSelProdNam.Text, txtSelDesc.Text, int.Parse(numQty.Text), cprice);
+            cprice = 0;
+            }
+        }
 
+        private void cartView_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            refTotal();
+        }
+
+        private void cartView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            refTotal();
         }
     }
 }
