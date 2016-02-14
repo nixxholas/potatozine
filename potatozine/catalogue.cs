@@ -35,6 +35,16 @@ namespace potatozine
             cartView.DataSource = cart;
         }
 
+        private void loadreport() {
+            DataTable tempstore = new DataTable();
+            DGVrep.DataSource = database.getsales();
+            tempstore = database.getSalesAvgTot();
+            foreach (DataRow row in tempstore.Rows) {
+                lblAvgSales.Text = "Average Sales: $" + row["Avg"].ToString();
+                lblTotSale.Text = "Total Sales: $" + row["Sum"].ToString();
+            }
+        }
+
         private void printReceipt()
         {
             printDocument.Print();
@@ -117,7 +127,7 @@ namespace potatozine
             //SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
             //simpleSound.Play();//If you don't want the annoyance, remove Looping
             Thread.Sleep(3000);
-            launchCart();            
+            launchCart();
             t.Abort();
         }
 
@@ -214,6 +224,9 @@ namespace potatozine
         {
             if (tabs.SelectedTab == tabs.TabPages["Cart"])
             {
+            }
+            else if (tabs.SelectedTab == tabs.TabPages["Report"]) {
+                loadreport();
             }
         }
 

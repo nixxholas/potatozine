@@ -65,6 +65,10 @@ namespace potatozine
             return SalesTbl;
         }
 
+        public DataTable getSalesAvgTot() {
+            return SQLQuery("select AVG(totamt) 'Avg', SUM(totamt) 'Sum' from sales");
+        }
+
         public void AddSales(DataTable cart, string username)
         {
             foreach (DataRow row in cart.Rows)
