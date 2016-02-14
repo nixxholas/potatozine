@@ -146,12 +146,16 @@ namespace potatozine
         public void listobj(int catcd)
         {
             picBoxes.Clear();
+            MessageBox.Show("Method invokedd");
             foreach (magazine mag in database.Magazineobj)
             {
+                MessageBox.Show("Working fe loop");
                 if (mag.Catcd == catcd + 1)
                 {
+                    MessageBox.Show("If statement working");
                     createPicBox(mag.ImgLink);
                     displayedMags.Add(mag);
+                    MessageBox.Show("Current listings: " + displayedMags.ToString());
                 }
             }
             foreach (Book bk in database.Bookobj)
@@ -192,16 +196,22 @@ namespace potatozine
         {
             int index = 0;
             string name = string.Empty;
+            //debugging
             if (sender is PictureBox)
             {
                 MessageBox.Show("clicked on: " + ((PictureBox)sender).Name);
             }
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
-            if (index < displayedMags.Count) {
+            try {
                 setinfo(displayedMags[index + 1].Name, displayedMags[index + 1].adddesc(), displayedMags[index + 1].Price.ToString(), displayedMags[index + 1].ImgLink);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(index.ToString());
+                MessageBox.Show(ex.ToString());
             }
-        }
+            }
+
 
         private void setinfo(string name, string desc, string price, string img) {
             lblSelProdNam.Text = name;
