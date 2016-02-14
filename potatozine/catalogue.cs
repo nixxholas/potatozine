@@ -161,10 +161,28 @@ namespace potatozine
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            if (memStatusBox.Text == "Premium") {
+                foreach (DataRow row in cart.Rows)
+                {
+                    row["Price"] = double.Parse(row["price"].ToString()) * 0.2;
+                }
+            }
+
+            if (couponBox.Text == "CNY50") {
+                foreach (DataRow row in cart.Rows)
+                {
+                    row["Price"] = double.Parse(row["price"].ToString()) * 0.5;
+                }
+            }
             database.AddSales(cart,lblGreet.Text);
             checkoutCart = (DataTable)(cartView.DataSource);
             checkoutCart.Columns.Remove("Description");
+            btnCheckout.Enabled = false;
             printReceipt();
+            cart.Rows.Clear();
+            checkoutCart.Clear();
+            cartView.DataSource = cart;
+            btnCheckout.Enabled = true;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -367,7 +385,7 @@ namespace potatozine
                 sum = Convert.ToDouble(cart.Compute("SUM(Price)", string.Empty));
                 if (memStatusBox.Text == "Premium")
                 {
-                    sum *= 0.75;
+                    sum *= 0.2;
                 }
                 if (couponBox.Text == "CNY50")
                 {
@@ -379,39 +397,39 @@ namespace potatozine
             }
         }
 
-        //Still Buggy
-        public void RemoveDupes(DataGridView grv)
-        {
-            for (int currentRow = 0; currentRow < grv.Rows.Count - 1; currentRow++)
-            {
-                DataGridViewRow rowToCompare = grv.Rows[currentRow];
+        ////Still Buggy
+        //public void RemoveDupes(DataGridView grv)
+        //{
+        //    for (int currentRow = 0; currentRow < grv.Rows.Count - 1; currentRow++)
+        //    {
+        //        DataGridViewRow rowToCompare = grv.Rows[currentRow];
 
-                for (int otherRow = currentRow + 1; otherRow < grv.Rows.Count; otherRow++)
-                {
-                    DataGridViewRow row = grv.Rows[otherRow];
+        //        for (int otherRow = currentRow + 1; otherRow < grv.Rows.Count; otherRow++)
+        //        {
+        //            DataGridViewRow row = grv.Rows[otherRow];
 
-                    bool duplicateRow = true;
+        //            bool duplicateRow = true;
 
-                    for (int cellIndex = 0; cellIndex < row.Cells.Count; cellIndex++)
-                    {
-                        if (!rowToCompare.Cells[cellIndex].Value.Equals(row.Cells[cellIndex].Value))
-                        {
-                            duplicateRow = false;
-                            break;
-                        }
-                    }
+        //            for (int cellIndex = 0; cellIndex < row.Cells.Count; cellIndex++)
+        //            {
+        //                if (!rowToCompare.Cells[cellIndex].Value.Equals(row.Cells[cellIndex].Value))
+        //                {
+        //                    duplicateRow = false;
+        //                    break;
+        //                }
+        //            }
 
-                    if (duplicateRow)
-                    {
-                        rowToCompare.Cells["Qty"].Value = int.Parse(rowToCompare.Cells["Qty"].Value.ToString()) + int.Parse(row.Cells["Qty"].Value.ToString());
-                        rowToCompare.Cells["Price"].Value = double.Parse(rowToCompare.Cells["Qty"].Value.ToString()) * int.Parse(row.Cells["Qty"].Value.ToString());
-                        //MessageBox.Show(rowToCompare.Cells["Qty"].Value.ToString() + row.Cells["Qty"].Value.ToString());
-                        grv.Rows.Remove(row);
-                        otherRow--;
-                    }
-                }
-            }
-        }
+        //            if (duplicateRow)
+        //            {
+        //                rowToCompare.Cells["Qty"].Value = int.Parse(rowToCompare.Cells["Qty"].Value.ToString()) + int.Parse(row.Cells["Qty"].Value.ToString());
+        //                rowToCompare.Cells["Price"].Value = double.Parse(rowToCompare.Cells["Qty"].Value.ToString()) * int.Parse(row.Cells["Qty"].Value.ToString());
+        //                //MessageBox.Show(rowToCompare.Cells["Qty"].Value.ToString() + row.Cells["Qty"].Value.ToString());
+        //                grv.Rows.Remove(row);
+        //                otherRow--;
+        //            }
+        //        }
+        //    }
+        //}
 
         private void btnAddCart_Click(object sender, EventArgs e)
         {
@@ -442,7 +460,6 @@ namespace potatozine
                 discount = 50;
             }
         }
-
     }
 }
 
