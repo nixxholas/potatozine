@@ -200,7 +200,7 @@ namespace potatozine
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
             try {
-                setinfo(displayedMags[index + 1].Name, displayedMags[index + 1].adddesc(), displayedMags[index + 1].Price.ToString(), displayedMags[index + 1].ImgLink);
+                setinfo(displayedMags[index].Name, displayedMags[index].adddesc(), displayedMags[index].Price.ToString(), displayedMags[index].ImgLink);
             } catch (Exception ex)
             {
                 MessageBox.Show(index.ToString());
