@@ -24,7 +24,7 @@ namespace potatozine
 
         public string adddesc() {
             string basedesc = base.getDesc();
-            basedesc += "\nPages: " + pages;
+            basedesc += "\r\nPages: " + pages;
             return basedesc;
         }
     }

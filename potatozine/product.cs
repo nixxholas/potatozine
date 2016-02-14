@@ -64,7 +64,7 @@ namespace potatozine
         public string getDesc() {
             string toreturn = string.Empty;
             toreturn = "Product ID: " + this.pid
-                + "\n About this product:\n" + this.desc;
+                + "\r\nAbout this product:\r\n" + this.desc;
             return toreturn;
         }
     }

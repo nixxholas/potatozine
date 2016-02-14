@@ -19,6 +19,7 @@ namespace potatozine
         List<PictureBox> picBoxes = new List<PictureBox>();
         List<magazine> displayedMags = new List<magazine>();
         List<Book> displayedBooks = new List<Book>();
+        List<string> cart = new List<string>();
 
         int listnum = 0;
 
@@ -193,17 +194,12 @@ namespace potatozine
             int index = 0;
             string name = string.Empty;
             //debugging
-            if (sender is PictureBox)
-            {
-                MessageBox.Show("clicked on: " + ((PictureBox)sender).Name);
-            }
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
             try {
                 setinfo(displayedMags[index].Name, displayedMags[index].adddesc(), displayedMags[index].Price.ToString(), displayedMags[index].ImgLink);
             } catch (Exception ex)
             {
-                MessageBox.Show(index.ToString());
                 MessageBox.Show(ex.ToString());
             }
             }
@@ -248,6 +244,11 @@ namespace potatozine
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddCart_Click(object sender, EventArgs e)
         {
 
         }

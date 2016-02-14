@@ -39,9 +39,9 @@ namespace potatozine
         public string adddesc()
         {
             string basedesc = base.getDesc();
-            basedesc += "\nPublisher: " + publisher
-                +"\n Author(s): " + authors
-                +"\n Type: " + type;
+            basedesc += "\r\nPublisher: " + publisher
+                +"\r\n Author(s): " + authors
+                +"\r\n Type: " + type;
             return basedesc;
         }
 
