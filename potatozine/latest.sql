@@ -55,3 +55,5 @@ values (0, 'All'),
 drop table magazine
 drop table book
 drop table category
+
+select * from magazine

@@ -20,7 +20,7 @@ namespace potatozine
         List<magazine> displayedMags = new List<magazine>();
         List<Book> displayedBooks = new List<Book>();
 
-        int listnum = 1;
+        int listnum = 0;
 
         public catalogue()
         {
@@ -66,11 +66,12 @@ namespace potatozine
                     conn.ConnectionString = dbengine.uniConnectionStr;
                     conn.Open();
                     SqlDataAdapter sda = new SqlDataAdapter(command, conn);
-                    DataTable dt = new DataTable();
+                    DataTable dt = new DataTable(); //Data table verifying table
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        SqlDataAdapter uta = new SqlDataAdapter(usertype, conn);
+                        //Data table for storing current account
+                        SqlDataAdapter uta = new SqlDataAdapter(usertype, conn); 
                         DataTable account = new DataTable();
                         uta.Fill(account);
                         foreach (DataRow row in account.Rows)
@@ -147,7 +148,7 @@ namespace potatozine
             picBoxes.Clear();
             foreach (magazine mag in database.Magazineobj)
             {
-                if (mag.Catcd == catcd)
+                if (mag.Catcd == catcd + 1)
                 {
                     createPicBox(mag.ImgLink);
                     displayedMags.Add(mag);
@@ -155,7 +156,7 @@ namespace potatozine
             }
             foreach (Book bk in database.Bookobj)
             {
-                if (bk.Catcd == catcd)
+                if (bk.Catcd == catcd + 1)
                 {
                     createPicBox(bk.ImgLink);
                     displayedBooks.Add(bk);
@@ -175,7 +176,7 @@ namespace potatozine
             };
             pic.Load(imglink);
             picboxName = pic.Name.ToString();
-            pic.Click += new System.EventHandler(picBox_OnClick); //How to parse in data into a onclick listener
+            pic.Click += new System.EventHandler(picBox_OnClick);
             picBoxes.Add(pic);
             listnum++;
         }
@@ -197,8 +198,8 @@ namespace potatozine
             }
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
-            if (index < displayedMags.Count - 1) {
-                setinfo(displayedMags[index - 1].Name, displayedMags[index - 1].adddesc(), displayedMags[index - 1].Price.ToString(), displayedMags[index - 1].ImgLink);
+            if (index < displayedMags.Count) {
+                setinfo(displayedMags[index + 1].Name, displayedMags[index + 1].adddesc(), displayedMags[index + 1].Price.ToString(), displayedMags[index + 1].ImgLink);
             }
         }
 
@@ -222,6 +223,7 @@ namespace potatozine
             displayedMags.Clear();
             listobj(lstCatergory.SelectedIndex);
             displayboxes();
+            listnum = 0;
         }
 
         private void passwordBox_TextChanged(object sender, EventArgs e)
