@@ -252,16 +252,6 @@ namespace potatozine
             listnum = 0;
         }
 
-        private void passwordBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void refTotal()
         {
             double sum;
