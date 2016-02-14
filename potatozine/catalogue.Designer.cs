@@ -114,7 +114,7 @@
             this.maintab.Controls.Add(this.lstCatergory);
             this.maintab.Location = new System.Drawing.Point(4, 32);
             this.maintab.Name = "maintab";
-            this.maintab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.maintab.Padding = new System.Windows.Forms.Padding(3);
             this.maintab.Size = new System.Drawing.Size(919, 564);
             this.maintab.TabIndex = 0;
             this.maintab.Text = "Catalog";
@@ -133,7 +133,7 @@
             // 
             this.FlwPanel.AutoScroll = true;
             this.FlwPanel.Location = new System.Drawing.Point(182, 30);
-            this.FlwPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FlwPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FlwPanel.Name = "FlwPanel";
             this.FlwPanel.Size = new System.Drawing.Size(456, 494);
             this.FlwPanel.TabIndex = 11;
@@ -141,7 +141,7 @@
             // btnAddCart
             // 
             this.btnAddCart.Location = new System.Drawing.Point(758, 478);
-            this.btnAddCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCart.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCart.Name = "btnAddCart";
             this.btnAddCart.Size = new System.Drawing.Size(128, 46);
             this.btnAddCart.TabIndex = 10;
@@ -172,7 +172,7 @@
             // numQty
             // 
             this.numQty.Location = new System.Drawing.Point(655, 500);
-            this.numQty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numQty.Margin = new System.Windows.Forms.Padding(2);
             this.numQty.Minimum = new decimal(new int[] {
             1,
             0,
@@ -190,7 +190,7 @@
             // txtSelDesc
             // 
             this.txtSelDesc.Location = new System.Drawing.Point(655, 298);
-            this.txtSelDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSelDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtSelDesc.Multiline = true;
             this.txtSelDesc.Name = "txtSelDesc";
             this.txtSelDesc.ReadOnly = true;
@@ -220,7 +220,7 @@
             // PicSelProd
             // 
             this.PicSelProd.Location = new System.Drawing.Point(691, 30);
-            this.PicSelProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PicSelProd.Margin = new System.Windows.Forms.Padding(2);
             this.PicSelProd.Name = "PicSelProd";
             this.PicSelProd.Size = new System.Drawing.Size(167, 242);
             this.PicSelProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +246,7 @@
             "Technology",
             "Travel"});
             this.lstCatergory.Location = new System.Drawing.Point(6, 30);
-            this.lstCatergory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstCatergory.Margin = new System.Windows.Forms.Padding(2);
             this.lstCatergory.Name = "lstCatergory";
             this.lstCatergory.Size = new System.Drawing.Size(161, 472);
             this.lstCatergory.TabIndex = 0;
@@ -264,7 +264,7 @@
             this.carttab.Controls.Add(this.btnCheckout);
             this.carttab.Location = new System.Drawing.Point(4, 32);
             this.carttab.Name = "carttab";
-            this.carttab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.carttab.Padding = new System.Windows.Forms.Padding(3);
             this.carttab.Size = new System.Drawing.Size(919, 564);
             this.carttab.TabIndex = 1;
             this.carttab.Text = "Cart";
@@ -369,7 +369,7 @@
             this.accTab.Controls.Add(this.panel1);
             this.accTab.Location = new System.Drawing.Point(4, 32);
             this.accTab.Name = "accTab";
-            this.accTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.accTab.Padding = new System.Windows.Forms.Padding(3);
             this.accTab.Size = new System.Drawing.Size(919, 564);
             this.accTab.TabIndex = 2;
             this.accTab.Text = "My Account";
@@ -454,7 +454,6 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Password:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -468,7 +467,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Username:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Report
             // 
@@ -539,9 +537,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(309, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(315, 24);
+            this.label7.Size = new System.Drawing.Size(209, 24);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Potatozine Revision 110, Milestone 1";
+            this.label7.Text = "Potatozine Revision 116";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // catalogue
