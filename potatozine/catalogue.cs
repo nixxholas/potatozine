@@ -140,12 +140,6 @@ namespace potatozine
             database.loadProducts("magazine");
             database.loadProducts("Book");
             database.createobjects();
-            createPicBox("/Images/herworld.jpg");
-            createPicBox("/Images/bazarart.jpg");
-            createPicBox("/Images/cleo.jpg");
-            createPicBox("/Images/TRAVELE.png");
-            createPicBox("/Images/SMART.jpg");
-
         }
 
         public void listobj(int catcd)
@@ -183,7 +177,6 @@ namespace potatozine
             picboxName = pic.Name.ToString();
             pic.Click += new System.EventHandler(picBox_OnClick); //How to parse in data into a onclick listener
             picBoxes.Add(pic);
-            displayboxes();
             listnum++;
         }
 
@@ -205,8 +198,7 @@ namespace potatozine
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
             if (index < displayedMags.Count - 1) {
-                lblSelProdNam.Text = displayedMags[index-1].Name;
-                
+                setinfo(displayedMags[index - 1].Name, displayedMags[index - 1].adddesc(), displayedMags[index - 1].Price.ToString(), displayedMags[index - 1].ImgLink);
             }
         }
 
@@ -225,7 +217,11 @@ namespace potatozine
 
         private void lstCatergory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            FlwPanel.Controls.Clear();
+            displayedBooks.Clear();
+            displayedMags.Clear();
+            listobj(lstCatergory.SelectedIndex);
+            displayboxes();
         }
 
         private void passwordBox_TextChanged(object sender, EventArgs e)

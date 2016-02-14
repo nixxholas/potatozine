@@ -36,5 +36,14 @@ namespace potatozine
             set { this.type = value; }
         }
 
+        public string adddesc()
+        {
+            string basedesc = base.getDesc();
+            basedesc += "\nPublisher: " + publisher
+                +"\n Author(s): " + authors
+                +"\n Type: " + type;
+            return basedesc;
+        }
+
     }
 }

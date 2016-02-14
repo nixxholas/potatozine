@@ -21,5 +21,11 @@ namespace potatozine
             get { return this.pages; }
             set { this.pages = value; }
         }
+
+        public string adddesc() {
+            string basedesc = base.getDesc();
+            basedesc += "\nPages: " + pages;
+            return basedesc;
+        }
     }
 }
