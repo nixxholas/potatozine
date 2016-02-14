@@ -64,7 +64,7 @@ namespace potatozine
 
                         cmd.CommandText = "Select * from " + table;
 
-                        if (table == "Magazine")
+                        if (table == "magazine")
                         {
 
                             try

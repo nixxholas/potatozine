@@ -146,16 +146,12 @@ namespace potatozine
         public void listobj(int catcd)
         {
             picBoxes.Clear();
-            MessageBox.Show("Method invokedd");
             foreach (magazine mag in database.Magazineobj)
             {
-                MessageBox.Show("Working fe loop");
                 if (mag.Catcd == catcd + 1)
                 {
-                    MessageBox.Show("If statement working");
                     createPicBox(mag.ImgLink);
                     displayedMags.Add(mag);
-                    MessageBox.Show("Current listings: " + displayedMags.ToString());
                 }
             }
             foreach (Book bk in database.Bookobj)
