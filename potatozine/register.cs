@@ -22,47 +22,50 @@ namespace potatozine
 
         private void regBtn_Click(object sender, EventArgs e)
         {
-                using (SqlConnection conn = new SqlConnection())
+            using (SqlConnection conn = new SqlConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    using (SqlCommand cmd = new SqlCommand())
+                    if (premiumCheck.Checked == true)
                     {
-                        if (premiumCheck.Checked)
-                        {
-                            type = "Regular";
-                        } else
-                        {
-                            type = "Normal";
-                        }
-                        //set up the connection string
-                        conn.ConnectionString = dbengine.uniConnectionStr;
-                        cmd.Connection = conn;
-                        cmd.CommandText = "Insert into accountinfo(Username,Password,MemberType)"
-                            + "Values(@Username,@Password,@MemberType)";
+                        type = "Premium";
+                    }
+                    else
+                    {
+                        type = "Regular";
+                    }
+                    //set up the connection string
+                    conn.ConnectionString = dbengine.uniConnectionStr;
+                    cmd.Connection = conn;
+                    cmd.CommandText = "Insert into accountinfo(Name,Username,Password,Email,MemberType)"
+                        + "Values(@Name,@Username,@Password,@Email,@MemberType)";
 
-                        cmd.Parameters.AddWithValue("@Username", UsernameBox.Text);
-                        cmd.Parameters.AddWithValue("@Password", passwordBox.Text);
-                        cmd.Parameters.AddWithValue("@MemberType", type);
+                    cmd.Parameters.AddWithValue("@Name", nameBox.Text);
+                    cmd.Parameters.AddWithValue("@Username", UsernameBox.Text);
+                    cmd.Parameters.AddWithValue("@Password", passwordBox.Text);
+                    cmd.Parameters.AddWithValue("@Email", emailBox.Text);
+                    cmd.Parameters.AddWithValue("@MemberType", type);
 
-                        try
-                        {
-                            //open connection
-                            conn.Open();
-                            //execute command
-                            cmd.ExecuteNonQuery();
-                            MessageBox.Show("User created");
-                            this.Hide();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.ToString());
-                        }
-                        finally
-                        {
-                            //close connection
-                            conn.Close();
-                        }
+                    try
+                    {
+                        //open connection
+                        conn.Open();
+                        //execute command
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("User created");
+                        this.Hide();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    finally
+                    {
+                        //close connection
+                        conn.Close();
                     }
                 }
+            }
             //} else
             //{
             //    MessageBox.Show("Your input/s are invalid. Please try again.");

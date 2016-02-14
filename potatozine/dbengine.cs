@@ -10,8 +10,8 @@ namespace potatozine
 {
     class dbengine
     {
-        public static String uniConnectionStr = "Data Source = DIT-NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
-        //"Data Source=NIXH\\SQLEXPRESS;" + "database=potatozine;" + "integrated security=true";
+        public static String uniConnectionStr = //"Data Source = DIT-NB1530078\\SQLEXPRESS; " + "database = Potatozine; " + "integrated security = true";
+        "Data Source=NIXH\\SQLEXPRESS;" + "database=potatozine;" + "integrated security=true";
 
 
         private DataTable Magazines = new DataTable();

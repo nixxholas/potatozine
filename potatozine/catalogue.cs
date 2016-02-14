@@ -280,12 +280,15 @@ namespace potatozine
                 sum = 0.00;
                 totalcartBox.Text = String.Format("{0:C}", sum);
                 totalcartBox.Refresh();
-            }
-            else {
+            } else {
                 sum = Convert.ToDouble(cart.Compute("SUM(Price)", string.Empty));
                 if (memStatusBox.Text == "Premium")
                 {
                     sum *= 0.75;
+                }
+                if (couponBox.Text == "CNY50")
+                {
+                    sum *= 0.5;
                 }
                 totalcartBox.Text = sum.ToString("c");
                 totalcartBox.Refresh();
@@ -315,7 +318,7 @@ namespace potatozine
         {
             if (couponBox.Text == "CNY50")
             {
-                totalcartBox.Text = (Convert.ToDouble(totalcartBox.Text) * 0.5).ToString();
+                refTotal();
                 MessageBox.Show("You have just activated a 50% discount!");
             }
         }

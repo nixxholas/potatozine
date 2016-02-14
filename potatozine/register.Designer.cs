@@ -39,6 +39,8 @@
             this.regBtn = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.premiumCheck = new System.Windows.Forms.CheckBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -155,12 +157,34 @@
             this.premiumCheck.Text = "Premium";
             this.premiumCheck.UseVisualStyleBackColor = true;
             // 
+            // nameBox
+            // 
+            this.nameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameBox.Location = new System.Drawing.Point(292, 66);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(285, 29);
+            this.nameBox.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(224, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 24);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Name:";
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(740, 412);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.nameBox);
             this.Controls.Add(this.premiumCheck);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.regBtn);
@@ -195,5 +219,7 @@
         private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.CheckBox premiumCheck;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Label label5;
     }
 }
