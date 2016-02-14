@@ -16,6 +16,8 @@ namespace potatozine
     public partial class catalogue : Form
     {
         String memType;
+        public bool dscCd; //True or false whether discount code is given
+        public int discount; //Discount code percentage
         public double rprice; //Current Product Price
         public double cprice; //Current Calculated Price
         DBPOS database = new DBPOS();
@@ -61,26 +63,29 @@ namespace potatozine
             int startY = 10;
             int offset = 40;
 
-            graphic.DrawString(" Potatozine", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+            DateTime now = DateTime.Now;
+            string date = now.GetDateTimeFormats('d')[0];
+            string time = now.GetDateTimeFormats('t')[0];
+
+            graphic.DrawString(" Potatozine", new Font("Courier New", 21), new SolidBrush(Color.Black), startX, startY);
+
+            offset = offset + 30;
+            graphic.DrawString(time + "   " + date, new Font("Courier New", 14), new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + 30;
             string top = "Item Name".PadRight(30) + "Price";
             graphic.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + (int)fontHeight; //make the spacing consistent
             graphic.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + (int)fontHeight + 5; //make the spacing consistent
 
-            float totalprice = 0.00f;
-
             foreach (DataRow item in checkoutCart.Rows)
             {
                 //create the string to print on the reciept
-                string productDescription = item.ItemArray[1].ToString();
+                string productDescription = item.ItemArray[1].ToString().PadRight(30) + Convert.ToDouble(item.ItemArray[3]).ToString("c");
                 string productTotal = item.ItemArray[3].ToString();
                 float productPrice = float.Parse((double.Parse(item.ItemArray[3].ToString()) / double.Parse(item.ItemArray[2].ToString())).ToString());
 
                 //MessageBox.Show(item.Substring(item.Length - 5, 5) + "PROD TOTAL: " + productTotal);
-
-
-                totalprice += productPrice;
 
                 if (productDescription.Contains("  -"))
                 {
@@ -100,18 +105,31 @@ namespace potatozine
                 }
 
             }
-            //when we have drawn all of the items add the total
 
             offset = offset + 20; //make some room so that the total stands out.
 
-            graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            //if (dscCd == true)
+            //{
+            //    graphic.DrawString("Discount ".PadRight(30) + discount.ToString("00%"), font, new SolidBrush(Color.Black), startX, startY + offset);
+            //    offset = offset + 20;
+            //}
+
+
+            if (memStatusBox.Text == "Premium")
+            {
+                graphic.DrawString("Member Discount ".PadRight(30) + "25%", font, new SolidBrush(Color.Black), startX, startY + offset);
+                offset = offset + 20;
+            }
+            graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalcartBox.Text), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
 
             offset = offset + 30; //make some room so that the total stands out.
+
             graphic.DrawString("     Thank you for your purchase.", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
             graphic.DrawString("       Please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
-            
+
         }
+
 
         int listnum = 0;
 
@@ -420,6 +438,8 @@ namespace potatozine
             {
                 refTotal();
                 MessageBox.Show("You have just activated a 50% discount!");
+                dscCd = true;
+                discount = 50;
             }
         }
 
