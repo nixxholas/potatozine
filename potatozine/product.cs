@@ -60,5 +60,12 @@ namespace potatozine
             get { return this.imgLink; }
             set { this.imgLink = value; }
         }
+
+        public string getDesc() {
+            string toreturn = string.Empty;
+            toreturn = "Product ID: " + this.pid
+                + "\n About this product:\n" + this.desc;
+            return toreturn;
+        }
     }
 }

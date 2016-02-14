@@ -131,22 +131,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="images\allyou.jpg" />
-    <Content Include="images\bazarart.jpg" />
-    <Content Include="images\cleo.jpg" />
-    <Content Include="images\herworld.jpg" />
-    <Content Include="images\homendecor.jpg" />
-    <Content Include="images\howitworks.jpg" />
-    <Content Include="images\LocalAdventures.png" />
-    <Content Include="images\main.png" />
-    <Content Include="images\MensHealth.jpg" />
-    <Content Include="images\Simplyher.jpg" />
-    <Content Include="images\SMART.jpg" />
-    <Content Include="images\TRAVELE.png" />
-    <Content Include="images\zine.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

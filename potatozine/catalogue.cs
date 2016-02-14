@@ -9,17 +9,19 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.IO;
 
 namespace potatozine
 {
     public partial class catalogue : Form
     {
-        ImageList productImages = new ImageList();
+        String memType;
         dbengine database = new dbengine();
         List<PictureBox> picBoxes = new List<PictureBox>();
+        List<magazine> displayedMags = new List<magazine>();
+        List<Book> displayedBooks = new List<Book>();
+
         int listnum = 1;
-       
+
         public catalogue()
         {
             //Loads the splash screen
@@ -32,37 +34,7 @@ namespace potatozine
             //SoundPlayer simpleSound = new SoundPlayer(@"villager.wav");
             //simpleSound.Play();//If you don't want the annoyance, remove Looping
             Thread.Sleep(3000);
-            loadImgList();
             t.Abort();
-        }
-
-        private void loadImgList()
-        {
-            DirectoryInfo dir = new DirectoryInfo(@"images");
-            foreach (FileInfo file in dir.GetFiles())
-            {
-                try
-                {
-                    this.productImages.Images.Add(Image.FromFile(file.FullName));
-                }
-                catch
-                {
-                    Console.WriteLine("This is not an image file");
-                }
-            }
-            this.prodView.View = View.LargeIcon;
-            this.productImages.ImageSize = new Size(256, 256);
-            this.prodView.LargeImageList = this.productImages;
-            //or
-            //this.listView1.View = View.SmallIcon;
-            //this.listView1.SmallImageList = this.imageList1;
-
-            for (int j = 0; j < this.productImages.Images.Count; j++)
-            {
-                ListViewItem item = new ListViewItem();
-                item.ImageIndex = j;
-                this.prodView.Items.Add(item);
-            }
         }
 
         public void splashStart()
@@ -147,6 +119,12 @@ namespace potatozine
             database.loadProducts("magazine");
             database.loadProducts("Book");
             database.createobjects();
+            createPicBox("/Images/herworld.jpg");
+            createPicBox("/Images/bazarart.jpg");
+            createPicBox("/Images/cleo.jpg");
+            createPicBox("/Images/TRAVELE.png");
+            createPicBox("/Images/SMART.jpg");
+
         }
 
         public void listobj(int catcd)
@@ -156,44 +134,80 @@ namespace potatozine
             {
                 if (mag.Catcd == catcd)
                 {
-                    createPicBox("none");
+                    createPicBox(mag.ImgLink);
+                    displayedMags.Add(mag);
                 }
             }
             foreach (Book bk in database.Bookobj)
             {
                 if (bk.Catcd == catcd)
                 {
-                    //code to create picbox
+                    createPicBox(bk.ImgLink);
+                    displayedBooks.Add(bk);
                 }
             }
         }
 
         public void createPicBox(string imglink)
         {
+            string picboxName = string.Empty;
             PictureBox pic = new PictureBox
             {
                 Name = "PicBx" + listnum,
                 Size = new Size(221, 290),
-                Location = new Point(listnum * 316, 1),
                 BorderStyle = BorderStyle.FixedSingle,
                 SizeMode = PictureBoxSizeMode.StretchImage
             };
+            pic.Load(imglink);
+            picboxName = pic.Name.ToString();
+            pic.Click += new System.EventHandler(picBox_OnClick); //How to parse in data into a onclick listener
+            picBoxes.Add(pic);
+            displayboxes();
+            listnum++;
+        }
 
+        private void displayboxes() {
+            foreach (PictureBox pic in picBoxes)
+            {
+                FlwPanel.Controls.Add(pic);
+            }
+        }
+
+        private void picBox_OnClick(object sender, EventArgs e)
+        {
+            int index = 0;
+            string name = string.Empty;
+            if (sender is PictureBox)
+            {
+                MessageBox.Show("clicked on: " + ((PictureBox)sender).Name);
+            }
+            name = ((PictureBox)sender).Name;
+            index = int.Parse(name.Substring(5));
+            if (index < displayedMags.Count - 1) {
+                lblSelProdNam.Text = displayedMags[index-1].Name;
+                
+            }
+        }
+
+        private void setinfo(string name, string desc, string price, string img) {
+            lblSelProdNam.Text = name;
+            PicSelProd.Load(img);
+            txtSelDesc.Text = desc;
+            lblPrice.Text = "Price: " + price;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            lblGreet.Text = "Guest";
+            lblGreet.Text = "";
             memStatusBox.Text = "";
             btnLogout.Visible = false;
             MessageBox.Show("You have been logged out.");
         }
 
-        private void prodView_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstCatergory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(prodView.SelectedItems.ToString());
+
         }
     }
-    
 }
 
