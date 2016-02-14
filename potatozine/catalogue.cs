@@ -201,13 +201,30 @@ namespace potatozine
             string name = string.Empty;
             name = ((PictureBox)sender).Name;
             index = int.Parse(name.Substring(5));
-            try {
-                setinfo(displayedMags[index].Pid, displayedMags[index].Name, displayedMags[index].adddesc(), displayedMags[index].Price.ToString(), displayedMags[index].ImgLink);
-            } catch (Exception ex)
+            if (index >= displayedMags.Count) {
+                try
+                {
+                    index = index - displayedMags.Count();
+                    MessageBox.Show(index.ToString());
+                    setinfo(displayedBooks[index].Pid, displayedBooks[index].Name, displayedBooks[index].adddesc(), displayedBooks[index].Price.ToString(), displayedBooks[index].ImgLink);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
             {
-                MessageBox.Show(ex.ToString());
+                try
+                {
+                    setinfo(displayedMags[index].Pid, displayedMags[index].Name, displayedMags[index].adddesc(), displayedMags[index].Price.ToString(), displayedMags[index].ImgLink);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            }
+        }
 
 
         private void setinfo(string pid, string name, string desc, string price, string img) {

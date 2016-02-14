@@ -9,14 +9,3 @@ C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.splash.reso
 C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.csproj.GenerateResource.Cache
 C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.exe
 C:\Users\Qi\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.pdb
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.csprojResolveAssemblyReference.cache
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.catalogue.resources
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.Properties.Resources.resources
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.register.resources
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.splash.resources
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.csproj.GenerateResource.Cache
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.exe
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\obj\Debug\potatozine.pdb
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\bin\Debug\potatozine.exe.config
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\bin\Debug\potatozine.exe
-C:\Users\Nicholas\Documents\GitHub\schproj\potatozine\bin\Debug\potatozine.pdb
