@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 
 namespace potatozine
 {
@@ -22,6 +23,7 @@ namespace potatozine
         List<magazine> displayedMags = new List<magazine>();
         List<Book> displayedBooks = new List<Book>();
         DataTable cart = new DataTable();
+        DataTable checkoutCart = new DataTable();
 
         private void launchCart()
         {
@@ -31,6 +33,36 @@ namespace potatozine
             cart.Columns.Add("Qty", typeof(int));
             cart.Columns.Add("Price", typeof(double));
             cartView.DataSource = cart;
+        }
+
+        private void printReceipt()
+        {
+            PrintDialog printDialog = new PrintDialog();
+            PrintDocument printDocument = new PrintDocument();
+
+            printDialog.Document = printDocument;
+            printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                printDocument.Print();
+            }
+        }
+
+        private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphic = e.Graphics;
+
+            Font font = new Font("Segou UI", 24);
+            float fontHeight = font.GetHeight();
+
+            int startX = 10;
+            int startY = 10;
+            int offset = 50;
+
+            graphic.DrawString("Welcome to Potatozine", new Font("Segou UI", 30), new SolidBrush(Color.Black), startX, startY);
+            
         }
 
         int listnum = 0;
@@ -64,6 +96,8 @@ namespace potatozine
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             database.AddSales(cart,lblGreet.Text);
+            checkoutCart = (DataTable)(cartView.DataSource);
+            checkoutCart.Columns.Remove("Description");
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -272,7 +306,7 @@ namespace potatozine
                 }
                 totalcartBox.Text = sum.ToString("c");
                 totalcartBox.Refresh();
-                //RemoveDupes(cartView); Still doesnt add quantity
+                //RemoveDupes(cartView);
             }
         }
 
@@ -299,6 +333,8 @@ namespace potatozine
 
                     if (duplicateRow)
                     {
+                        rowToCompare.Cells["Qty"].Value = int.Parse(rowToCompare.Cells["Qty"].Value.ToString()) + int.Parse(row.Cells["Qty"].Value.ToString());
+                        MessageBox.Show(rowToCompare.Cells["Qty"].Value.ToString() + row.Cells["Qty"].Value.ToString());
                         grv.Rows.Remove(row);
                         otherRow--;
                     }
