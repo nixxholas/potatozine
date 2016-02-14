@@ -37,31 +37,69 @@ namespace potatozine
 
         private void printReceipt()
         {
-            PrintDialog printDialog = new PrintDialog();
-            PrintDocument printDocument = new PrintDocument();
-
-            printDialog.Document = printDocument;
-            printDocument.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
-            DialogResult result = printDialog.ShowDialog();
-
-            if (result == DialogResult.OK)
-            {
-                printDocument.Print();
-            }
+            printDocument.Print();
         }
-
-        private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
+        private void printDocument_PrintPage_1(object sender, PrintPageEventArgs e)
         {
+            //this prints the reciept
             Graphics graphic = e.Graphics;
+            Font font = new Font("Courier New", 12); //must use a mono spaced font as the spaces need to line up
 
-            Font font = new Font("Segou UI", 24);
             float fontHeight = font.GetHeight();
 
             int startX = 10;
             int startY = 10;
-            int offset = 50;
+            int offset = 40;
 
-            graphic.DrawString("Welcome to Potatozine", new Font("Segou UI", 30), new SolidBrush(Color.Black), startX, startY);
+            graphic.DrawString(" Potatozine", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
+            string top = "Item Name".PadRight(30) + "Price";
+            graphic.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + (int)fontHeight; //make the spacing consistent
+            graphic.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + (int)fontHeight + 5; //make the spacing consistent
+
+            float totalprice = 0.00f;
+
+            foreach (DataRow item in checkoutCart.Rows)
+            {
+                //create the string to print on the reciept
+                string productDescription = item.ItemArray[1].ToString();
+                string productTotal = item.ItemArray[3].ToString();
+                float productPrice = float.Parse((double.Parse(item.ItemArray[3].ToString()) / double.Parse(item.ItemArray[2].ToString())).ToString());
+
+                //MessageBox.Show(item.Substring(item.Length - 5, 5) + "PROD TOTAL: " + productTotal);
+
+
+                totalprice += productPrice;
+
+                if (productDescription.Contains("  -"))
+                {
+                    string productLine = productDescription.Substring(0, 24);
+
+                    graphic.DrawString(productLine, new Font("Courier New", 12, FontStyle.Italic), new SolidBrush(Color.Red), startX, startY + offset);
+
+                    offset = offset + (int)fontHeight + 5; //make the spacing consistent
+                }
+                else
+                {
+                    string productLine = productDescription;
+
+                    graphic.DrawString(productLine, font, new SolidBrush(Color.Black), startX, startY + offset);
+
+                    offset = offset + (int)fontHeight + 5; //make the spacing consistent
+                }
+
+            }
+            //when we have drawn all of the items add the total
+
+            offset = offset + 20; //make some room so that the total stands out.
+
+            graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+
+            offset = offset + 30; //make some room so that the total stands out.
+            graphic.DrawString("     Thank you for your purchase.", font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + 15;
+            graphic.DrawString("       Please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
             
         }
 
@@ -98,6 +136,7 @@ namespace potatozine
             database.AddSales(cart,lblGreet.Text);
             checkoutCart = (DataTable)(cartView.DataSource);
             checkoutCart.Columns.Remove("Description");
+            printReceipt();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -306,10 +345,11 @@ namespace potatozine
                 }
                 totalcartBox.Text = sum.ToString("c");
                 totalcartBox.Refresh();
-                RemoveDupes(cartView);
+                //RemoveDupes(cartView);
             }
         }
 
+        //Still Buggy
         public void RemoveDupes(DataGridView grv)
         {
             for (int currentRow = 0; currentRow < grv.Rows.Count - 1; currentRow++)
@@ -370,6 +410,7 @@ namespace potatozine
                 MessageBox.Show("You have just activated a 50% discount!");
             }
         }
+
     }
 }
 

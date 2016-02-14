@@ -65,6 +65,7 @@
             this.lblGreet = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.tabs.SuspendLayout();
             this.maintab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
@@ -540,6 +541,10 @@
             this.label7.Text = "Potatozine Revision 120";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // printDocument
+            // 
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage_1);
+            // 
             // catalogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -615,6 +620,7 @@
         private System.Windows.Forms.TabPage Report;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Drawing.Printing.PrintDocument printDocument;
     }
 }
 
