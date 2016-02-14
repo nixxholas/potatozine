@@ -334,7 +334,8 @@ namespace potatozine
                     if (duplicateRow)
                     {
                         rowToCompare.Cells["Qty"].Value = int.Parse(rowToCompare.Cells["Qty"].Value.ToString()) + int.Parse(row.Cells["Qty"].Value.ToString());
-                        MessageBox.Show(rowToCompare.Cells["Qty"].Value.ToString() + row.Cells["Qty"].Value.ToString());
+                        rowToCompare.Cells["Price"].Value = double.Parse(rowToCompare.Cells["Qty"].Value.ToString()) * int.Parse(row.Cells["Qty"].Value.ToString());
+                        //MessageBox.Show(rowToCompare.Cells["Qty"].Value.ToString() + row.Cells["Qty"].Value.ToString());
                         grv.Rows.Remove(row);
                         otherRow--;
                     }
