@@ -126,7 +126,7 @@ namespace potatozine
 
             if (memStatusBox.Text == "Premium")
             {
-                graphic.DrawString("Member Discount ".PadRight(30) + "25%", font, new SolidBrush(Color.Black), startX, startY + offset);
+                graphic.DrawString("Member Discount ".PadRight(30) + "20%", font, new SolidBrush(Color.Black), startX, startY + offset);
                 offset = offset + 20;
             }
             graphic.DrawString("Total to pay ".PadRight(30) + String.Format("{0:c}", totalcartBox.Text), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
@@ -170,19 +170,6 @@ namespace potatozine
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (memStatusBox.Text == "Premium") {
-                foreach (DataRow row in cart.Rows)
-                {
-                    row["Price"] = double.Parse(row["price"].ToString()) * 0.2;
-                }
-            }
-
-            if (couponBox.Text == "CNY50") {
-                foreach (DataRow row in cart.Rows)
-                {
-                    row["Price"] = double.Parse(row["price"].ToString()) * 0.5;
-                }
-            }
             database.AddSales(cart,lblGreet.Text);
             checkoutCart = (DataTable)(cartView.DataSource);
             checkoutCart.Columns.Remove("Description");
@@ -394,7 +381,7 @@ namespace potatozine
                 sum = Convert.ToDouble(cart.Compute("SUM(Price)", string.Empty));
                 if (memStatusBox.Text == "Premium")
                 {
-                    sum *= 0.2;
+                    sum *= 0.8;
                 }
                 if (couponBox.Text == "CNY50")
                 {
