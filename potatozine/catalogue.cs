@@ -46,6 +46,17 @@ namespace potatozine
             launchCart();
         }
 
+        private void loadCat()
+        {
+            DataTable CatLoad = database.SQLQuery("Select * from category");
+            List<string> catnames = new List<string>();
+            foreach (DataRow row in CatLoad.Rows)
+            {
+                catnames.Add(row["catname"].ToString());
+            }
+            lstCatergory.DataSource = catnames;
+        }
+
         private void loadreport() {
             DataTable tempstore = new DataTable();
             DGVrep.DataSource = database.getsales();
@@ -266,6 +277,7 @@ namespace potatozine
         {
             database.loadProducts();
             database.createobjects();
+            loadCat();
         }
 
         public void listobj(int catcd)
