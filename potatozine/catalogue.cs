@@ -122,7 +122,11 @@ namespace potatozine
             //    graphic.DrawString("Discount ".PadRight(30) + discount.ToString("00%"), font, new SolidBrush(Color.Black), startX, startY + offset);
             //    offset = offset + 20;
             //}
-
+            if (couponBox.Text == "CNY50")
+            {
+                graphic.DrawString("Discount Code: "+couponBox.Text.PadRight(15) + "50%", font, new SolidBrush(Color.Black), startX, startY + offset);
+                offset = offset + 20;
+            }
 
             if (memStatusBox.Text == "Premium")
             {
@@ -179,6 +183,8 @@ namespace potatozine
             resetCart();
             checkoutCart.Clear();
             btnCheckout.Enabled = true;
+            couponBox.Text = "";
+            numQty.Value = 1;
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
